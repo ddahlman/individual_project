@@ -1,3 +1,8 @@
+.background {
+   background: url('../img/daniel solnedgång1.jpg') no-repeat center center;
+   background-size: 100% 100%;
+}
+
 h1 {
   color: green;
 }

@@ -4,19 +4,37 @@ html, body {
    height: 100%;
 }
 
-/*.first-container {
-height: 500px;
-width: 100%;
+.my-mode {
+  cursor: pointer;
 }
-*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #555;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; 
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #ec9b13;
+  display: block;
+  transition: 0.3s;
+}
 .background {
    background: url('../img/daniel gbg copy.jpg') no-repeat 50% 38%;
    background-size: cover;
-  /* image-rendering: crisp-edges;*/
    height: 600px;
-  
-   /*height: 30%;*/
 }
+
+
 
 h1 {
   color: #fff;

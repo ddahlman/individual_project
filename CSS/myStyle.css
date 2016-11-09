@@ -65,7 +65,7 @@ a.page-links:hover {
    height: 600px;
 }
 
-#layer {
+.layer {
     /*position: absolute;*/
     top: 0;
     left: 0;
@@ -122,8 +122,9 @@ p {
     width: 20%;
 }
 
-.borderleft {
-    background-color: #fff;
+.profile-img {
+    background: url("../img/Daniel svart bakgrund (2).jpg") no-repeat right;
+    background-size: 34% 75%;
     border-top: none;
     border-right: none;
     border-bottom: none;
@@ -131,28 +132,23 @@ p {
     height: 300px;
 }
 
-img {
-    width: 200px;
-    height: 200px;
-}
-
 .second {
     background-image: url('../img/greyPantsBackground.png');
     padding: 20px;
 }
 
-.well.skillz {
+.skillz {
     background-image: url('../img/greyPantsBackground.png');
 }
 
-.well.project {
+.project {
     height: 1083px;
     background-color: #fff;
     box-shadow: 0 5px 10px;
     border: none;
 }
 
-.well-footer {
+well-footer {
     background-image: url('../img/greyPantsBackground.png');
     border-radius: 5px;
     padding: 15px;

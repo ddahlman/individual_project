@@ -2,9 +2,9 @@ html, body {
    margin: 0;
    padding: 0;
    height: 100%;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
    transition: background-color .5s;
-   z-index: 9999;
+  /* z-index: 9999;*/
 }
 
 .hamburger {
@@ -37,17 +37,18 @@ html, body {
 }
 
 .sidenav a {
+  text-shadow: 2px 2px 2px #333;
   text-decoration: none;
   font-size: 25px;
   color: #ec9b13;
   display: block;
-  line-height: 2.5;
-  padding-left: 15px;
+  padding: 15px 0 15px 50px;
   transition: 0.5s;
 }
 
-.sidenav a:hover {
+a.page-links:hover {
   color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .background {
@@ -63,4 +64,11 @@ html, body {
     width: 100%;
     height: 100%;
     transition: 0.4s;
+}
+
+footer {
+  background-color: #3d3835;
+  color: #fff;
+  position: absolute;
+  width: 100%;
 }

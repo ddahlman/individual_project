@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../font/BebasNeue.otf') format('opentype');
+}
+
 html, body {
    margin: 0;
    padding: 0;
@@ -7,6 +12,7 @@ html, body {
   /* z-index: 9999;*/
 }
 
+/*beginning of sidebar-------------------------------------------------------------------------------*/
 .hamburger {
   cursor: pointer;
   font-size: 40px;
@@ -50,7 +56,9 @@ a.page-links:hover {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.3);
 }
+/*end of sidebar--------------------------------------------------------------------------------------*/
 
+/*index page------------------------------------------------------------------------------------------*/
 .background {
    background: url('../img/daniel gbg copy.jpg') no-repeat 50% 38%;
    background-size: cover;
@@ -65,7 +73,120 @@ a.page-links:hover {
     height: 100%;
     transition: 0.4s;
 }
+/*end of index---------------------------------------------------------------------------------------*/
 
+/*about page-----------------------------------------------------------------------------------------*/
+
+
+hr {
+    border: solid 2px #fff;
+}
+
+.hr {
+    border: solid 2px #606060;
+    box-shadow: 2px 2px rgba(128, 128, 128, 0.4);
+}
+
+.gap {
+    height: 50px;
+}
+
+.gapper {
+    height: 85px;
+}
+
+h1 {
+    font-family: BebasNeue;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.h1-col {
+    color: #808080;
+    font-size: 70px;
+}
+
+h2 {
+    font-family: BebasNeue;
+    color: #606060;
+}
+
+
+
+p {
+    font-family: BebasNeue;
+    font-size: 20px;
+    color: #808080;
+}
+
+.span-gap {
+    width: 20%;
+}
+
+.borderleft {
+    background-color: #fff;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 4px solid #606060;
+    height: 300px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.second {
+    background-image: url('../img/greyPantsBackground.png');
+    padding: 20px;
+}
+
+.well.skillz {
+    background-image: url('../img/greyPantsBackground.png');
+}
+
+.well.project {
+    height: 1083px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px;
+    border: none;
+}
+
+.well-footer {
+    background-image: url('../img/greyPantsBackground.png');
+    border-radius: 5px;
+    padding: 15px;
+    height: 274px;
+}
+
+ul {
+    padding: 20px;
+}
+
+li {
+    list-style: none;
+    font: 20px BebasNeue;
+    color: #fff;
+    text-shadow: 1px 1px rgba(23, 23, 23, 0.83);
+}
+
+.li-education {
+    color: #808080;
+    text-shadow: none;
+}
+
+a {
+    color: #fff;
+}
+
+    a:hover {
+        text-decoration: none;
+        color: #808080;
+    }
+
+
+/*end of about---------------------------------------------------------------------------------------*/
+/*footer---------------------------------------------------------------------------------------------*/
 footer {
   background-color: #3d3835;
   color: #fff;

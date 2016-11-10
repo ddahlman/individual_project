@@ -3,66 +3,14 @@
     src: url('../font/BebasNeue.otf') format('opentype');
 }
 
-html, body {
-   margin: 0;
-   padding: 0;
-   height: 100%;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   transition: background-color .5s;
-  /* z-index: 9999;*/
-}
-
-/*beginning of sidebar-------------------------------------------------------------------------------*/
-.hamburger {
-  cursor: pointer;
-  font-size: 40px;
-  color: #fff;
-  position: fixed;
-  margin: 15px;
-  transition: 1s;
-}
-
-.sidenav .closebtn {
-  top: 0;
-  right: 25px;
-  position: absolute;
-  font-size: 40px;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px; 
-}
-
-.sidenav a {
-  text-shadow: 2px 2px 2px #333;
-  text-decoration: none;
-  font-size: 25px;
-  color: #ec9b13;
-  display: block;
-  padding: 15px 0 15px 50px;
-  transition: 0.5s;
-}
-
-a.page-links:hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-/*end of sidebar--------------------------------------------------------------------------------------*/
-
-/*index page------------------------------------------------------------------------------------------*/
-.background {
-   background: url('../img/daniel gbg copy.jpg') no-repeat 50% 38%;
-   background-size: cover;
-   height: 600px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background-color .5s;
+    /* z-index: 9999;*/
 }
 
 .layer {
@@ -71,12 +19,75 @@ a.page-links:hover {
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 20px;
     transition: 0.4s;
+    z-index: 9999;
 }
+
+
+/*beginning of sidebar-------------------------------------------------------------------------------*/
+
+.hamburger {
+    cursor: pointer;
+    font-size: 40px;
+    color: #fff;
+    position: fixed;
+    margin: 15px;
+    transition: 1s;
+}
+
+.sidenav .closebtn {
+    top: 0;
+    right: 25px;
+    position: absolute;
+    font-size: 40px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    text-shadow: 2px 2px 2px #333;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ec9b13;
+    display: block;
+    padding: 15px 0 15px 50px;
+    transition: 0.5s;
+}
+
+a.page-links:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*end of sidebar--------------------------------------------------------------------------------------*/
+
+
+/*index page------------------------------------------------------------------------------------------*/
+
+.background {
+    background: url('../img/daniel gbg copy.jpg') no-repeat 50% 38%;
+    background-size: cover;
+    height: 600px;
+}
+
+
 /*end of index---------------------------------------------------------------------------------------*/
 
-/*about page-----------------------------------------------------------------------------------------*/
 
+/*about page-----------------------------------------------------------------------------------------*/
 
 hr {
     border: solid 2px #fff;
@@ -95,8 +106,13 @@ hr {
     height: 85px;
 }
 
-h1 {
+h1,
+h2,
+p {
     font-family: BebasNeue;
+}
+
+h1 {
     color: rgba(255, 255, 255, 0.80);
 }
 
@@ -106,14 +122,10 @@ h1 {
 }
 
 h2 {
-    font-family: BebasNeue;
     color: #606060;
 }
 
-
-
 p {
-    font-family: BebasNeue;
     font-size: 20px;
     color: #808080;
 }
@@ -132,12 +144,8 @@ p {
     height: 300px;
 }
 
-.second {
-    background-image: url('../img/greyPantsBackground.png');
-    padding: 20px;
-}
-
-.skillz {
+.skillz,
+.well-footer {
     background-image: url('../img/greyPantsBackground.png');
 }
 
@@ -148,8 +156,7 @@ p {
     border: none;
 }
 
-well-footer {
-    background-image: url('../img/greyPantsBackground.png');
+.well-footer {
     border-radius: 5px;
     padding: 15px;
     height: 274px;
@@ -160,10 +167,11 @@ ul {
 }
 
 li {
+    /*position: relative;*/
     list-style: none;
     font: 20px BebasNeue;
     color: #fff;
-    text-shadow: 1px 1px rgba(23, 23, 23, 0.83);
+    text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
 }
 
 .li-education {
@@ -175,17 +183,20 @@ a {
     color: #fff;
 }
 
-    a:hover {
-        text-decoration: none;
-        color: #808080;
-    }
+a:hover {
+    text-decoration: none;
+    color: #808080;
+}
 
 
 /*end of about---------------------------------------------------------------------------------------*/
+
+
 /*footer---------------------------------------------------------------------------------------------*/
+
 footer {
-  background-color: #3d3835;
-  color: #fff;
-  position: absolute;
-  width: 100%;
+    background-color: #3d3835;
+    color: #fff;
+    position: absolute;
+    width: 100%;
 }

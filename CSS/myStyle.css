@@ -36,9 +36,13 @@
         color: #ec9b13;
         position: fixed;
         margin: 15px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 0 23px inset;
+        border-radius: 13px;
     }
     
-    .hamburger:hover {}
+    .hamburger:hover {
+        color: #555;
+    }
     
     .sidenav .closebtn {
         top: 0;
@@ -108,8 +112,8 @@
         font-family: BebasNeue;
     }
     
-    h1 {
-        color: rgba(255, 255, 255, 0.80);
+    .h1-index {
+        color: #ec9b13;
     }
     
     .h1-col {

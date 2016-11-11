@@ -3,6 +3,10 @@
         src: url('../font/BebasNeue.otf') format('opentype');
     }
     
+    * {
+        box-sizing: border-box;
+    }
+    
     html {
         overflow-y: scroll;
     }
@@ -20,8 +24,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        -webkit-transition: all ease-in .7s;
-        transition: all ease-in .7s;
+        -webkit-transition: all ease-in .5s;
+        transition: all ease-in .5s;
         z-index: 100;
     }
     
@@ -60,7 +64,7 @@
         left: 0;
         background-color: rgba(255, 255, 255, 0.8);
         overflow-x: hidden;
-        transition: 0.5s;
+        transition: 0.3s;
         padding-top: 60px;
     }
     
@@ -134,16 +138,6 @@
         width: 20%;
     }
     
-    .profile-img {
-        background: url("../img/Daniel svart bakgrund (2).jpg") no-repeat right;
-        background-size: 33% 75%;
-        border-top: none;
-        border-right: none;
-        border-bottom: none;
-        border-left: 4px solid #606060;
-        height: 300px;
-    }
-    
     .skillz,
     .well-footer {
         background-image: url('../img/greyPantsBackground.png');
@@ -196,3 +190,54 @@
         position: absolute;
         width: 100%;
     }
+    /*flex-grid------------------------------------------------------------------------------------------*/
+    
+    .flex-grid,
+    .flex-grid-2,
+    .flex-grid-3 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .flex-grid {
+        margin: 0 0 20px 0;
+    }
+    
+    .flex-grid .col {
+        -ms-flex: 1;
+        flex: 1;
+        padding: 20px;
+    }
+    
+    .flex-grid-2,
+    .flex-grid-3 {
+        justify-content: space-between;
+    }
+    
+    .flex-grid-2 .col {
+        padding: 20px;
+        width: 48%;
+    }
+    
+    .flex-grid-3 .col {
+        width: 32%;
+        padding: 20px;
+    }
+    
+    img {
+        display: block;
+        width: 100%;
+    }
+    
+    @media (max-width: 400px) {
+        .flex-grid,
+        .flex-grid-2,
+        .flex-grid-3 {
+            display: block;
+        }
+        .col {
+            width: 100%;
+            margin: 0 0 10px 0;
+        }
+    }
+    /*end of flex-grid------------------------------------------------------------------------------------------*/

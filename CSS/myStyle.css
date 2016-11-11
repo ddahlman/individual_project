@@ -1,202 +1,194 @@
-@font-face {
-    font-family: 'BebasNeue';
-    src: url('../font/BebasNeue.otf') format('opentype');
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: background-color .5s;
-    /* z-index: 9999;*/
-}
-
-.layer {
-    /*position: absolute;*/
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    transition: 0.4s;
-    z-index: 9999;
-}
-
-
-/*beginning of sidebar-------------------------------------------------------------------------------*/
-
-.hamburger {
-    cursor: pointer;
-    font-size: 40px;
-    color: #fff;
-    position: fixed;
-    margin: 15px;
-    transition: 1s;
-}
-
-.sidenav .closebtn {
-    top: 0;
-    right: 25px;
-    position: absolute;
-    font-size: 40px;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    text-shadow: 2px 2px 2px #333;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ec9b13;
-    display: block;
-    padding: 15px 0 15px 50px;
-    transition: 0.5s;
-}
-
-a.page-links:hover {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-
-/*end of sidebar--------------------------------------------------------------------------------------*/
-
-
-/*index page------------------------------------------------------------------------------------------*/
-
-.background {
-    background: url('../img/daniel gbg copy.jpg') no-repeat 50% 38%;
-    background-size: cover;
-    height: 600px;
-}
-
-
-/*end of index---------------------------------------------------------------------------------------*/
-
-
-/*about page-----------------------------------------------------------------------------------------*/
-
-hr {
-    border: solid 2px #fff;
-}
-
-.hr {
-    border: solid 2px #606060;
-    box-shadow: 2px 2px rgba(128, 128, 128, 0.4);
-}
-
-.gap {
-    height: 50px;
-}
-
-.gapper {
-    height: 85px;
-}
-
-h1,
-h2,
-p {
-    font-family: BebasNeue;
-}
-
-h1 {
-    color: rgba(255, 255, 255, 0.80);
-}
-
-.h1-col {
-    color: #808080;
-    font-size: 70px;
-}
-
-h2 {
-    color: #606060;
-}
-
-p {
-    font-size: 20px;
-    color: #808080;
-}
-
-.span-gap {
-    width: 20%;
-}
-
-.profile-img {
-    background: url("../img/Daniel svart bakgrund (2).jpg") no-repeat right;
-    background-size: 33% 75%;
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
-    border-left: 4px solid #606060;
-    height: 300px;
-}
-
-.skillz,
-.well-footer {
-    background-image: url('../img/greyPantsBackground.png');
-}
-
-.project {
-    height: 1083px;
-    background-color: #fff;
-    box-shadow: 0 5px 10px;
-    border: none;
-}
-
-.well-footer {
-    border-radius: 5px;
-    padding: 15px;
-    height: 274px;
-}
-
-ul {
-    padding: 20px;
-}
-
-li {
-    /*position: relative;*/
-    list-style: none;
-    font: 20px BebasNeue;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
-}
-
-.li-education {
-    color: #808080;
-    text-shadow: none;
-}
-
-a {
-    color: #fff;
-}
-
-a:hover {
-    text-decoration: none;
-    color: #808080;
-}
-
-
-/*end of about---------------------------------------------------------------------------------------*/
-
-
-/*footer---------------------------------------------------------------------------------------------*/
-
-footer {
-    background-color: #3d3835;
-    color: #fff;
-    position: absolute;
-    width: 100%;
-}
+    @font-face {
+        font-family: 'BebasNeue';
+        src: url('../font/BebasNeue.otf') format('opentype');
+    }
+    
+    html {
+        overflow-y: scroll;
+    }
+    
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .layer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transition: all ease-in .7s;
+        transition: all ease-in .7s;
+        z-index: 100;
+    }
+    
+    .openmenu .layer {
+        top: 0;
+    }
+    /*beginning of sidebar-------------------------------------------------------------------------------*/
+    
+    .hamburger {
+        cursor: pointer;
+        font-size: 40px;
+        color: #ec9b13;
+        position: fixed;
+        margin: 15px;
+    }
+    
+    .hamburger:hover {}
+    
+    .sidenav .closebtn {
+        top: 0;
+        right: 25px;
+        position: absolute;
+        font-size: 40px;
+    }
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 200;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    
+    .sidenav a {
+        text-shadow: 2px 2px 2px #333;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ec9b13;
+        display: block;
+        padding: 15px 0 15px 50px;
+        transition: 0.5s;
+    }
+    
+    a.page-links:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    /*end of sidebar--------------------------------------------------------------------------------------*/
+    /*index page------------------------------------------------------------------------------------------*/
+    
+    .background {
+        background: url('../img/daniel gbg copy.jpg') no-repeat 50% 38%;
+        background-size: cover;
+        height: 600px;
+    }
+    /*end of index---------------------------------------------------------------------------------------*/
+    /*about page-----------------------------------------------------------------------------------------*/
+    
+    hr {
+        border: solid 2px #fff;
+    }
+    
+    .hr {
+        border: solid 2px #606060;
+        box-shadow: 2px 2px rgba(128, 128, 128, 0.4);
+    }
+    
+    .gap {
+        height: 50px;
+    }
+    
+    .gapper {
+        height: 85px;
+    }
+    
+    h1,
+    h2,
+    p {
+        font-family: BebasNeue;
+    }
+    
+    h1 {
+        color: rgba(255, 255, 255, 0.80);
+    }
+    
+    .h1-col {
+        color: #808080;
+        font-size: 70px;
+    }
+    
+    h2 {
+        color: #606060;
+    }
+    
+    p {
+        font-size: 20px;
+        color: #808080;
+    }
+    
+    .span-gap {
+        width: 20%;
+    }
+    
+    .profile-img {
+        background: url("../img/Daniel svart bakgrund (2).jpg") no-repeat right;
+        background-size: 33% 75%;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        border-left: 4px solid #606060;
+        height: 300px;
+    }
+    
+    .skillz,
+    .well-footer {
+        background-image: url('../img/greyPantsBackground.png');
+    }
+    
+    .project {
+        height: 1083px;
+        /*background-color: #fff;*/
+        box-shadow: 0 5px 10px;
+        border: none;
+    }
+    
+    .well-footer {
+        border-radius: 5px;
+        padding: 15px;
+        height: 274px;
+    }
+    
+    ul {
+        padding: 20px;
+    }
+    
+    li {
+        /*position: relative;*/
+        list-style: none;
+        font: 20px BebasNeue;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
+    }
+    
+    .li-education {
+        color: #808080;
+        text-shadow: none;
+    }
+    
+    a {
+        color: #fff;
+    }
+    
+    a:hover {
+        text-decoration: none;
+        color: #808080;
+    }
+    /*end of about---------------------------------------------------------------------------------------*/
+    /*footer---------------------------------------------------------------------------------------------*/
+    
+    footer {
+        background-color: #3d3835;
+        color: #fff;
+        position: absolute;
+        width: 100%;
+    }

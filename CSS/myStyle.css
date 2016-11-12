@@ -32,6 +32,11 @@
     .openmenu .layer {
         top: 0;
     }
+    
+    .grey-background {
+        background-color: #f6f6f6;
+        border-radius: 5px;
+    }
     /*beginning of sidebar-------------------------------------------------------------------------------*/
     
     .hamburger {
@@ -85,10 +90,14 @@
     /*end of sidebar--------------------------------------------------------------------------------------*/
     /*index page------------------------------------------------------------------------------------------*/
     
-    .background {
-        background: url('../img/daniel gbg copy.jpg') no-repeat 50% 38%;
-        background-size: cover;
-        height: 600px;
+    .index-profile {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+    }
+    
+    .yellow {
+        background-color: #ec9b13;
     }
     /*end of index---------------------------------------------------------------------------------------*/
     /*about page-----------------------------------------------------------------------------------------*/
@@ -116,7 +125,12 @@
         font-family: BebasNeue;
     }
     
-    .h1-index {
+    .h1-index-grey {
+        color: #555;
+        font-size: 54px;
+    }
+    
+    .h1-index-yellow {
         color: #ec9b13;
     }
     
@@ -155,10 +169,9 @@
         padding: 15px;
         height: 274px;
     }
-    
-    ul {
+    /*ul {
         padding: 20px;
-    }
+    }*/
     
     li {
         /*position: relative;*/
@@ -174,12 +187,13 @@
     }
     
     a {
-        color: #fff;
+        color: #808080;
+        text-decoration: none;
     }
     
     a:hover {
         text-decoration: none;
-        color: #808080;
+        color: #555;
     }
     /*end of about---------------------------------------------------------------------------------------*/
     /*footer---------------------------------------------------------------------------------------------*/
@@ -195,6 +209,7 @@
     .flex-grid,
     .flex-grid-2,
     .flex-grid-3 {
+        display: -webkit-flex;
         display: flex;
         flex-wrap: wrap;
     }
@@ -207,6 +222,11 @@
         -ms-flex: 1;
         flex: 1;
         padding: 20px;
+    }
+    
+    .col-img {
+        -ms-flex: 1;
+        flex: 1;
     }
     
     .flex-grid-2,

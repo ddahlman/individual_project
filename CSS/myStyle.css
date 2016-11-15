@@ -1,217 +1,217 @@
-    @font-face {
-        font-family: 'BebasNeue';
-        src: url('../font/BebasNeue.otf') format('opentype');
-    }
-    
-    * {
-        box-sizing: border-box;
-    }
-    
-    html {
-        overflow-y: scroll;
-    }
-    
-    html,
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    
-    .layer {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        -webkit-transition: all ease-in .5s;
-        transition: all ease-in .5s;
-        z-index: 100;
-    }
-    
-    .openmenu .layer {
-        top: 0;
-    }
-    
-    .grey-background {
-        background-color: #f6f6f6;
-        border-radius: 5px;
-    }
-    /*beginning of sidebar-------------------------------------------------------------------------------*/
-    
-    .hamburger {
-        cursor: pointer;
-        font-size: 40px;
-        color: #ec9b13;
-        position: fixed;
-        margin: 15px;
-        box-shadow: rgba(0, 0, 0, 0.2) 0 0 23px inset;
-        border-radius: 13px;
-    }
-    
-    .hamburger:hover {
-        color: #555;
-    }
-    
-    .sidenav .closebtn {
-        top: 0;
-        right: 25px;
-        position: absolute;
-        font-size: 40px;
-    }
-    
-    .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 200;
-        top: 0;
-        left: 0;
-        background-color: rgba(255, 255, 255, 0.8);
-        overflow-x: hidden;
-        transition: 0.3s;
-        padding-top: 60px;
-    }
-    
-    .sidenav a {
-        text-shadow: 2px 2px 2px #333;
-        text-decoration: none;
-        font-size: 25px;
-        color: #ec9b13;
-        display: block;
-        padding: 15px 0 15px 50px;
-        transition: 0.5s;
-    }
-    
-    a.page-links:hover {
-        color: #fff;
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-    /*end of sidebar--------------------------------------------------------------------------------------*/
-    /*index page------------------------------------------------------------------------------------------*/
-    
-    .index-profile {
-        height: 250px;
-        width: 250px;
-        border-radius: 50%;
-    }
-    
-    .yellow {
-        background-color: #ec9b13;
-    }
-    /*end of index---------------------------------------------------------------------------------------*/
-    /*about page-----------------------------------------------------------------------------------------*/
-    
-    hr {
-        border: solid 2px #fff;
-    }
-    
-    .hr {
-        border: solid 2px #606060;
-        box-shadow: 2px 2px rgba(128, 128, 128, 0.4);
-    }
-    
-    .gap {
-        height: 50px;
-    }
-    
-    .gapper {
-        height: 85px;
-    }
-    
-    h1,
-    h2,
-    p {
-        font-family: BebasNeue;
-    }
-    
-    .h1-index-grey {
-        color: #555;
-        font-size: 54px;
-    }
-    
-    .h1-index-yellow {
-        color: #ec9b13;
-    }
-    
-    .h1-col {
-        color: #808080;
-        font-size: 70px;
-    }
-    
-    h2 {
-        color: #606060;
-    }
-    
-    p {
-        font-size: 20px;
-        color: #808080;
-    }
-    
-    .span-gap {
-        width: 20%;
-    }
-    
-    .skillz,
-    .well-footer {
-        background-image: url('../img/greyPantsBackground.png');
-    }
-    
-    .project {
-        height: 1083px;
-        /*background-color: #fff;*/
-        box-shadow: 0 5px 10px;
-        border: none;
-    }
-    
-    .well-footer {
-        border-radius: 5px;
-        padding: 15px;
-        height: 274px;
-    }
-    /*ul {
+            @font-face {
+                font-family: 'BebasNeue';
+                src: url('../font/BebasNeue.otf') format('opentype');
+            }
+            
+            * {
+                box-sizing: border-box;
+            }
+            
+            html {
+                overflow-y: scroll;
+            }
+            
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .layer {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                -webkit-transition: all ease-in .5s;
+                transition: all ease-in .5s;
+                z-index: 100;
+            }
+            
+            .openmenu .layer {
+                top: 0;
+            }
+            
+            .grey-background {
+                background-color: #f6f6f6;
+                border-radius: 5px;
+            }
+            /*beginning of sidebar-------------------------------------------------------------------------------*/
+            
+            .hamburger {
+                cursor: pointer;
+                font-size: 40px;
+                color: #ec9b13;
+                position: fixed;
+                margin: 15px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0 0 23px inset;
+                border-radius: 13px;
+            }
+            
+            .hamburger:hover {
+                color: #555;
+            }
+            
+            .sidenav .closebtn {
+                top: 0;
+                right: 25px;
+                position: absolute;
+                font-size: 40px;
+            }
+            
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 200;
+                top: 0;
+                left: 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                overflow-x: hidden;
+                transition: 0.3s;
+                padding-top: 60px;
+            }
+            
+            .sidenav a {
+                text-shadow: 2px 2px 2px #333;
+                text-decoration: none;
+                font-size: 25px;
+                color: #ec9b13;
+                display: block;
+                padding: 15px 0 15px 50px;
+                transition: 0.5s;
+            }
+            
+            a.page-links:hover {
+                color: #fff;
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+            /*end of sidebar--------------------------------------------------------------------------------------*/
+            /*index page------------------------------------------------------------------------------------------*/
+            
+            .h1-index-grey {
+                color: #555;
+                font-size: 54px;
+            }
+            
+            .h1-index-yellow {
+                color: #ec9b13;
+            }
+            
+            .index-profile {
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+            }
+            
+            .yellow {
+                background-color: #ec9b13;
+            }
+            /*end of index---------------------------------------------------------------------------------------*/
+            /*about page-----------------------------------------------------------------------------------------*/
+            
+            hr {
+                border: solid 2px #fff;
+            }
+            
+            .hr {
+                margin-left: 0;
+                margin-right: 0;
+                border: solid 2px #ec9b13;
+                box-shadow: 2px 2px rgba(128, 128, 128, 0.4);
+            }
+            
+            h1,
+            h2,
+            p {
+                font-family: BebasNeue;
+            }
+            
+            .h1-about {
+                color: #ec9b13;
+                text-shadow: 1px 1px 1px #555;
+            }
+            
+            .h1-col {
+                color: #808080;
+                font-size: 70px;
+                text-align: center;
+                flex: 1;
+            }
+            /*@media (max-width: 400px) {
+                .h1-col {
+                    font-size: 50px;
+                }
+            }*/
+            
+            h2 {
+                color: #606060;
+            }
+            
+            p {
+                font-size: 120%;
+                color: #808080;
+            }
+            
+            .span-gap {
+                width: 20%;
+            }
+            
+            .grey-pants {
+                background-image: url('../img/greyPantsBackground.png');
+                border-radius: 5px;
+            }
+            
+            .project {
+                box-shadow: 0 5px 10px;
+                border: none;
+                border-radius: 5px;
+                padding: 15px;
+            }
+            /*ul {
         padding: 20px;
     }*/
-    
-    li {
-        /*position: relative;*/
-        list-style: none;
-        font: 20px BebasNeue;
-        color: #fff;
-        text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
-    }
-    
-    .li-education {
-        color: #808080;
-        text-shadow: none;
-    }
-    
-    a {
-        color: #808080;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        text-decoration: none;
-        color: #555;
-    }
-    /*end of about---------------------------------------------------------------------------------------*/
-    /*footer---------------------------------------------------------------------------------------------*/
-    
-    footer {
-        background-color: #3d3835;
-        color: #fff;
-        position: absolute;
-        width: 100%;
-    }
-    /*flex-grid------------------------------------------------------------------------------------------*/
-    
-    .flex-grid,
+            
+            li {
+                /*list-style: none;*/
+                font: 20px BebasNeue;
+                color: #fff;
+                text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
+            }
+            
+            .li-education {
+                color: #808080;
+                text-shadow: none;
+                list-style: none;
+            }
+            
+            a {
+                color: #808080;
+                text-decoration: none;
+            }
+            
+            a:hover {
+                text-decoration: none;
+                color: #555;
+            }
+            /*end of about---------------------------------------------------------------------------------------*/
+            /*footer---------------------------------------------------------------------------------------------*/
+            
+            footer {
+                flex: 1;
+                background-color: #3d3835;
+                color: #fff;
+            }
+            /*flex-grid------------------------------------------------------------------------------------------*/
+            /*  .flex-grid,
     .flex-grid-2,
     .flex-grid-3 {
         display: -webkit-flex;
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
     }
     
     .flex-grid {
@@ -221,7 +221,7 @@
     .flex-grid .col {
         -ms-flex: 1;
         flex: 1;
-        padding: 20px;
+        padding: 15px;
     }
     
     .col-img {
@@ -229,9 +229,15 @@
         flex: 1;
     }
     
+    .col-footer {
+        -ms-flex: 1;
+        flex: 1;
+        align-self: flex-end;
+    }
+    
     .flex-grid-2,
     .flex-grid-3 {
-        justify-content: space-between;
+        justify-content: space-around;
     }
     
     .flex-grid-2 .col {
@@ -241,7 +247,8 @@
     
     .flex-grid-3 .col {
         width: 32%;
-        padding: 20px;
+        padding: 15px;
+        align-self: stretch;
     }
     
     img {
@@ -255,9 +262,118 @@
         .flex-grid-3 {
             display: block;
         }
-        .col {
+        .col,
+        .col-footer,
+        .col-img {
             width: 100%;
             margin: 0 0 10px 0;
         }
+    }*/
+            /*end of flex-grid------------------------------------------------------------------------------------------*/
+            /*new flexbox grid system-----------------------------------------------------------------------------------*/
+            /* .row {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
-    /*end of flex-grid------------------------------------------------------------------------------------------*/
+    
+    .row-end {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    .row-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    @media screen and (min-width: 500px) {
+        .row,
+        .row-column,
+        .row-end {
+            display: flex;
+            flex-direction: row;
+        }
+    }*/
+            /*NEWEST FUCKING FLEX GRID========================================================================*/
+            
+            .flex-container {
+                display: flex;
+                flex-flow: row wrap;
+            }
+            
+            .flex-row {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 10px 10px 10px;
+            }
+            
+            .flex-col {
+                flex: 1;
+                padding: 15px;
+            }
+            
+            .flex-col-2 {
+                flex: 2;
+                padding: 15px;
+            }
+            
+            .flex-col-center-cl {
+                flex: 1;
+                align-self: center;
+            }
+            
+            .flex-col-img-center {
+                justify-content: center;
+                display: flex;
+                align-self: center;
+                -ms-flex: 1;
+                flex: 1;
+            }
+            
+            img {
+                display: block;
+                width: 100%;
+            }
+            
+            .flex-col-card {
+                display: flex;
+                flex: 1 0 30%;
+                flex-direction: column;
+                margin: 0 10px 10px 10px;
+                padding: 15px;
+            }
+            
+            .flex-col-card p {
+                flex: 1 0 auto;
+            }
+            
+            .flex-footer {
+                display: flex;
+                flex: 0 1 290px;
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            @media screen and (max-width: 400px) {
+                .h1-col {
+                    font-size: 40px;
+                }
+                .flex-row {
+                    flex-direction: column;
+                    margin: 0 0 10px 0;
+                }
+                .flex-col-card {
+                    flex: 1;
+                }
+                .flex-col-img-center {
+                    display: block;
+                }
+                /* footer {
+                    display: block;
+                    width: 100%;
+                }*/
+            }

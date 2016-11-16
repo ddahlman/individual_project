@@ -1,6 +1,6 @@
+/*Sidebar=============================================================================================*/
+
 (function () {
-
-
 
     var openNav = document.getElementById("openNav");
     openNav.addEventListener('click', openNavbar);
@@ -32,8 +32,8 @@
 
 })();
 
-/*end of sidebar=============================================*/
-
+/*end of sidebar======================================================================*/
+/*Social media plugin=================================================================*/
 (function () {
     $('.share').ShareLink({
         title: 'Daniel Dahlman',
@@ -50,3 +50,5 @@
         increment: false
     });
 })();
+
+/*End of social media =================================================================*/

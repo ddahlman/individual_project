@@ -49,6 +49,7 @@
                 margin: 15px;
                 box-shadow: rgba(0, 0, 0, 0.2) 0 0 23px inset;
                 border-radius: 13px;
+                z-index: 50;
             }
             
             .hamburger:hover {
@@ -326,6 +327,17 @@
                 align-self: center;
             }
             
+            .flex-col-img {
+                flex-direction: column;
+                display: flex;
+                justify-content: flex-end;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 30px;
+                right: 30px;
+            }
+            
             .flex-col-img-center {
                 justify-content: center;
                 display: flex;
@@ -369,11 +381,49 @@
                 .flex-col-card {
                     flex: 1;
                 }
+                .index-img {
+                    padding-bottom: 0;
+                }
+                .flex-col-img {
+                    position: relative;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    /* padding: 30px;
+                    display: block;
+                    width: 100%;*/
+                    /* flex: 1;*/
+                }
                 .flex-col-img-center {
                     display: block;
                 }
-                /* footer {
-                    display: block;
-                    width: 100%;
-                }*/
+            }
+            /*jquery plugin social media------------------------------------------------------------*/
+            
+            .index-img {
+                background: url('../img/daniel gbg copy smaller.jpg') no-repeat center;
+                background-size: cover;
+                position: relative;
+                width: 100%;
+                padding-bottom: 46%;
+            }
+            
+            .like-block {
+                width: 100%;
+                background-color: rgba(128, 128, 128, 0.4);
+                justify-content: center;
+                display: flex;
+            }
+            
+            .like-button {
+                background-color: transparent;
+                cursor: pointer;
+                border: none;
+            }
+            
+            .like-button span {
+                padding: 20px;
+                color: #333;
+                font-size: 40px;
             }

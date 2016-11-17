@@ -142,11 +142,6 @@
                 text-align: center;
                 flex: 1;
             }
-            /*@media (max-width: 400px) {
-                .h1-col {
-                    font-size: 50px;
-                }
-            }*/
             
             h2 {
                 color: #606060;
@@ -172,9 +167,6 @@
                 border-radius: 5px;
                 padding: 15px;
             }
-            /*ul {
-        padding: 20px;
-    }*/
             
             li {
                 /*list-style: none;*/
@@ -207,99 +199,6 @@
                 color: #fff;
             }
             /*flex-grid------------------------------------------------------------------------------------------*/
-            /*  .flex-grid,
-    .flex-grid-2,
-    .flex-grid-3 {
-        display: -webkit-flex;
-        display: flex;
-        flex-flow: row wrap;
-    }
-    
-    .flex-grid {
-        margin: 0 0 20px 0;
-    }
-    
-    .flex-grid .col {
-        -ms-flex: 1;
-        flex: 1;
-        padding: 15px;
-    }
-    
-    .col-img {
-        -ms-flex: 1;
-        flex: 1;
-    }
-    
-    .col-footer {
-        -ms-flex: 1;
-        flex: 1;
-        align-self: flex-end;
-    }
-    
-    .flex-grid-2,
-    .flex-grid-3 {
-        justify-content: space-around;
-    }
-    
-    .flex-grid-2 .col {
-        padding: 20px;
-        width: 48%;
-    }
-    
-    .flex-grid-3 .col {
-        width: 32%;
-        padding: 15px;
-        align-self: stretch;
-    }
-    
-    img {
-        display: block;
-        width: 100%;
-    }
-    
-    @media (max-width: 400px) {
-        .flex-grid,
-        .flex-grid-2,
-        .flex-grid-3 {
-            display: block;
-        }
-        .col,
-        .col-footer,
-        .col-img {
-            width: 100%;
-            margin: 0 0 10px 0;
-        }
-    }*/
-            /*end of flex-grid------------------------------------------------------------------------------------------*/
-            /*new flexbox grid system-----------------------------------------------------------------------------------*/
-            /* .row {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-    }
-    
-    .row-end {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-    
-    .row-column {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    @media screen and (min-width: 500px) {
-        .row,
-        .row-column,
-        .row-end {
-            display: flex;
-            flex-direction: row;
-        }
-    }*/
-            /*NEWEST FUCKING FLEX GRID========================================================================*/
             
             .flex-container {
                 display: flex;
@@ -328,20 +227,17 @@
             }
             
             .flex-col-img {
-                flex-direction: column;
                 display: flex;
+                flex-direction: column;
+                position: relative;
                 justify-content: flex-end;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 30px;
-                right: 30px;
             }
             
             .flex-col-img-center {
                 justify-content: center;
                 display: flex;
                 align-self: center;
+                margin: 0 0 10px 0;
                 -ms-flex: 1;
                 flex: 1;
             }
@@ -369,8 +265,39 @@
                 flex-direction: column;
                 padding: 15px;
             }
+            /*jquery plugin social media------------------------------------------------------------*/
             
-            @media screen and (max-width: 400px) {
+            .like-block {
+                position: absolute;
+                background-color: rgba(128, 128, 128, 0.4);
+                width: 100%;
+                justify-content: center;
+                display: flex;
+            }
+            
+            .like-button {
+                background-color: transparent;
+                cursor: pointer;
+                border: none;
+                display: flex;
+            }
+            
+            .like-button span {
+                padding: 20px;
+                color: #333;
+                font-size: 40px;
+            }
+            
+            .like-button span:hover {
+                color: #fff;
+                transition: ease-in-out 0.4s;
+            }
+            /*media queries================================================================================*/
+            
+            @media (max-width: 480px) {
+                .flex-container {
+                    flex-flow: column wrap;
+                }
                 .h1-col {
                     font-size: 40px;
                 }
@@ -381,49 +308,13 @@
                 .flex-col-card {
                     flex: 1;
                 }
-                .index-img {
-                    padding-bottom: 0;
+                .like-block {
+                    background-color: transparent;
+                    justify-content: space-around;
                 }
-                .flex-col-img {
-                    position: relative;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    /* padding: 30px;
-                    display: block;
-                    width: 100%;*/
-                    /* flex: 1;*/
+                .like-button span {
+                    color: #808080;
+                    padding: 10px;
+                    font-size: 30px;
                 }
-                .flex-col-img-center {
-                    display: block;
-                }
-            }
-            /*jquery plugin social media------------------------------------------------------------*/
-            
-            .index-img {
-                background: url('../img/daniel gbg copy smaller.jpg') no-repeat center;
-                background-size: cover;
-                position: relative;
-                width: 100%;
-                padding-bottom: 46%;
-            }
-            
-            .like-block {
-                width: 100%;
-                background-color: rgba(128, 128, 128, 0.4);
-                justify-content: center;
-                display: flex;
-            }
-            
-            .like-button {
-                background-color: transparent;
-                cursor: pointer;
-                border: none;
-            }
-            
-            .like-button span {
-                padding: 20px;
-                color: #333;
-                font-size: 40px;
             }

@@ -43,12 +43,27 @@
         class_prefix: 's_'
     });
 
-    $('.counter').ShareCounter({
-        url: 'http://www.danieldahlman.se',
-        class_prefix: 'c_',
-        display_counter_from: 0,
-        increment: false
-    });
 })();
 
 /*End of social media =================================================================*/
+/*Expand function =====================================================================*/
+
+
+
+
+var toggle = document.getElementsByClassName('toggle');
+for (var i = 0; i < toggle.length; i++) {
+    toggle[i].addEventListener('click', toggleThis);
+}
+
+function toggleThis(e) {
+
+    var myInfo = document.getElementsByClassName('myInfo');
+    for (var i = 0; i < myInfo.length; i++) {
+        if (myInfo[i].style.display == "none") {
+            myInfo[i].style.display = 'block';
+        } else {
+            myInfo[i].style.display = 'none';
+        }
+    }
+}

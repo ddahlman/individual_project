@@ -241,23 +241,31 @@
                                                         
                                                         .h1-header-about {
                                                             position: absolute;
-                                                            justify-content: center;
-                                                            align-content: center;
-                                                            flex-flow: row wrap;
                                                             display: flex;
-                                                            flex: 1;
+                                                            top: 25%;
                                                         }
                                                         
                                                         .h1-flex-about {
-                                                            font: bold 80px BebasNeue;
-                                                            color: rgba(236, 155, 19, 0.8);
+                                                            font: bold 156px BebasNeue;
+                                                            color: rgba(236, 155, 19, 0.6);
+                                                            text-shadow: 2px 8px 10px #808080;
                                                             flex: 1;
                                                         }
                                                         /*footer---------------------------------------------------------------------------------------------*/
                                                         
                                                         footer {
                                                             flex: 1;
-                                                            background-color: #3d3835;
+                                                            background-image: url('../img/whitewoodBackground.png');
+                                                            color: #fff;
+                                                            border-top: 5px solid #555;
+                                                            box-shadow: 2px 17px 50px #333 inset;
+                                                        }
+                                                        
+                                                        footer li {
+                                                            list-style: none;
+                                                        }
+                                                        
+                                                        footer li a {
                                                             color: #fff;
                                                         }
                                                         /*flex-grid------------------------------------------------------------------------------------------*/
@@ -298,6 +306,7 @@
                                                             flex-direction: column;
                                                             position: relative;
                                                             justify-content: flex-end;
+                                                            align-items: center;
                                                         }
                                                         
                                                         .flex-col-img2 {
@@ -305,6 +314,7 @@
                                                             flex-direction: column;
                                                             position: relative;
                                                             justify-content: flex-end;
+                                                            align-items: center;
                                                             flex: 1;
                                                         }
                                                         
@@ -344,7 +354,6 @@
                                                         
                                                         .like-block {
                                                             position: absolute;
-                                                            background-color: rgba(128, 128, 128, 0.4);
                                                             width: 100%;
                                                             justify-content: center;
                                                             display: flex;
@@ -464,5 +473,6 @@
                                                             }
                                                             .h1-flex-about {
                                                                 font-size: 50px;
+                                                                padding: 0 30px 23px 67px;
                                                             }
                                                         }

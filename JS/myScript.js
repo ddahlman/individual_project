@@ -49,21 +49,35 @@
 /*Expand function =====================================================================*/
 
 
+window.onload = function () {
 
+    var expand = document.querySelectorAll('.expand');
+    var expandArray = Array.prototype.slice.call(expand, 0);
 
-var toggle = document.getElementsByClassName('toggle');
-for (var i = 0; i < toggle.length; i++) {
-    toggle[i].addEventListener('click', toggleThis);
-}
+    expandArray.forEach(function (el) {
+            var button = el.querySelector('a[data-toggle="expand"]'),
+                info = el.querySelector('.myInfo'),
+                plus = button.querySelector('i.fa.fa-plus-circle');
 
-function toggleThis(e) {
+            button.onclick = function (e) {
+                if (!info.hasClass('show')) {
+                    info.classList.add('show');
+                    info.classList.remove('hide');
+                    plus.classList.add('open');
+                    plus.classList.remove('close');
+                    e.preventDefault();
+                } else {
+                    info.classList.remove('show');
+                    info.classList.add('hide');
+                    plus.classList.remove('open');
+                    plus.classList.add('close');
+                    event.preventDefault();
+                }
+            };
+        })
+        /*checking if this element contains this class, creating jquerys "hasclass method"*/
+    Element.prototype.hasClass = function (className) {
+        return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+    };
 
-    var myInfo = document.getElementsByClassName('myInfo');
-    for (var i = 0; i < myInfo.length; i++) {
-        if (myInfo[i].style.display == "none") {
-            myInfo[i].style.display = 'block';
-        } else {
-            myInfo[i].style.display = 'none';
-        }
-    }
-}
+};

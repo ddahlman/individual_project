@@ -179,10 +179,6 @@
                 text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
             }
             
-            ul.myInfo {
-                display: none;
-            }
-            
             .li-education {
                 color: #808080;
                 text-shadow: none;
@@ -190,14 +186,51 @@
             }
             
             a {
-                color: #808080;
+                color: #ec9b13;
                 text-decoration: none;
+                text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
             }
             
             a:hover {
                 text-decoration: none;
-                color: #555;
+                color: #b8860b;
+                text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
             }
+            /*EXPAND FUNCTION=========*/
+            
+            .fa.fa-plus-circle {
+                font-size: 40px;
+                margin-left: 20px;
+            }
+            
+            .open {
+                transform: rotate(-180deg);
+                transition: transform .3s;
+            }
+            
+            .close {
+                transform: rotate(0deg);
+                transition: transform .6s;
+            }
+            
+            .myInfo {
+                max-height: 0;
+                overflow: hidden;
+            }
+            
+            .show {
+                display: block;
+                max-height: 9999px;
+                transform: scaleY(1);
+                transition: 1s ease-in-out;
+            }
+            
+            .hide {
+                max-height: 0;
+                transform: scaleY(1);
+                transition: .6s ease-out;
+            }
+            /*END OF EXPAND===========*/
             /*end of about---------------------------------------------------------------------------------------*/
             /*footer---------------------------------------------------------------------------------------------*/
             
@@ -319,6 +352,18 @@
                 color: #fff;
                 transition: ease-in-out 0.4s;
             }
+            /*CountDown====================================================================================*/
+            
+            .count-down-lia,
+            .count-down-exam {
+                position: absolute;
+                font-family: BebasNeue;
+                background-color: rgba(128, 128, 128, 0.4);
+                width: 100%;
+                justify-content: center;
+                display: flex;
+            }
+            /*CountDown Finnished==========================================================================*/
             /*media queries================================================================================*/
             
             @media (max-width: 800px) {

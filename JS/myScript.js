@@ -106,9 +106,9 @@ function countDownLia() {
     min = (min < 10) ? "0" + min : min;
     sec = (sec < 10) ? "0" + sec : sec;
 
-    document.getElementById("days1").innerText = day;
-    document.getElementById("hours1").innerText = hour;
-    document.getElementById("minutes1").innerText = min;
+    document.getElementById("days1").innerText = day + " " + ":";
+    document.getElementById("hours1").innerText = hour + " " + ":";
+    document.getElementById("minutes1").innerText = min + " " + ":";
     document.getElementById("seconds1").innerText = sec;
 
     setTimeout(countDownLia, 1000);
@@ -137,9 +137,9 @@ function countDownExam() {
     min = (min < 10) ? "0" + min : min;
     sec = (sec < 10) ? "0" + sec : sec;
 
-    document.getElementById("days2").innerText = day;
-    document.getElementById("hours2").innerText = hour;
-    document.getElementById("minutes2").innerText = min;
+    document.getElementById("days2").innerText = day + " " + ":";
+    document.getElementById("hours2").innerText = hour + " " + ":";
+    document.getElementById("minutes2").innerText = min + " " + ":";
     document.getElementById("seconds2").innerText = sec;
 
     setTimeout(countDownExam, 1000);

@@ -39,33 +39,42 @@
                                                         .openmenu .layer {
                                                             top: 0;
                                                         }
-                                                        
-                                                        .grey-background {
-                                                            background-color: #f6f6f6;
-                                                            border-radius: 5px;
-                                                        }
                                                         /*beginning of sidebar-------------------------------------------------------------------------------*/
                                                         
                                                         .hamburger {
-                                                            cursor: pointer;
-                                                            font-size: 40px;
-                                                            color: #ec9b13;
                                                             position: fixed;
                                                             margin: 15px;
                                                             box-shadow: rgba(0, 0, 0, 0.2) 0 0 23px inset;
                                                             border-radius: 13px;
                                                             z-index: 50;
+                                                            text-shadow: 2px 2px 5px #000;
+                                                        }
+                                                        
+                                                        .hamburger,
+                                                        .sidenav a {
+                                                            color: #ec9b13;
                                                         }
                                                         
                                                         .hamburger:hover {
                                                             color: #555;
                                                         }
                                                         
+                                                        .hamburger,
+                                                        .like-button span,
+                                                        .fa.fa-plus-circle,
+                                                        .sidenav .closebtn,
+                                                        .like-button span.nr2 {
+                                                            font-size: 40px;
+                                                        }
+                                                        
                                                         .sidenav .closebtn {
-                                                            top: 0;
                                                             right: 25px;
                                                             position: absolute;
-                                                            font-size: 40px;
+                                                        }
+                                                        
+                                                        .sidenav,
+                                                        .sidenav .closebtn {
+                                                            top: 0;
                                                         }
                                                         
                                                         .sidenav {
@@ -73,7 +82,6 @@
                                                             width: 0;
                                                             position: fixed;
                                                             z-index: 200;
-                                                            top: 0;
                                                             left: 0;
                                                             background-color: rgba(255, 255, 255, 0.8);
                                                             overflow-x: hidden;
@@ -81,13 +89,16 @@
                                                             padding-top: 60px;
                                                         }
                                                         
+                                                        .sidenav a,
+                                                        img {
+                                                            display: block;
+                                                        }
+                                                        
                                                         .sidenav a {
                                                             text-shadow: 2px 2px 2px #333;
                                                             text-decoration: none;
                                                             font-size: 25px;
-                                                            color: #ec9b13;
-                                                            display: block;
-                                                            padding: 15px 0 15px 50px;
+                                                            padding: 10px 15px 15px 50px;
                                                             transition: 0.5s;
                                                         }
                                                         
@@ -103,29 +114,23 @@
                                                             font-size: 54px;
                                                         }
                                                         
-                                                        .h1-index-yellow {
-                                                            color: #ec9b13;
-                                                        }
-                                                        
                                                         .index-profile {
                                                             height: 250px;
                                                             width: 250px;
                                                             border-radius: 50%;
                                                         }
                                                         
-                                                        .yellow {
-                                                            background-color: #ec9b13;
-                                                        }
-                                                        
                                                         .p-contact {
                                                             align-self: center;
                                                         }
+                                                        
+                                                        .h1-index-yellow,
+                                                        .h1-about {
+                                                            color: #ec9b13;
+                                                            text-shadow: 2px 2px 5px #555;
+                                                        }
                                                         /*end of index---------------------------------------------------------------------------------------*/
                                                         /*resume page-----------------------------------------------------------------------------------------*/
-                                                        
-                                                        hr {
-                                                            border: solid 2px #fff;
-                                                        }
                                                         
                                                         .hr {
                                                             margin-left: 0;
@@ -136,17 +141,19 @@
                                                         
                                                         h1,
                                                         h2,
-                                                        p {
+                                                        p,
+                                                        li {
                                                             font-family: BebasNeue;
                                                         }
                                                         
-                                                        .h1-about {
-                                                            color: #ec9b13;
-                                                            text-shadow: 1px 1px 1px #555;
+                                                        .h1-col,
+                                                        .li-education,
+                                                        p,
+                                                        .like-button span.nr2 {
+                                                            color: #808080;
                                                         }
                                                         
                                                         .h1-col {
-                                                            color: #808080;
                                                             font-size: 70px;
                                                             text-align: center;
                                                             flex: 1;
@@ -158,53 +165,54 @@
                                                         
                                                         p {
                                                             font-size: 120%;
-                                                            color: #808080;
-                                                        }
-                                                        
-                                                        .span-gap {
-                                                            width: 20%;
                                                         }
                                                         
                                                         .grey-pants {
                                                             background-image: url('../img/greyPantsBackground.png');
+                                                        }
+                                                        
+                                                        .grey-pants,
+                                                        .project {
                                                             border-radius: 5px;
                                                         }
                                                         
                                                         .project {
                                                             box-shadow: 0 5px 10px;
-                                                            border: none;
-                                                            border-radius: 5px;
                                                             padding: 15px;
                                                         }
                                                         
+                                                        .project,
+                                                        .like-button {
+                                                            border: none;
+                                                        }
+                                                        
                                                         li {
-                                                            /*list-style: none;*/
-                                                            font: 20px BebasNeue;
+                                                            font-size: 20px;
                                                             color: #fff;
                                                             text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
                                                         }
                                                         
                                                         .li-education {
-                                                            color: #808080;
                                                             text-shadow: none;
                                                             list-style: none;
                                                         }
                                                         
                                                         a {
                                                             color: #ec9b13;
+                                                        }
+                                                        
+                                                        a,
+                                                        a:hover {
                                                             text-decoration: none;
                                                             text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
                                                         }
                                                         
                                                         a:hover {
-                                                            text-decoration: none;
                                                             color: #b8860b;
-                                                            text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
                                                         }
                                                         /*EXPAND FUNCTION=========*/
                                                         
                                                         .fa.fa-plus-circle {
-                                                            font-size: 40px;
                                                             margin-left: 20px;
                                                         }
                                                         
@@ -226,25 +234,30 @@
                                                         .show {
                                                             display: block;
                                                             max-height: 9999px;
-                                                            transform: scaleY(1);
                                                             transition: 1s ease-in-out;
+                                                        }
+                                                        
+                                                        .show,
+                                                        .hide {
+                                                            transform: scaleY(1);
                                                         }
                                                         
                                                         .hide {
                                                             max-height: 0;
-                                                            transform: scaleY(1);
                                                             transition: .6s ease-out;
                                                         }
                                                         /*END OF EXPAND===========*/
                                                         /*end of resume.html---------------------------------------------------------------------------------*/
                                                         /*Start of about page--------------------------------------------------------------------------------*/
                                                         
+                                                        .h1-header-class,
                                                         .h1-header-about {
                                                             position: absolute;
                                                             display: flex;
                                                             top: 25%;
                                                         }
                                                         
+                                                        .h1-flex-class,
                                                         .h1-flex-about {
                                                             font: bold 156px BebasNeue;
                                                             color: rgba(236, 155, 19, 0.6);
@@ -256,88 +269,103 @@
                                                         footer {
                                                             flex: 1;
                                                             background-image: url('../img/whitewoodBackground.png');
-                                                            color: #fff;
                                                             border-top: 5px solid #555;
                                                             box-shadow: 2px 17px 50px #333 inset;
+                                                        }
+                                                        
+                                                        footer,
+                                                        footer li a,
+                                                        .like-button span:hover {
+                                                            color: #fff;
                                                         }
                                                         
                                                         footer li {
                                                             list-style: none;
                                                         }
-                                                        
-                                                        footer li a {
-                                                            color: #fff;
-                                                        }
                                                         /*flex-grid------------------------------------------------------------------------------------------*/
                                                         
+                                                        .flex-container,
+                                                        .flex-row,
+                                                        .flex-row-2,
+                                                        .flex-col-img,
+                                                        .flex-col-img2,
+                                                        .flex-col-img-center,
+                                                        .flex-col-card,
+                                                        .flex-footer,
+                                                        .like-block,
+                                                        .like-button {
+                                                            display: flex;
+                                                        }
+                                                        
                                                         .flex-container {
-                                                            display: flex;
                                                             flex-flow: row wrap;
                                                         }
                                                         
-                                                        .flex-container-margin {
-                                                            display: flex;
-                                                            flex-flow: row wrap;
-                                                        }
-                                                        
-                                                        .flex-row {
-                                                            display: flex;
+                                                        .flex-row,
+                                                        .flex-row-2 {
                                                             flex-wrap: wrap;
+                                                        }
+                                                        
+                                                        .flex-row,
+                                                        .flex-col-card {
                                                             margin: 0 10px 10px 10px;
                                                         }
                                                         
-                                                        .flex-col {
-                                                            flex: 1;
+                                                        .flex-row-2,
+                                                        .flex-col-img,
+                                                        .flex-col-img2,
+                                                        .flex-col-card,
+                                                        .flex-footer {
+                                                            flex-direction: column;
+                                                        }
+                                                        
+                                                        .flex-row-2,
+                                                        .like-block {
+                                                            justify-content: center;
+                                                        }
+                                                        
+                                                        .flex-row-2 {
+                                                            margin: 0 20% 10px 20%;
+                                                        }
+                                                        
+                                                        .flex-col,
+                                                        .flex-col-2,
+                                                        .flex-col-card,
+                                                        .flex-footer {
                                                             padding: 15px;
                                                         }
                                                         
-                                                        .flex-col-2 {
-                                                            flex: 2;
-                                                            padding: 15px;
-                                                        }
-                                                        
-                                                        .flex-col-center-cl {
-                                                            flex: 1;
-                                                            align-self: center;
-                                                        }
-                                                        
-                                                        .flex-col-img {
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                            position: relative;
-                                                            justify-content: flex-end;
-                                                            align-items: center;
-                                                        }
-                                                        
-                                                        .flex-col-img2 {
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                            position: relative;
-                                                            justify-content: flex-end;
-                                                            align-items: center;
-                                                            flex: 1;
-                                                        }
-                                                        
+                                                        .flex-col,
+                                                        .flex-col-center-cl,
+                                                        .flex-col-img2,
                                                         .flex-col-img-center {
-                                                            display: flex;
-                                                            justify-content: space-around;
-                                                            align-self: center;
-                                                            margin: 0 0 10px 0;
                                                             -ms-flex: 1;
                                                             flex: 1;
                                                         }
                                                         
-                                                        img {
-                                                            display: block;
-                                                            width: 100%;
+                                                        .flex-col-2 {
+                                                            flex: 2;
+                                                        }
+                                                        
+                                                        .flex-col-center-cl,
+                                                        .flex-col-img-center {
+                                                            align-self: center;
+                                                        }
+                                                        
+                                                        .flex-col-img,
+                                                        .flex-col-img2 {
+                                                            position: relative;
+                                                            justify-content: flex-end;
+                                                            align-items: center;
+                                                        }
+                                                        
+                                                        .flex-col-img-center {
+                                                            justify-content: space-around;
+                                                            margin: 0 0 10px 0;
                                                         }
                                                         
                                                         .flex-col-card {
-                                                            display: flex;
                                                             flex: 1 0 30%;
-                                                            flex-direction: column;
-                                                            margin: 0 10px 10px 10px;
-                                                            padding: 15px;
                                                         }
                                                         
                                                         .flex-col-card p {
@@ -345,41 +373,38 @@
                                                         }
                                                         
                                                         .flex-footer {
-                                                            display: flex;
                                                             flex: 0 1 290px;
-                                                            flex-direction: column;
-                                                            padding: 15px;
                                                         }
                                                         /*jquery plugin social media------------------------------------------------------------*/
                                                         
+                                                        .like-block,
+                                                        img {
+                                                            width: 100%;
+                                                        }
+                                                        
                                                         .like-block {
                                                             position: absolute;
-                                                            width: 100%;
-                                                            justify-content: center;
-                                                            display: flex;
+                                                        }
+                                                        
+                                                        .like-button,
+                                                        .hamburger {
+                                                            cursor: pointer;
                                                         }
                                                         
                                                         .like-button {
                                                             background-color: transparent;
-                                                            cursor: pointer;
-                                                            border: none;
-                                                            display: flex;
                                                         }
                                                         
                                                         .like-button span {
-                                                            padding: 20px;
                                                             color: #333;
-                                                            font-size: 40px;
                                                         }
                                                         
+                                                        .like-button span,
                                                         .like-button span.nr2 {
                                                             padding: 20px;
-                                                            color: #808080;
-                                                            font-size: 40px;
                                                         }
                                                         
                                                         .like-button span:hover {
-                                                            color: #fff;
                                                             transition: ease-in-out 0.4s;
                                                         }
                                                         /*CountDown====================================================================================*/
@@ -392,9 +417,9 @@
                                                             border: 2px solid;
                                                             border-radius: 10px;
                                                             padding: 10px;
-                                                            box-shadow: 2px 2px 10px #555;
+                                                            box-shadow: 2px 2px 10px #000;
                                                             background-color: rgba(255, 255, 255, 0.3);
-                                                            /* text-shadow: 2px 2px #000;*/
+                                                            width: 665px;
                                                         }
                                                         
                                                         .count-down-lia,
@@ -438,8 +463,22 @@
                                                             .flex-col-img-center {
                                                                 flex-direction: column;
                                                             }
+                                                            .h1-header-about {
+                                                                flex-direction: row;
+                                                                align-self: center;
+                                                                top: 0;
+                                                            }
+                                                            .h1-flex-class {
+                                                                font-size: 100px;
+                                                            }
+                                                            tbody {
+                                                                width: 44%;
+                                                                text-shadow: 1px 1px #000;
+                                                                padding: 0;
+                                                            }
                                                             .digits {
-                                                                font-size: 30px;
+                                                                font-size: 45px;
+                                                                text-shadow: 1px 1px #555;
                                                             }
                                                             .time-text,
                                                             .time-text1 {
@@ -472,7 +511,36 @@
                                                                 font-size: 30px;
                                                             }
                                                             .h1-flex-about {
+                                                                font-size: 70px;
+                                                                padding: 0;
+                                                            }
+                                                            .count-down-lia {
+                                                                top: 10%;
+                                                            }
+                                                            .count-down-exam {
+                                                                top: 41%;
+                                                            }
+                                                            tbody {
+                                                                width: 55%;
+                                                                text-shadow: 1px 1px #000;
+                                                                padding: 0;
+                                                            }
+                                                            .digits {
+                                                                font-size: 15px;
+                                                                text-shadow: 1px 1px #555;
+                                                            }
+                                                            .time-text,
+                                                            .time-text1 {
+                                                                font-size: 7px;
+                                                            }
+                                                            .flex-row-2 {
+                                                                margin: 10px;
+                                                            }
+                                                            .h1-header-about {
+                                                                align-self: center;
+                                                                top: 0;
+                                                            }
+                                                            .h1-flex-class {
                                                                 font-size: 50px;
-                                                                padding: 0 30px 23px 67px;
                                                             }
                                                         }

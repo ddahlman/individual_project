@@ -1,399 +1,468 @@
-            @font-face {
-                font-family: 'BebasNeue';
-                src: url('../font/BebasNeue.otf') format('opentype');
-            }
-            
-            * {
-                box-sizing: border-box;
-            }
-            
-            html {
-                overflow-y: scroll;
-            }
-            
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-                min-height: 100vh;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                display: flex;
-                flex-direction: column;
-            }
-            
-            .layer {
-                position: fixed;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                -webkit-transition: all ease-in .5s;
-                transition: all ease-in .5s;
-                z-index: 100;
-            }
-            
-            .openmenu .layer {
-                top: 0;
-            }
-            
-            .grey-background {
-                background-color: #f6f6f6;
-                border-radius: 5px;
-            }
-            /*beginning of sidebar-------------------------------------------------------------------------------*/
-            
-            .hamburger {
-                cursor: pointer;
-                font-size: 40px;
-                color: #ec9b13;
-                position: fixed;
-                margin: 15px;
-                box-shadow: rgba(0, 0, 0, 0.2) 0 0 23px inset;
-                border-radius: 13px;
-                z-index: 50;
-            }
-            
-            .hamburger:hover {
-                color: #555;
-            }
-            
-            .sidenav .closebtn {
-                top: 0;
-                right: 25px;
-                position: absolute;
-                font-size: 40px;
-            }
-            
-            .sidenav {
-                height: 100%;
-                width: 0;
-                position: fixed;
-                z-index: 200;
-                top: 0;
-                left: 0;
-                background-color: rgba(255, 255, 255, 0.8);
-                overflow-x: hidden;
-                transition: 0.3s;
-                padding-top: 60px;
-            }
-            
-            .sidenav a {
-                text-shadow: 2px 2px 2px #333;
-                text-decoration: none;
-                font-size: 25px;
-                color: #ec9b13;
-                display: block;
-                padding: 15px 0 15px 50px;
-                transition: 0.5s;
-            }
-            
-            a.page-links:hover {
-                color: #fff;
-                background-color: rgba(255, 255, 255, 0.3);
-            }
-            /*end of sidebar--------------------------------------------------------------------------------------*/
-            /*index page------------------------------------------------------------------------------------------*/
-            
-            .h1-index-grey {
-                color: #555;
-                font-size: 54px;
-            }
-            
-            .h1-index-yellow {
-                color: #ec9b13;
-            }
-            
-            .index-profile {
-                height: 250px;
-                width: 250px;
-                border-radius: 50%;
-            }
-            
-            .yellow {
-                background-color: #ec9b13;
-            }
-            
-            .p-contact {
-                align-self: center;
-            }
-            /*end of index---------------------------------------------------------------------------------------*/
-            /*about page-----------------------------------------------------------------------------------------*/
-            
-            hr {
-                border: solid 2px #fff;
-            }
-            
-            .hr {
-                margin-left: 0;
-                margin-right: 0;
-                border: solid 2px #ec9b13;
-                box-shadow: 2px 2px rgba(128, 128, 128, 0.4);
-            }
-            
-            h1,
-            h2,
-            p {
-                font-family: BebasNeue;
-            }
-            
-            .h1-about {
-                color: #ec9b13;
-                text-shadow: 1px 1px 1px #555;
-            }
-            
-            .h1-col {
-                color: #808080;
-                font-size: 70px;
-                text-align: center;
-                flex: 1;
-            }
-            
-            h2 {
-                color: #606060;
-            }
-            
-            p {
-                font-size: 120%;
-                color: #808080;
-            }
-            
-            .span-gap {
-                width: 20%;
-            }
-            
-            .grey-pants {
-                background-image: url('../img/greyPantsBackground.png');
-                border-radius: 5px;
-            }
-            
-            .project {
-                box-shadow: 0 5px 10px;
-                border: none;
-                border-radius: 5px;
-                padding: 15px;
-            }
-            
-            li {
-                /*list-style: none;*/
-                font: 20px BebasNeue;
-                color: #fff;
-                text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
-            }
-            
-            .li-education {
-                color: #808080;
-                text-shadow: none;
-                list-style: none;
-            }
-            
-            a {
-                color: #ec9b13;
-                text-decoration: none;
-                text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
-            }
-            
-            a:hover {
-                text-decoration: none;
-                color: #b8860b;
-                text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
-            }
-            /*EXPAND FUNCTION=========*/
-            
-            .fa.fa-plus-circle {
-                font-size: 40px;
-                margin-left: 20px;
-            }
-            
-            .open {
-                transform: rotate(-180deg);
-                transition: transform .3s;
-            }
-            
-            .close {
-                transform: rotate(0deg);
-                transition: transform .6s;
-            }
-            
-            .myInfo {
-                max-height: 0;
-                overflow: hidden;
-            }
-            
-            .show {
-                display: block;
-                max-height: 9999px;
-                transform: scaleY(1);
-                transition: 1s ease-in-out;
-            }
-            
-            .hide {
-                max-height: 0;
-                transform: scaleY(1);
-                transition: .6s ease-out;
-            }
-            /*END OF EXPAND===========*/
-            /*end of about---------------------------------------------------------------------------------------*/
-            /*footer---------------------------------------------------------------------------------------------*/
-            
-            footer {
-                flex: 1;
-                background-color: #3d3835;
-                color: #fff;
-            }
-            /*flex-grid------------------------------------------------------------------------------------------*/
-            
-            .flex-container {
-                display: flex;
-                flex-flow: row wrap;
-            }
-            
-            .flex-container-margin {
-                display: flex;
-                flex-flow: row wrap;
-            }
-            
-            .flex-row {
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0 10px 10px 10px;
-            }
-            
-            .flex-col {
-                flex: 1;
-                padding: 15px;
-            }
-            
-            .flex-col-2 {
-                flex: 2;
-                padding: 15px;
-            }
-            
-            .flex-col-center-cl {
-                flex: 1;
-                align-self: center;
-            }
-            
-            .flex-col-img {
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                justify-content: flex-end;
-            }
-            
-            .flex-col-img2 {
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                justify-content: flex-end;
-                flex: 1;
-            }
-            
-            .flex-col-img-center {
-                display: flex;
-                justify-content: space-around;
-                align-self: center;
-                margin: 0 0 10px 0;
-                -ms-flex: 1;
-                flex: 1;
-            }
-            
-            img {
-                display: block;
-                width: 100%;
-            }
-            
-            .flex-col-card {
-                display: flex;
-                flex: 1 0 30%;
-                flex-direction: column;
-                margin: 0 10px 10px 10px;
-                padding: 15px;
-            }
-            
-            .flex-col-card p {
-                flex: 1 0 auto;
-            }
-            
-            .flex-footer {
-                display: flex;
-                flex: 0 1 290px;
-                flex-direction: column;
-                padding: 15px;
-            }
-            /*jquery plugin social media------------------------------------------------------------*/
-            
-            .like-block {
-                position: absolute;
-                background-color: rgba(128, 128, 128, 0.4);
-                width: 100%;
-                justify-content: center;
-                display: flex;
-            }
-            
-            .like-button {
-                background-color: transparent;
-                cursor: pointer;
-                border: none;
-                display: flex;
-            }
-            
-            .like-button span {
-                padding: 20px;
-                color: #333;
-                font-size: 40px;
-            }
-            
-            .like-button span.nr2 {
-                padding: 20px;
-                color: #808080;
-                font-size: 40px;
-            }
-            
-            .like-button span:hover {
-                color: #fff;
-                transition: ease-in-out 0.4s;
-            }
-            /*CountDown====================================================================================*/
-            
-            .count-down-lia,
-            .count-down-exam {
-                position: absolute;
-                font-family: BebasNeue;
-                background-color: rgba(128, 128, 128, 0.4);
-                width: 100%;
-                justify-content: center;
-                display: flex;
-            }
-            /*CountDown Finnished==========================================================================*/
-            /*media queries================================================================================*/
-            
-            @media (max-width: 800px) {
-                .flex-col-img-center {
-                    flex-direction: column;
-                }
-            }
-            
-            @media (max-width: 480px) {
-                .flex-container {
-                    flex-flow: column wrap;
-                }
-                .h1-col {
-                    font-size: 40px;
-                }
-                .flex-row {
-                    flex-direction: column;
-                    margin: 0 0 10px 0;
-                }
-                .flex-col-card {
-                    flex: 1;
-                }
-                .like-block {
-                    background-color: transparent;
-                    justify-content: space-around;
-                }
-                .like-button span,
-                .like-button span.nr2 {
-                    color: #808080;
-                    padding: 10px;
-                    font-size: 30px;
-                }
-            }
+                                                        @font-face {
+                                                            font-family: 'BebasNeue';
+                                                            src: url('../font/BebasNeue.otf') format('opentype');
+                                                        }
+                                                        
+                                                        @font-face {
+                                                            font-family: 'digital-7';
+                                                            src: url('../font/digital-7.ttf') format('opentype');
+                                                        }
+                                                        
+                                                        * {
+                                                            box-sizing: border-box;
+                                                        }
+                                                        
+                                                        html {
+                                                            overflow-y: scroll;
+                                                        }
+                                                        
+                                                        html,
+                                                        body {
+                                                            margin: 0;
+                                                            padding: 0;
+                                                            min-height: 100vh;
+                                                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                        }
+                                                        
+                                                        .layer {
+                                                            position: fixed;
+                                                            left: 0;
+                                                            right: 0;
+                                                            bottom: 0;
+                                                            -webkit-transition: all ease-in .5s;
+                                                            transition: all ease-in .5s;
+                                                            z-index: 100;
+                                                        }
+                                                        
+                                                        .openmenu .layer {
+                                                            top: 0;
+                                                        }
+                                                        
+                                                        .grey-background {
+                                                            background-color: #f6f6f6;
+                                                            border-radius: 5px;
+                                                        }
+                                                        /*beginning of sidebar-------------------------------------------------------------------------------*/
+                                                        
+                                                        .hamburger {
+                                                            cursor: pointer;
+                                                            font-size: 40px;
+                                                            color: #ec9b13;
+                                                            position: fixed;
+                                                            margin: 15px;
+                                                            box-shadow: rgba(0, 0, 0, 0.2) 0 0 23px inset;
+                                                            border-radius: 13px;
+                                                            z-index: 50;
+                                                        }
+                                                        
+                                                        .hamburger:hover {
+                                                            color: #555;
+                                                        }
+                                                        
+                                                        .sidenav .closebtn {
+                                                            top: 0;
+                                                            right: 25px;
+                                                            position: absolute;
+                                                            font-size: 40px;
+                                                        }
+                                                        
+                                                        .sidenav {
+                                                            height: 100%;
+                                                            width: 0;
+                                                            position: fixed;
+                                                            z-index: 200;
+                                                            top: 0;
+                                                            left: 0;
+                                                            background-color: rgba(255, 255, 255, 0.8);
+                                                            overflow-x: hidden;
+                                                            transition: 0.3s;
+                                                            padding-top: 60px;
+                                                        }
+                                                        
+                                                        .sidenav a {
+                                                            text-shadow: 2px 2px 2px #333;
+                                                            text-decoration: none;
+                                                            font-size: 25px;
+                                                            color: #ec9b13;
+                                                            display: block;
+                                                            padding: 15px 0 15px 50px;
+                                                            transition: 0.5s;
+                                                        }
+                                                        
+                                                        a.page-links:hover {
+                                                            color: #fff;
+                                                            background-color: rgba(255, 255, 255, 0.3);
+                                                        }
+                                                        /*end of sidebar--------------------------------------------------------------------------------------*/
+                                                        /*index page------------------------------------------------------------------------------------------*/
+                                                        
+                                                        .h1-index-grey {
+                                                            color: #555;
+                                                            font-size: 54px;
+                                                        }
+                                                        
+                                                        .h1-index-yellow {
+                                                            color: #ec9b13;
+                                                        }
+                                                        
+                                                        .index-profile {
+                                                            height: 250px;
+                                                            width: 250px;
+                                                            border-radius: 50%;
+                                                        }
+                                                        
+                                                        .yellow {
+                                                            background-color: #ec9b13;
+                                                        }
+                                                        
+                                                        .p-contact {
+                                                            align-self: center;
+                                                        }
+                                                        /*end of index---------------------------------------------------------------------------------------*/
+                                                        /*resume page-----------------------------------------------------------------------------------------*/
+                                                        
+                                                        hr {
+                                                            border: solid 2px #fff;
+                                                        }
+                                                        
+                                                        .hr {
+                                                            margin-left: 0;
+                                                            margin-right: 0;
+                                                            border: solid 2px #ec9b13;
+                                                            box-shadow: 2px 2px rgba(128, 128, 128, 0.4);
+                                                        }
+                                                        
+                                                        h1,
+                                                        h2,
+                                                        p {
+                                                            font-family: BebasNeue;
+                                                        }
+                                                        
+                                                        .h1-about {
+                                                            color: #ec9b13;
+                                                            text-shadow: 1px 1px 1px #555;
+                                                        }
+                                                        
+                                                        .h1-col {
+                                                            color: #808080;
+                                                            font-size: 70px;
+                                                            text-align: center;
+                                                            flex: 1;
+                                                        }
+                                                        
+                                                        h2 {
+                                                            color: #606060;
+                                                        }
+                                                        
+                                                        p {
+                                                            font-size: 120%;
+                                                            color: #808080;
+                                                        }
+                                                        
+                                                        .span-gap {
+                                                            width: 20%;
+                                                        }
+                                                        
+                                                        .grey-pants {
+                                                            background-image: url('../img/greyPantsBackground.png');
+                                                            border-radius: 5px;
+                                                        }
+                                                        
+                                                        .project {
+                                                            box-shadow: 0 5px 10px;
+                                                            border: none;
+                                                            border-radius: 5px;
+                                                            padding: 15px;
+                                                        }
+                                                        
+                                                        li {
+                                                            /*list-style: none;*/
+                                                            font: 20px BebasNeue;
+                                                            color: #fff;
+                                                            text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
+                                                        }
+                                                        
+                                                        .li-education {
+                                                            color: #808080;
+                                                            text-shadow: none;
+                                                            list-style: none;
+                                                        }
+                                                        
+                                                        a {
+                                                            color: #ec9b13;
+                                                            text-decoration: none;
+                                                            text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
+                                                        }
+                                                        
+                                                        a:hover {
+                                                            text-decoration: none;
+                                                            color: #b8860b;
+                                                            text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
+                                                        }
+                                                        /*EXPAND FUNCTION=========*/
+                                                        
+                                                        .fa.fa-plus-circle {
+                                                            font-size: 40px;
+                                                            margin-left: 20px;
+                                                        }
+                                                        
+                                                        .open {
+                                                            transform: rotate(-180deg);
+                                                            transition: transform .3s;
+                                                        }
+                                                        
+                                                        .close {
+                                                            transform: rotate(0deg);
+                                                            transition: transform .6s;
+                                                        }
+                                                        
+                                                        .myInfo {
+                                                            max-height: 0;
+                                                            overflow: hidden;
+                                                        }
+                                                        
+                                                        .show {
+                                                            display: block;
+                                                            max-height: 9999px;
+                                                            transform: scaleY(1);
+                                                            transition: 1s ease-in-out;
+                                                        }
+                                                        
+                                                        .hide {
+                                                            max-height: 0;
+                                                            transform: scaleY(1);
+                                                            transition: .6s ease-out;
+                                                        }
+                                                        /*END OF EXPAND===========*/
+                                                        /*end of resume.html---------------------------------------------------------------------------------*/
+                                                        /*Start of about page--------------------------------------------------------------------------------*/
+                                                        
+                                                        .h1-header-about {
+                                                            position: absolute;
+                                                            justify-content: center;
+                                                            align-content: center;
+                                                            flex-flow: row wrap;
+                                                            display: flex;
+                                                            flex: 1;
+                                                        }
+                                                        
+                                                        .h1-flex-about {
+                                                            font: bold 80px BebasNeue;
+                                                            color: rgba(236, 155, 19, 0.8);
+                                                            flex: 1;
+                                                        }
+                                                        /*footer---------------------------------------------------------------------------------------------*/
+                                                        
+                                                        footer {
+                                                            flex: 1;
+                                                            background-color: #3d3835;
+                                                            color: #fff;
+                                                        }
+                                                        /*flex-grid------------------------------------------------------------------------------------------*/
+                                                        
+                                                        .flex-container {
+                                                            display: flex;
+                                                            flex-flow: row wrap;
+                                                        }
+                                                        
+                                                        .flex-container-margin {
+                                                            display: flex;
+                                                            flex-flow: row wrap;
+                                                        }
+                                                        
+                                                        .flex-row {
+                                                            display: flex;
+                                                            flex-wrap: wrap;
+                                                            margin: 0 10px 10px 10px;
+                                                        }
+                                                        
+                                                        .flex-col {
+                                                            flex: 1;
+                                                            padding: 15px;
+                                                        }
+                                                        
+                                                        .flex-col-2 {
+                                                            flex: 2;
+                                                            padding: 15px;
+                                                        }
+                                                        
+                                                        .flex-col-center-cl {
+                                                            flex: 1;
+                                                            align-self: center;
+                                                        }
+                                                        
+                                                        .flex-col-img {
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            position: relative;
+                                                            justify-content: flex-end;
+                                                        }
+                                                        
+                                                        .flex-col-img2 {
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            position: relative;
+                                                            justify-content: flex-end;
+                                                            flex: 1;
+                                                        }
+                                                        
+                                                        .flex-col-img-center {
+                                                            display: flex;
+                                                            justify-content: space-around;
+                                                            align-self: center;
+                                                            margin: 0 0 10px 0;
+                                                            -ms-flex: 1;
+                                                            flex: 1;
+                                                        }
+                                                        
+                                                        img {
+                                                            display: block;
+                                                            width: 100%;
+                                                        }
+                                                        
+                                                        .flex-col-card {
+                                                            display: flex;
+                                                            flex: 1 0 30%;
+                                                            flex-direction: column;
+                                                            margin: 0 10px 10px 10px;
+                                                            padding: 15px;
+                                                        }
+                                                        
+                                                        .flex-col-card p {
+                                                            flex: 1 0 auto;
+                                                        }
+                                                        
+                                                        .flex-footer {
+                                                            display: flex;
+                                                            flex: 0 1 290px;
+                                                            flex-direction: column;
+                                                            padding: 15px;
+                                                        }
+                                                        /*jquery plugin social media------------------------------------------------------------*/
+                                                        
+                                                        .like-block {
+                                                            position: absolute;
+                                                            background-color: rgba(128, 128, 128, 0.4);
+                                                            width: 100%;
+                                                            justify-content: center;
+                                                            display: flex;
+                                                        }
+                                                        
+                                                        .like-button {
+                                                            background-color: transparent;
+                                                            cursor: pointer;
+                                                            border: none;
+                                                            display: flex;
+                                                        }
+                                                        
+                                                        .like-button span {
+                                                            padding: 20px;
+                                                            color: #333;
+                                                            font-size: 40px;
+                                                        }
+                                                        
+                                                        .like-button span.nr2 {
+                                                            padding: 20px;
+                                                            color: #808080;
+                                                            font-size: 40px;
+                                                        }
+                                                        
+                                                        .like-button span:hover {
+                                                            color: #fff;
+                                                            transition: ease-in-out 0.4s;
+                                                        }
+                                                        /*CountDown====================================================================================*/
+                                                        
+                                                        table {
+                                                            border-spacing: 15px 0;
+                                                        }
+                                                        
+                                                        tbody {
+                                                            border: 2px solid;
+                                                            border-radius: 10px;
+                                                            padding: 10px;
+                                                            box-shadow: 2px 2px 10px #555;
+                                                            background-color: rgba(255, 255, 255, 0.3);
+                                                            /* text-shadow: 2px 2px #000;*/
+                                                        }
+                                                        
+                                                        .count-down-lia,
+                                                        .count-down-exam {
+                                                            position: absolute;
+                                                            font: 100px BebasNeue;
+                                                            color: rgba(255, 255, 255, 0.8);
+                                                            width: 100%;
+                                                            display: flex;
+                                                            justify-content: flex-end;
+                                                            right: 5%;
+                                                        }
+                                                        
+                                                        .count-down-lia {
+                                                            top: 20%;
+                                                        }
+                                                        
+                                                        .count-down-exam {
+                                                            top: 48%;
+                                                        }
+                                                        
+                                                        .time-text,
+                                                        .time-text1 {
+                                                            color: rgba(255, 255, 255, 0.8);
+                                                            font-size: 15px;
+                                                        }
+                                                        
+                                                        .time-text {
+                                                            text-align: center;
+                                                        }
+                                                        
+                                                        .digits {
+                                                            font: 100px digital-7;
+                                                            color: rgba(236, 155, 19, 0.8);
+                                                            text-shadow: 2px 2px #555;
+                                                        }
+                                                        /*CountDown Finnished==========================================================================*/
+                                                        /*media queries================================================================================*/
+                                                        
+                                                        @media (max-width: 800px) {
+                                                            .flex-col-img-center {
+                                                                flex-direction: column;
+                                                            }
+                                                            .digits {
+                                                                font-size: 30px;
+                                                            }
+                                                            .time-text,
+                                                            .time-text1 {
+                                                                font-size: 10px;
+                                                            }
+                                                        }
+                                                        
+                                                        @media (max-width: 480px) {
+                                                            .flex-container {
+                                                                flex-flow: column wrap;
+                                                            }
+                                                            .h1-col {
+                                                                font-size: 40px;
+                                                            }
+                                                            .flex-row {
+                                                                flex-direction: column;
+                                                                margin: 0 0 10px 0;
+                                                            }
+                                                            .flex-col-card {
+                                                                flex: 1;
+                                                            }
+                                                            .like-block {
+                                                                background-color: transparent;
+                                                                justify-content: space-around;
+                                                            }
+                                                            .like-button span,
+                                                            .like-button span.nr2 {
+                                                                color: #808080;
+                                                                padding: 10px;
+                                                                font-size: 30px;
+                                                            }
+                                                            .h1-flex-about {
+                                                                font-size: 50px;
+                                                            }
+                                                        }

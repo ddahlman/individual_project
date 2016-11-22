@@ -160,7 +160,6 @@
                                                             font-size: 70px;
                                                             text-align: center;
                                                             -webkit-box-flex: 1;
-                                                            /*width: 20%;*/
                                                             -webkit-flex: 1;
                                                             -ms-flex: 1;
                                                             flex: 1;
@@ -360,7 +359,6 @@
                                                         .flex-col-img2,
                                                         .flex-col-img-center {
                                                             -webkit-box-flex: 1;
-                                                            /*width: 20%;*/
                                                             -webkit-flex: 1;
                                                             -ms-flex: 1;
                                                             flex: 1;
@@ -385,7 +383,6 @@
                                                         
                                                         .flex-col-card {
                                                             -webkit-box-flex: 1;
-                                                            /*width: 20%;*/
                                                             -webkit-flex: 1 0 30%;
                                                             -ms-flex: 1 0 30%;
                                                             flex: 1 0 30%;
@@ -393,7 +390,6 @@
                                                         
                                                         .flex-col-card p {
                                                             -webkit-box-flex: 1;
-                                                            /*width: 20%;*/
                                                             -webkit-flex: 1 0 auto;
                                                             -ms-flex: 1 0 auto;
                                                             flex: 1 0 auto;
@@ -401,7 +397,6 @@
                                                         
                                                         .flex-footer {
                                                             -webkit-box-flex: 1;
-                                                            /*width: 20%;*/
                                                             -webkit-flex: 0 1 290px;
                                                             -ms-flex: 0 1 290px;
                                                             flex: 0 1 290px;
@@ -533,7 +528,6 @@
                                                             }
                                                             .flex-col-card {
                                                                 -webkit-box-flex: 1;
-                                                                /*width: 20%;*/
                                                                 -webkit-flex: 1;
                                                                 -ms-flex: 1;
                                                                 flex: 1;

@@ -520,6 +520,9 @@
                                                                 font-size: 70px;
                                                                 padding: 0;
                                                             }
+                                                            .h1-flex-class {
+                                                                font-size: 50px;
+                                                            }
                                                             .count-down-lia {
                                                                 top: 10%;
                                                             }
@@ -544,6 +547,9 @@
                                                             }
                                                             .index-profile {
                                                                 align-self: center;
+                                                            }
+                                                            .flex-row-2 {
+                                                                margin: 10px;
                                                             }
                                                         }
                                                         

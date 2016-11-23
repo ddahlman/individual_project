@@ -50,15 +50,19 @@ $(document).ready(function () {
 
 
 
-
+    /*hämtar alla element i dokumentet som matchar css class .expand som ett nodelist-objekt*/
     var expand = document.querySelectorAll('.expand');
+    /*konverterar arrayliknande objektet tillen riktig array, slice hämtar nu en del av den nya arrayen(det array liknande objektet) 
+    Vi lagrar det första elementet ur vår nya array i expandArray*/
     var expandArray = Array.prototype.slice.call(expand, 0);
 
+
+    /*gör en forEach-loop på expandArray a[data-toggle="expand"]=knapp, myinfo=det som ska expanderas, plus=den knappens fa-klass */
     expandArray.forEach(function (el) {
         var button = el.querySelector('a[data-toggle="expand"]'),
             info = el.querySelector('.myInfo'),
             plus = button.querySelector('i.fa.fa-plus-circle');
-
+        /*e.preventDefault gör så att man inte följer URLen om man klickar på länken*/
         button.onclick = function (e) {
             if (!info.hasClass('show')) {
                 info.classList.add('show');
@@ -71,11 +75,12 @@ $(document).ready(function () {
                 info.classList.add('hide');
                 plus.classList.remove('open');
                 plus.classList.add('close');
-                event.preventDefault();
+                e.preventDefault();
             }
         };
     });
-    /*checking if this element contains this class, creating jquerys "hasclass method"*/
+    /*checking if this element contains this class, creating jquerys "hasclass method"
+    parametern kollar om det finns den här klassen någonstans i selektorn*/
     Element.prototype.hasClass = function (className) {
         return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
     };
@@ -142,6 +147,7 @@ $(document).ready(function () {
         document.getElementById("minutes2").innerText = min + " " + ":";
         document.getElementById("seconds2").innerText = sec;
 
+        /*detta blir en loop som sätts igång varje 1000ms*/
         setTimeout(countDownExam, 1000);
     }
 

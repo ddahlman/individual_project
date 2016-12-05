@@ -1,7 +1,6 @@
 <?php include('./includes/header.php');
 ?>
 
-
   <div class="flex-container">
     <div class="flex-col-img">
       <img src="img/daniel gbg copy smaller copy.jpg" alt="Daniel i Göteborg" />

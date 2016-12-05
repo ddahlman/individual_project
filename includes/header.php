@@ -15,7 +15,7 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" id="closeNav" class="closebtn fa fa-close"></a>
     <a class="page-links" href="index.php">HEM <hr class="hr"></a>
-    <a class="page-links" href="résumé.php">CV <hr class="hr"></a>
+    <a class="page-links" href="resume.php">CV <hr class="hr"></a>
     <a class="page-links" href="about.php">OM MIG <hr class="hr"></a>
   </div>
   <div class="layer"></div>

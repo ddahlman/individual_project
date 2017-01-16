@@ -84,10 +84,10 @@ $(document).ready(function () {
         min = (min < 10) ? "0" + min : min;
         sec = (sec < 10) ? "0" + sec : sec;
 
-        document.getElementById("days1").innerText = day + " " + ":";
-        document.getElementById("hours1").innerText = hour + " " + ":";
-        document.getElementById("minutes1").innerText = min + " " + ":";
-        document.getElementById("seconds1").innerText = sec;
+        $("#days1").html(day + " " + ":");
+        $("#hours1").html(hour + " " + ":");
+        $("#minutes1").html(min + " " + ":");
+        $("#seconds1").html(sec);
 
         setTimeout(countDownLia, 1000);
     }
@@ -115,10 +115,11 @@ $(document).ready(function () {
         min = (min < 10) ? "0" + min : min;
         sec = (sec < 10) ? "0" + sec : sec;
 
-        document.getElementById("days2").innerText = day + " " + ":";
-        document.getElementById("hours2").innerText = hour + " " + ":";
-        document.getElementById("minutes2").innerText = min + " " + ":";
-        document.getElementById("seconds2").innerText = sec;
+        $("#days2").html(day + " " + ":");
+        $("#hours2").html(hour + " " + ":");
+        $("#minutes2").html(min + " " + ":");
+        $("#seconds2").html(sec);
+
 
         /*detta blir en loop som sätts igång varje 1000ms*/
         setTimeout(countDownExam, 1000);

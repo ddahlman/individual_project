@@ -47,43 +47,16 @@ $(document).ready(function () {
 
     /*End of social media =================================================================*/
     /*Expand function =====================================================================*/
+    $('.expand .myInfo').hide();
 
-
-
-    /*hämtar alla element i dokumentet som matchar css class .expand som ett nodelist-objekt*/
-    var expand = document.querySelectorAll('.expand');
-    /*konverterar arrayliknande objektet tillen riktig array, slice hämtar nu en del av den nya arrayen(det array liknande objektet) 
-    Vi lagrar det första elementet ur vår nya array i expandArray*/
-    var expandArray = Array.prototype.slice.call(expand, 0);
-
-
-    /*gör en forEach-loop på expandArray a[data-toggle="expand"]=knapp, myinfo=det som ska expanderas, plus=den knappens fa-klass */
-    expandArray.forEach(function (el) {
-        var button = el.querySelector('a[data-toggle="expand"]'),
-            info = el.querySelector('.myInfo'),
-            plus = button.querySelector('i.fa.fa-plus-circle');
-        /*e.preventDefault gör så att man inte följer URLen om man klickar på länken*/
-        button.onclick = function (e) {
-            if (!info.hasClass('show')) {
-                info.classList.add('show');
-                info.classList.remove('hide');
-                plus.classList.add('open');
-                plus.classList.remove('close');
-                e.preventDefault();
-            } else {
-                info.classList.remove('show');
-                info.classList.add('hide');
-                plus.classList.remove('open');
-                plus.classList.add('close');
-                e.preventDefault();
-            }
-        };
+    $('.expand a').on('click', function (e) {
+        e.preventDefault();
+        // <a>.hitta alla '.myInfo' efter this.med start från detta '.myInfo', ta bort en. toggla detta. 
+        $(this).nextAll('.myInfo').slice(0, 1).slideToggle();
     });
-    /*checking if this element contains this class, creating jquerys "hasclass method"
-    parametern kollar om det finns den här klassen någonstans i selektorn*/
-    Element.prototype.hasClass = function (className) {
-        return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
-    };
+
+
+
 
     /*CountDown function======================================================================================*/
 

@@ -21,7 +21,7 @@
 <div class="flex-row-2">
   <div class="flex-col-card grey-pants expand">
     <h1 class="h1-about"> Tekniska färdigheter</h1>
-    <a href="#" data-toggle="expand">mer info<i class="fa fa-plus-circle"></i></a>
+    <a href="#">mer info<i class="fa fa-plus-circle"></i></a>
     <ul class="myInfo">
       <li>C# Grund</li>
       <li>Databaser SQL</li>
@@ -40,7 +40,7 @@
   </div>
   <div class="flex-col-card grey-pants expand">
     <h1 class="h1-about">Personliga färdigheter</h1>
-    <a href="#" data-toggle="expand">mer info<i class="fa fa-plus-circle"></i></a>
+    <a href="#">mer info<i class="fa fa-plus-circle"></i></a>
     <ul class="myInfo">
       <li>Positiv och social</li>
       <li>Talar och skriver flytande engelska</li>
@@ -51,7 +51,7 @@
   </div>
   <div class="flex-col-card grey-pants expand">
     <h1 class="h1-about">Körkort</h1>
-    <a href="#" data-toggle="expand">mer info<i class="fa fa-plus-circle"></i></a>
+    <a href="#">mer info<i class="fa fa-plus-circle"></i></a>
     <ul class="myInfo">
       <li>Ja, B-körkort</li>
     </ul>
@@ -60,7 +60,7 @@
 <h1 class="h1-col">- P r o j e k t -</h1>
 <div class="flex-col-card project expand">
   <h2>Ärendehanteringssystem för bilar</h2>
-  <a href="#" data-toggle="expand">mer info<i class="fa fa-plus-circle"></i></a>
+  <a href="#">mer info<i class="fa fa-plus-circle"></i></a>
   <hr class="hr" />
   <div class="myInfo">
     <p>
@@ -82,7 +82,7 @@
 </div>
 <div class="flex-col-card project expand">
   <h2>Bygga upp webbsida för bilföretag</h2>
-  <a href="#" data-toggle="expand">mer info<i class="fa fa-plus-circle"></i></a>
+  <a href="#">mer info<i class="fa fa-plus-circle"></i></a>
   <hr class="hr" />
   <div class="myInfo">
     <p>
@@ -102,7 +102,7 @@
 </div>
 <div class="flex-col-card project expand">
   <h2>Affärssida som integrerar med en annan apps API</h2>
-  <a href="#" data-toggle="expand">mer info<i class="fa fa-plus-circle"></i></a>
+  <a href="#">mer info<i class="fa fa-plus-circle"></i></a>
   <hr class="hr" />
   <div class="myInfo">
     <p>
@@ -124,7 +124,7 @@
 </div>
 <div class="flex-col expand">
   <h1 class="h1-col">Anställningar och erfarenheter</h1>
-  <a href="#" data-toggle="expand">mer info<i class="fa fa-plus-circle"></i></a>
+  <a href="#">mer info<i class="fa fa-plus-circle"></i></a>
   <hr class="hr" />
   <ul class="myInfo">
     <li class="li-education">12 veckor Praktik hos konsultföretaget Walter IT Systems AB- AGILE MANAGEMENT AND DEVELOPMENT</li>
@@ -157,7 +157,7 @@
 </div>
 <div class="flex-col-card grey-pants expand">
   <h1 class="h1-index-yellow">Meritförteckning inom de tekniska färdigheterna</h1>
-  <a href="#" data-toggle="expand">mer info<i class="fa fa-plus-circle"></i></a>
+  <a href="#">mer info<i class="fa fa-plus-circle"></i></a>
   <ul class="myInfo">
     <li>OOP C#<span>VG</span></li>
     <li>C# Grund<span>VG</span></li>
@@ -169,7 +169,7 @@
 </div>
 <div class="flex-col expand">
   <h1 class="h1-col">Utbildningar</h1>
-  <a href="#" data-toggle="expand">mer info<i class="fa fa-plus-circle"></i></a>
+  <a href="#">mer info<i class="fa fa-plus-circle"></i></a>
   <hr class="hr" />
   <ul class="myInfo">
     <li class="li-education">

@@ -248,12 +248,14 @@ a:hover {
     transition: transform .6s;
 }
 
-.myInfo {
+
+/*.myInfo {
     max-height: 0;
     overflow: hidden;
-}
+}*/
 
-.show {
+
+/*.show {
     display: block;
     max-height: 9999px;
     transition: 1s ease-in-out;
@@ -267,7 +269,7 @@ a:hover {
 .hide {
     max-height: 0;
     transition: .6s ease-out;
-}
+}*/
 
 
 /*END OF EXPAND===========*/

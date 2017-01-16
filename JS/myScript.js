@@ -2,33 +2,48 @@
 
 $(document).ready(function () {
 
-    var openNav = document.getElementById("openNav");
-    openNav.addEventListener('click', openNavbar);
-    var closeNav = document.getElementById("closeNav");
-    closeNav.addEventListener('click', closeNavbar);
-    var layer = document.getElementsByClassName("layer");
+    /* var openNav = document.getElementById("openNav");
+     openNav.addEventListener('click', openNavbar);
+     var closeNav = document.getElementById("closeNav");
+     closeNav.addEventListener('click', closeNavbar);
+     var layer = document.getElementsByClassName("layer");
 
-    function openNavbar() {
-        document.getElementById("mySidenav").style.width = "250px";
-        openNav.style.display = "none";
+     function openNavbar() {
+         document.getElementById("mySidenav").style.width = "250px";
+         openNav.style.display = "none";
 
-        document.body.className = "openmenu";
+         document.body.className = "openmenu";
 
-        for (var i = 0; i < layer.length; i++) {
-            layer[i].style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-        }
-    }
+         for (var i = 0; i < layer.length; i++) {
+             layer[i].style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+         }
+     }
 
-    function closeNavbar() {
-        document.getElementById("mySidenav").style.width = "0";
-        openNav.style.display = "block";
+     function closeNavbar() {
+         document.getElementById("mySidenav").style.width = "0";
+         openNav.style.display = "block";
 
-        document.body.removeAttribute("class");
+         document.body.removeAttribute("class");
 
-        for (var i = 0; i < layer.length; i++) {
-            layer[i].style.backgroundColor = "";
-        }
-    }
+         for (var i = 0; i < layer.length; i++) {
+             layer[i].style.backgroundColor = "";
+         }
+     }*/
+
+    $("#openNav").on('click', function () {
+        $('#mySidenav').css('width', 250);
+        $(this).css('display', 'none');
+        $('body').addClass('openmenu');
+        $('.layer').css('background-color', 'rgba(0, 0, 0, 0.8)');
+
+    });
+
+    $("#closeNav").on('click', function () {
+        $('#mySidenav').css('width', 0);
+        $("#openNav").css('display', 'block');
+        $('body').removeClass('openmenu');
+        $('.layer').css('background-color', '');
+    });
 
 
 

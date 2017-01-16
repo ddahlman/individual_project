@@ -2,40 +2,11 @@
 
 $(document).ready(function () {
 
-    /* var openNav = document.getElementById("openNav");
-     openNav.addEventListener('click', openNavbar);
-     var closeNav = document.getElementById("closeNav");
-     closeNav.addEventListener('click', closeNavbar);
-     var layer = document.getElementsByClassName("layer");
-
-     function openNavbar() {
-         document.getElementById("mySidenav").style.width = "250px";
-         openNav.style.display = "none";
-
-         document.body.className = "openmenu";
-
-         for (var i = 0; i < layer.length; i++) {
-             layer[i].style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-         }
-     }
-
-     function closeNavbar() {
-         document.getElementById("mySidenav").style.width = "0";
-         openNav.style.display = "block";
-
-         document.body.removeAttribute("class");
-
-         for (var i = 0; i < layer.length; i++) {
-             layer[i].style.backgroundColor = "";
-         }
-     }*/
-
     $("#openNav").on('click', function () {
         $('#mySidenav').css('width', 250);
         $(this).css('display', 'none');
         $('body').addClass('openmenu');
         $('.layer').css('background-color', 'rgba(0, 0, 0, 0.8)');
-
     });
 
     $("#closeNav").on('click', function () {
@@ -44,8 +15,6 @@ $(document).ready(function () {
         $('body').removeClass('openmenu');
         $('.layer').css('background-color', '');
     });
-
-
 
     /*end of sidebar======================================================================*/
     /*Social media plugin=================================================================*/
@@ -58,10 +27,9 @@ $(document).ready(function () {
         class_prefix: 's_'
     });
 
-
-
     /*End of social media =================================================================*/
     /*Expand function =====================================================================*/
+
     $('.expand .myInfo').hide();
 
     $('.expand a').on('click', function (e) {
@@ -70,13 +38,7 @@ $(document).ready(function () {
         $(this).nextAll('.myInfo').slice(0, 1).slideToggle();
     });
 
-
-
-
     /*CountDown function======================================================================================*/
-
-
-
 
     function countDownLia() {
 
@@ -106,7 +68,6 @@ $(document).ready(function () {
 
         setTimeout(countDownLia, 1000);
     }
-
     countDownLia();
 
     function countDownExam() {
@@ -139,8 +100,6 @@ $(document).ready(function () {
         /*detta blir en loop som sätts igång varje 1000ms*/
         setTimeout(countDownExam, 1000);
     }
-
-
     countDownExam();
 
 });

@@ -101,5 +101,4 @@ $(document).ready(function () {
         setTimeout(countDownExam, 1000);
     }
     countDownExam();
-
 });

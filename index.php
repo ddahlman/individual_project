@@ -1,4 +1,6 @@
-<?php include_once('./includes/header.php');?>
+<?php include_once('./includes/header.php');
+include('config.php');
+?>
 
   <?php
 $page = isset($_GET['page']) ? $_GET['page'] : "";

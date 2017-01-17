@@ -34,8 +34,11 @@ $(document).ready(function () {
 
     $('.expand a').on('click', function (e) {
         e.preventDefault();
+
         // <a>.hitta alla '.myInfo' efter this.med start från detta '.myInfo', ta bort en. toggla detta. 
         $(this).nextAll('.myInfo').slice(0, 1).slideToggle();
+
+        $(this).find('i').toggleClass('close open');
     });
 
     /*CountDown function======================================================================================*/

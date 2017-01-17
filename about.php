@@ -18,7 +18,7 @@
         LIA som står för ”Lärande I Arbete”. Förutom att jag lär mig hur det går till på en arbetsplats ska jag bidra med mina kunskaper om webbapplikationer, design, grundläggande databasadministration inom mySQL-server och utveckling av dynamiska webbplatser.
       </p>
       <div class="flex-col expand">
-        <a href="#" data-toggle="expand">mer info...<i class="fa fa-plus-circle"></i></a>
+        <a href="#">mer info...<i class="fa fa-plus-circle close"></i></a>
         <div class="myInfo">
           <p> Min omgivning ger mig ofta återkoppling på att jag är en utåtriktad, social person som gillar att arbeta med människor. Jag har stor erfarenhet i att hantera stressiga situationer på ett smidigt och effektivt sätt. Mitt modersmål är svenska
             men jag talar och skriver flytande engelska. Under min tid ute i arbetslivet har jag främst arbetat med dans och kultur men har även jobbat inom försäljning och som kassapersonal. Anledningen varför jag tog steget in i programmeringsvärlden

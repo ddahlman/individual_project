@@ -2,8 +2,6 @@
 include('session.php');
 include('config.php');
 include('admin_meny.php');
-
-
 ?>
 
   <?php
@@ -14,11 +12,11 @@ switch ($page) {
         include_once("home.php");
         break;
     
-    case 'resume':
+    case 'cv':
         include_once("cv.php");
         break;
     
-    case 'about':
+    case 'incoming_msg':
         include_once("incoming_msg.php");
         break;
     
@@ -26,4 +24,8 @@ switch ($page) {
         include ('home.php');
         break;
 }
+?>
+
+    <?php
+include('admin_footer.php');
 ?>

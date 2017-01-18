@@ -2,7 +2,7 @@
 include('config.php');
 session_start();
 if(isset($_SESSION['login_user'])) {
-    header("location: home.php");
+    header("location: home_load.php");
 }
 $error = '';
 if(isset($_POST['submit'])) {
@@ -37,7 +37,7 @@ if(isset($_POST['submit'])) {
         //checks if $query has info from the database
         if (mysqli_num_rows($query) == 1) {
             $_SESSION['login_user'] = $username; //sets the key to login_user and the value to $username
-            header("location: home.php");
+            header("location: home_load.php");
         }
         
         else

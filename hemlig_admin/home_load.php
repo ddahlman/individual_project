@@ -1,5 +1,9 @@
-<?php include_once('./includes/header.php');
-include('./hemlig_admin/config.php');
+<?php
+include('session.php');
+include('config.php');
+include('admin_meny.php');
+
+
 ?>
 
   <?php
@@ -11,19 +15,15 @@ switch ($page) {
         break;
     
     case 'resume':
-        include_once("resume.php");
+        include_once("cv.php");
         break;
     
     case 'about':
-        include_once("about.php");
+        include_once("incoming_msg.php");
         break;
     
     default:
         include ('home.php');
         break;
 }
-?>
-
-    <?php
-include('./includes/footer.php');
 ?>

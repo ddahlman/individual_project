@@ -3,6 +3,15 @@
     src: url('../font/BebasNeue.otf') format('opentype');
 }
 
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+
+/*============side nav========================*/
+
 .hamburger {
     cursor: pointer;
     color: #ec9b13;
@@ -84,4 +93,31 @@ a.page-links:hover {
 h1,
 .page-links {
     font-family: BebasNeue;
+}
+
+.h1-white {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.grey-bg {
+    background-color: #909090;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+/*flex----------------------------*/
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+.flex-center-center {
+    max-width: 50%;
 }

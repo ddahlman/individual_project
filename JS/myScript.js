@@ -41,6 +41,7 @@ $(document).ready(function () {
         $(this).find('i').toggleClass('close open');
     });
 
+
     /*CountDown function======================================================================================*/
 
     function countDownLia() {

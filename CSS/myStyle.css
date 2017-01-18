@@ -249,33 +249,10 @@ a:hover {
 }
 
 
-/*.myInfo {
-    max-height: 0;
-    overflow: hidden;
-}*/
-
-
-/*.show {
-    display: block;
-    max-height: 9999px;
-    transition: 1s ease-in-out;
-}
-
-.show,
-.hide {
-    transform: scaleY(1);
-}
-
-.hide {
-    max-height: 0;
-    transition: .6s ease-out;
-}*/
-
-
 /*END OF EXPAND===========*/
 
 
-/*end of resume.html---------*/
+/*end of resume.php---------*/
 
 
 /*Start of about page--------*/

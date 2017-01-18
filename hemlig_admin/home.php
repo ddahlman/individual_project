@@ -1,1 +1,1 @@
-<h1>Välkommen!</h1>
+<h1 class="h1-col">Välkommen!</h1>

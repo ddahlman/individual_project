@@ -26,5 +26,10 @@ if(isset($_POST['save'])) {
           <input type="submit" name="save" value="spara">
         </form>
       </div>
+      <?php
+if(isset($success)) {
+    echo $success;
+}
+?>
     </div>
   </div>

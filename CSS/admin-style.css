@@ -9,6 +9,11 @@ html {
     margin: 0;
 }
 
+textarea {
+    font: 100% BebasNeue;
+    border-radius: 5px;
+}
+
 
 /*============side nav========================*/
 
@@ -112,12 +117,7 @@ h1,
 
 .flex-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: row;
     height: 100%;
-}
-
-.flex-center-center {
-    max-width: 50%;
+    margin-top: 15px;
 }

@@ -14,21 +14,4 @@ $(document).ready(function () {
         $('.layer').css('background-color', '');
     });
 
-
-    /*admin cv list-items====================================================*/
-
-    var addLi = document.getElementById('addLi');
-    addLi.addEventListener('click', addToListAdmin);
-
-    function addToListAdmin(e) {
-        e.preventDefault();
-        var li = document.createElement('li');
-        var listItem = document.createElement('input');
-        listItem.setAttribute('name', 'list-item');
-
-        var firstList = document.getElementById('first-list');
-        li.appendChild(listItem);
-        firstList.appendChild(li);
-    }
-
 });

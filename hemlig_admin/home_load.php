@@ -17,6 +17,10 @@ switch ($page) {
         include_once("cv.php");
         break;
     
+    case 'portfolio':
+        include_once("portfolio.php");
+        break;
+    
     case 'incoming_msg':
         include_once("incoming_msg.php");
         break;

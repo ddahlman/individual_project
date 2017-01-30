@@ -384,9 +384,6 @@ WHERE headersID=2");
 $cv_second_header = mysqli_fetch_assoc($cv_2gh_query);
 $second_header  = $cv_second_header['header'];
 ?>
-
-
-
           <div class="grey-bg">
             <form method="post" action="">
               <h1 class="h1-white">Redigera andra rubriken</h1>

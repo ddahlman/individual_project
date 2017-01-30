@@ -29,6 +29,287 @@ body {
     flex-direction: column;
 }
 
+#easterEgg {
+    display: none;
+    position: relative;
+}
+
+
+/****************** hangman *********************************/
+
+.hangman-text {
+    font: 40px bolder;
+    text-align: center;
+}
+
+.hangman-container {
+    border: 10px solid #000;
+    height: 329px;
+    width: 400px;
+    padding-top: 10px;
+}
+
+#platform,
+#theman-container,
+#embracer,
+#rope,
+#head,
+#h-body,
+#arms,
+#legs,
+#face {
+    display: none;
+}
+
+#platform,
+#theman-container {
+    height: 200px;
+}
+
+#platform {
+    width: 200px;
+}
+
+#platform,
+#theman-container,
+#arms,
+#legs {
+    border-top: 10px solid #000;
+}
+
+#theman-container,
+#h-body {
+    border-left: 10px solid #000;
+}
+
+#platform {
+    border-radius: 50%;
+}
+
+#theman-container {
+    width: 166px;
+    margin-left: 94px;
+}
+
+#embracer {
+    border-right: 10px solid #000;
+    height: 100px;
+    width: 80px;
+    transform: rotate(47deg);
+    margin: -50px 0 0 -40px;
+}
+
+#rope {
+    border-right: 7px dotted #000;
+    height: 50px;
+    margin-top: -50px;
+}
+
+#head {
+    border: 5px solid #000;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 133px;
+}
+
+#h-body {
+    height: 60px;
+    width: 100px;
+    margin: -1px 0 0 158px;
+}
+
+#arms {
+    border-right: 10px solid #000;
+    height: 56px;
+    width: 60px;
+    transform: rotate(-40deg);
+    margin: -48px 0 0 124px;
+}
+
+#legs {
+    border-right: 10px solid #000;
+    height: 70px;
+    width: 74px;
+    transform: rotate(-40deg);
+    margin: -5px 0 0 116px;
+}
+
+#face {
+    color: #000;
+}
+
+
+/*====================== Text ============*/
+
+.letters-to-fill {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.correct {
+    border-bottom: 10px solid #000;
+    height: 50px;
+    width: 70px;
+    margin: 10px;
+    font: bold 40px arial;
+    text-align: center;
+}
+
+#undefinedChar {
+    color: #ff0000;
+}
+
+#undefinedChar,
+.wrong {
+    text-align: center;
+}
+
+.wrong,
+#alreadyPressed {
+    color: #ff0000;
+    font: 900 30px arial;
+}
+
+
+/*=======================Flex================*/
+
+.hangflex-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/*************************** end of hangman *********************************/
+
+
+/**************************  modal for hangman ******************************/
+
+
+/*background*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/*content*/
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/*animation*/
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/*close button*/
+
+.closeModal {
+    color: #fff;
+    float: right;
+    font: bolder 28px arial;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #ffffff;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.btn-again,
+.btn-backhome {
+    font: bold 12px arial;
+    border-radius: 8px;
+    padding: 10px 20px 10px 20px;
+    margin: 5px;
+    border: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    background-color: #2f2f2f;
+    color: #fefefe;
+}
+
+.btn-again:focus,
+.btn-backhome:focus {
+    outline: 0;
+}
+
+.btn-again:hover,
+.btn-backhome:hover {
+    box-shadow: 2px 2px 4px #000;
+}
+
+.btn-again:active,
+.btn-backhome:active {
+    box-shadow: inset 0 2px 10px #000;
+}
+
+
+/***************************** end of modal ***********************************/
+
 .layer {
     position: fixed;
     left: 0;

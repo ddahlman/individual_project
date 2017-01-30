@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['id'])) {
-    $id = $_POST['id'];
+    $id = mysqli_real_escape_string($connection, $_POST['id']);
     
     $query = "DELETE FROM inc_message
     WHERE id = $id";

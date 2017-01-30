@@ -1,10 +1,10 @@
 <?php
 if(isset($_POST['submit'])) {
     
-    $name = $_POST['name-contact'];
-    $phone = $_POST['tfn-contact'];
-    $email = $_POST['email-contact'];
-    $note = $_POST['note-contact'];
+    $name = mysqli_real_escape_string($connection, $_POST['name-contact']);
+    $phone = mysqli_real_escape_string($connection, $_POST['tfn-contact']);
+    $email = mysqli_real_escape_string($connection, $_POST['email-contact']);
+    $note = mysqli_real_escape_string($connection, $_POST['note-contact']);
     
     mysqli_query($connection, "INSERT INTO inc_message (name_contact, phone_contact, email_contact, note_contact)
     VALUES ('$name', '$phone', '$email', '$note')");

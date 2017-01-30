@@ -13,6 +13,10 @@ switch ($page) {
         include_once("home.php");
         break;
     
+    case 'home_admin':
+        include_once("home_admin.php");
+        break;
+    
     case 'cv':
         include_once("cv.php");
         break;

@@ -16,6 +16,7 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" id="closeNav" class="closebtn fa fa-close"></a>
     <a class="page-links" href="?page=home">Admin <hr class="hr"></a>
+    <a class="page-links" href="?page=home_admin">Första sidan <hr class="hr"></a>
     <a class="page-links" href="?page=cv">CV <hr class="hr"></a>
     <a class="page-links" href="?page=portfolio">Mitt arbete <hr class="hr"></a>
     <a class="page-links" href="?page=incoming_msg">Meddelande <hr class="hr"></a>

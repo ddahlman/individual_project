@@ -19,7 +19,7 @@ $success_11 = "";
 
 /*when clicking on spara below text================*/
 if(isset($_POST['save-text'])) {
-    $first_text = $_POST["first-text"];
+    $first_text = mysqli_real_escape_string($connection, $_POST["first-text"]);
     
     mysqli_query($connection, "UPDATE cv_firsttext
     SET first_text='$first_text'
@@ -30,7 +30,7 @@ if(isset($_POST['save-text'])) {
 
 /*when clicking on first spara rubrik================*/
 if(isset($_POST['save-1st-header'])) {
-    $first_header = $_POST["first-header"];
+    $first_header = mysqli_real_escape_string($connection, $_POST["first-header"]);
     
     mysqli_query($connection, "UPDATE cv_grey_headers
     SET header='$first_header'
@@ -42,7 +42,7 @@ if(isset($_POST['save-1st-header'])) {
 /*when clicking on first spara tillägg================*/
 if(isset($_POST['add-1st-list'])) {
     
-    $add_to_list = $_POST["add-to-list"];
+    $add_to_list = mysqli_real_escape_string($connection, $_POST["add-to-list"]);
     
     $result1 = mysqli_query($connection, "INSERT INTO items (headersID, list_item)
     VALUES ('1', '$add_to_list')");
@@ -55,8 +55,8 @@ if(isset($_POST['add-1st-list'])) {
 
 /*when clicking on first ändra================*/
 if(isset($_POST['list1-id'])) {
-    $list_item1 = $_POST["list-item1"];
-    $list1_id = $_POST["list1-id"];
+    $list_item1 = mysqli_real_escape_string($connection, $_POST["list-item1"]);
+    $list1_id = mysqli_real_escape_string($connection, $_POST["list1-id"]);
     
     $update = mysqli_query($connection, "UPDATE items
     SET list_item='$list_item1'
@@ -75,7 +75,7 @@ if(isset($_POST['list1-id'])) {
 
 /*when clicking on second spara rubrik================*/
 if(isset($_POST['save-2nd-header'])) {
-    $second_header = $_POST["second-header"];
+    $second_header = mysqli_real_escape_string($connection, $_POST["second-header"]);
     
     mysqli_query($connection, "UPDATE cv_grey_headers
     SET header='$second_header'
@@ -87,7 +87,7 @@ if(isset($_POST['save-2nd-header'])) {
 /*when clicking on second spara tillägg================*/
 if(isset($_POST['add-2nd-list'])) {
     
-    $add_to_list2 = $_POST["add-to-list2"];
+    $add_to_list2 = mysqli_real_escape_string($connection, $_POST["add-to-list2"]);
     
     $result2 = mysqli_query($connection, "INSERT INTO items (headersID, list_item)
     VALUES ('2', '$add_to_list2')");
@@ -100,8 +100,8 @@ if(isset($_POST['add-2nd-list'])) {
 
 /*when clicking on second ändra================*/
 if(isset($_POST['list2-id'])) {
-    $list_item2 = $_POST["list-item2"];
-    $list2_id = $_POST["list2-id"];
+    $list_item2 = mysqli_real_escape_string($connection, $_POST["list-item2"]);
+    $list2_id = mysqli_real_escape_string($connection, $_POST["list2-id"]);
     
     $update = mysqli_query($connection, "UPDATE items
     SET list_item='$list_item2'
@@ -121,7 +121,7 @@ if(isset($_POST['list2-id'])) {
 
 /*when clicking on third spara rubrik================*/
 if(isset($_POST['save-3rd-header'])) {
-    $third_header = $_POST["third-header"];
+    $third_header = mysqli_real_escape_string($connection, $_POST["third-header"]);
     
     mysqli_query($connection, "UPDATE cv_grey_headers
     SET header='$third_header'
@@ -133,7 +133,7 @@ if(isset($_POST['save-3rd-header'])) {
 /*when clicking on third spara tillägg================*/
 if(isset($_POST['add-3rd-list'])) {
     
-    $add_to_list3 = $_POST["add-to-list3"];
+    $add_to_list3 = mysqli_real_escape_string($connection, $_POST["add-to-list3"]);
     
     $result3 = mysqli_query($connection, "INSERT INTO items (headersID, list_item)
     VALUES ('3', '$add_to_list3')");
@@ -146,8 +146,8 @@ if(isset($_POST['add-3rd-list'])) {
 
 /*when clicking on third ändra================*/
 if(isset($_POST['list3-id'])) {
-    $list_item3 = $_POST["list-item3"];
-    $list3_id = $_POST["list3-id"];
+    $list_item3 = mysqli_real_escape_string($connection, $_POST["list-item3"]);
+    $list3_id = mysqli_real_escape_string($connection, $_POST["list3-id"]);
     
     $update = mysqli_query($connection, "UPDATE items
     SET list_item='$list_item3'
@@ -166,7 +166,7 @@ if(isset($_POST['list3-id'])) {
 
 /*when clicking on spara below redigera projektrubriken================*/
 if(isset($_POST['save-pro-header'])) {
-    $proj_header = $_POST["project-header"];
+    $proj_header = mysqli_real_escape_string($connection, $_POST["project-header"]);
     
     mysqli_query($connection, "UPDATE projects_text
     SET header='$proj_header'
@@ -177,7 +177,7 @@ if(isset($_POST['save-pro-header'])) {
 
 /*when clicking on spara below redigera projekttexten================*/
 if(isset($_POST['save-pro-text'])) {
-    $proj_text = $_POST["project-text"];
+    $proj_text = mysqli_real_escape_string($connection, $_POST["project-text"]);
     
     mysqli_query($connection, "UPDATE projects_text
     SET project_text='$proj_text'
@@ -194,8 +194,8 @@ if(isset($_POST['save-pro-text'])) {
 /*when clicking on employments spara tillägg================*/
 if(isset($_POST['add-employment'])) {
     
-    $add_emp = $_POST["add-to-emp"];
-    $add_empyears = $_POST["add-to-empyears"];
+    $add_emp = mysqli_real_escape_string($connection, $_POST["add-to-emp"]);
+    $add_empyears = mysqli_real_escape_string($connection, $_POST["add-to-empyears"]);
     
     $result4 = mysqli_query($connection, "INSERT INTO employments (employment, year)
     VALUES ('$add_emp', '$add_empyears')");
@@ -208,9 +208,9 @@ if(isset($_POST['add-employment'])) {
 
 /*when clicking on employments ändra================*/
 if(isset($_POST['emp-id'])) {
-    $employments = $_POST["employment"];
-    $emp_year = $_POST["emp-years"];
-    $emp_id = $_POST["emp-id"];
+    $employments = mysqli_real_escape_string($connection, $_POST["employment"]);
+    $emp_year = mysqli_real_escape_string($connection, $_POST["emp-years"]);
+    $emp_id = mysqli_real_escape_string($connection, $_POST["emp-id"]);
     
     $update_emp = mysqli_query($connection, "UPDATE employments
     SET employment='$employments', year='$emp_year'
@@ -232,8 +232,8 @@ if(isset($_POST['emp-id'])) {
 /*when clicking on education spara tillägg================*/
 if(isset($_POST['add-education'])) {
     
-    $add_edu = $_POST["add-to-edu"];
-    $add_eduyears = $_POST["add-to-eduyears"];
+    $add_edu = mysqli_real_escape_string($connection, $_POST["add-to-edu"]);
+    $add_eduyears = mysqli_real_escape_string($connection, $_POST["add-to-eduyears"]);
     
     $result5 = mysqli_query($connection, "INSERT INTO education (schools, years)
     VALUES ('$add_edu', '$add_eduyears')");
@@ -246,9 +246,9 @@ if(isset($_POST['add-education'])) {
 
 /*when clicking on education ändra================*/
 if(isset($_POST['edu-id'])) {
-    $educations = $_POST["education"];
-    $edu_year = $_POST["edu-years"];
-    $edu_id = $_POST["edu-id"];
+    $educations = mysqli_real_escape_string($connection, $_POST["education"]);
+    $edu_year = mysqli_real_escape_string($connection, $_POST["edu-years"]);
+    $edu_id = mysqli_real_escape_string($connection, $_POST["edu-id"]);
     
     $update_edu = mysqli_query($connection, "UPDATE education
     SET schools='$educations', years='$edu_year'
@@ -272,7 +272,6 @@ FROM cv_firsttext
 WHERE id=1");
 
 $cv_first_text = mysqli_fetch_assoc($cv_ft_query);
-
 $first_text    = $cv_first_text['first_text'];
 ?>
     <div class="dark-bg">

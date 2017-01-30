@@ -1,5 +1,35 @@
 <?php
 $result = mysqli_query($connection, "SELECT * FROM cv_firsttext WHERE id=1");
+$row = mysqli_fetch_assoc($result);
+$first_text = $row['first_text'];
+
+$first_head = mysqli_query($connection, "SELECT header FROM cv_grey_headers WHERE headersID=1");
+$row = mysqli_fetch_assoc($first_head);
+$first_header = $row['header'];
+
+$second_head = mysqli_query($connection, "SELECT header FROM cv_grey_headers WHERE headersID=2");
+$row = mysqli_fetch_assoc($second_head);
+$second_header = $row['header'];
+
+$third_head = mysqli_query($connection, "SELECT header FROM cv_grey_headers WHERE headersID=3");
+$row = mysqli_fetch_assoc($third_head);
+$third_header = $row['header'];
+
+$first_li = mysqli_query($connection, "SELECT list_item FROM items WHERE headersID=1");
+
+$second_li = mysqli_query($connection, "SELECT list_item FROM items WHERE headersID=2");
+
+$third_li = mysqli_query($connection, "SELECT list_item FROM items WHERE headersID=3");
+
+$project_result = mysqli_query($connection, "SELECT * FROM projects_text");
+$row = mysqli_fetch_assoc($project_result);
+$project_header = $row['header'];
+$project_text = $row['project_text'];
+
+$employment_result = mysqli_query($connection, "SELECT * FROM employments");
+
+$educatio_result = mysqli_query($connection, "SELECT * FROM education");
+
 ?>
 
   <div class="flex-col-img2">
@@ -17,182 +47,120 @@ $result = mysqli_query($connection, "SELECT * FROM cv_firsttext WHERE id=1");
   <div class="flex-row">
     <div class="flex-col">
       <?php
-$row = mysqli_fetch_assoc($result);
-$first_text = $row['first_text'];
-
 echo "<p>$first_text</p>";
 ?>
     </div>
   </div>
   <div class="flex-row-2">
     <div class="flex-col-card grey-pants expand">
-      <h1 class="h1-about"> Tekniska färdigheter</h1>
+      <h1 class="h1-about">
+<?php
+echo $first_header;
+?>
+</h1>
       <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
       <ul class="myInfo">
-        <li>C# Grund</li>
-        <li>Databaser SQL</li>
-        <li>Arbeta i Agila projekt</li>
-        <li>Objektorienterad programmering i C#</li>
-        <li>ASP.Net</li>
-        <li>Web-applikationer</li>
-        <li>HTML 5</li>
-        <li>CSS 3</li>
-        <li>Bootstrap frameworks</li>
-        <li>Jquery</li>
-        <li>Javascript</li>
-        <li>Visual Studio</li>
-        <li>Team Foundation Server</li>
+        <?php
+while( $row = mysqli_fetch_assoc($first_li)) {
+    $first_list = $row['list_item'];
+    
+    echo "<li>$first_list</li>";
+}
+?>
       </ul>
     </div>
     <div class="flex-col-card grey-pants expand">
-      <h1 class="h1-about">Personliga färdigheter</h1>
+      <h1 class="h1-about">
+<?php
+echo $second_header;
+?>
+</h1>
       <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
       <ul class="myInfo">
-        <li>Positiv och social</li>
-        <li>Talar och skriver flytande engelska</li>
-        <li>Har pedagogiska färdigheter</li>
-        <li>Flexibel</li>
-        <li>Är kreativ och har inga problem med att ta egna initiativ</li>
+        <?php
+while( $row = mysqli_fetch_assoc($second_li)) {
+    $second_list = $row['list_item'];
+    
+    echo "<li>$second_list</li>";
+}
+?>
       </ul>
     </div>
     <div class="flex-col-card grey-pants expand">
-      <h1 class="h1-about">Körkort</h1>
+      <h1 class="h1-about">
+<?php
+echo $third_header;
+?>
+</h1>
       <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
       <ul class="myInfo">
-        <li>Ja, B-körkort</li>
+        <?php
+while( $row = mysqli_fetch_assoc($third_li)) {
+    $third_list = $row['list_item'];
+    
+    echo "<li>$third_list</li>";
+}
+?>
       </ul>
     </div>
   </div>
   <h1 class="h1-col">- P r o j e k t -</h1>
   <div class="flex-col-card project expand">
-    <h2>Ärendehanteringssystem för bilar</h2>
+    <h2>
+<?php
+echo $project_header;
+?>
+</h2>
     <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
     <hr class="hr" />
     <div class="myInfo">
       <p>
-        Det här var ett ASP.NET projekt, som gjordes i MVC C#, som jag var involverad i. Jag skapade t.ex. en service som hanterade mail genom SMTP där användaren klickade på en knapp och ett mail skickades iväg för att begära en granskning ifrån olika granskare.
-        Jag skapade också en uppladdnings-tjänst där användaren skulle kunna klicka på en knapp, eller på en placeholder, för att leta efter en bild. Bilden skulle sen kunna förhandsgranskas av användaren innan det bestämdes för att ladda upp den.
+        <?php
+echo $project_text;
+?>
       </p>
       <div class="flex-footer grey-pants">
-        <h1>tekniker</h1>
-        <ul>
-          <li>C#</li>
-          <li>Jquery</li>
-          <li>Javascript</li>
-          <li>html</li>
-          <li>css</li>
-          <li>Bootstrap</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="flex-col-card project expand">
-    <h2>Bygga upp webbsida för bilföretag</h2>
-    <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
-    <hr class="hr" />
-    <div class="myInfo">
-      <p>
-        Jag fick i uppdrag att skapa en dubblett av en webbsida som hade skapats i Joomla, fast nu med ren html och css. Responsiviteten skulle bara utgå från ren css och jag använde mig då av en wrapper som hade css-attributen "display: flex;, justify-content:
-        center; align-items: center;" och självklart några media-querys för att fixa det. Det kluriga var att jag skulle skapa en border utav stjärnor som självklart inte fanns på Google. Jag fick lov att jobba utanför ramarna och skapa en egen ram utav
-        stjärnor i Adobe Illustator. Ramen använde jag i css-attributet "border-image;" som jag sedan kunde justera till den storleken jag ville ha.
-      </p>
-      <div class="flex-footer grey-pants">
-        <h1>tekniker</h1>
-        <ul>
-          <li>html</li>
-          <li>css</li>
-          <li>Adobe Illustrator</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="flex-col-card project expand">
-    <h2>Affärssida som integrerar med en annan apps API</h2>
-    <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
-    <hr class="hr" />
-    <div class="myInfo">
-      <p>
-        Under det här projektet fick jag skapa en "storefront"-sida som integrerade med en e-butik som använde sig utav rest API. Då ingick det att skapa kolumner med klickbara placeholders med underliggande information. När användaren klickade på en placeholder
-        skulle en modal visas med en carousel som hade fler placeholders, ungefär som en vanlig webbshop. Sedan skapade jag en "shopping cart"-knapp som öppnade ännu en modal där användaren kunde se sina tillagda varor och därefter kunde klicka på en
-        knapp och gå vidare till ett utcheckningsformulär (fortfarande i modal-fönstret).
-      </p>
-      <div class="flex-footer grey-pants">
-        <h1>tekniker</h1>
-        <ul>
-          <li>Jquery</li>
-          <li>html</li>
-          <li>css</li>
-          <li>Bootstrap</li>
-          <li>javascript</li>
-        </ul>
+        <h1>Klicka på ett projekt för att se mitt arbete</h1>
+
+        <a href="http://projects/ToDoList/index.html">klicka här</a>
+
+
       </div>
     </div>
   </div>
   <div class="flex-col expand">
     <h1 class="h1-col">Anställningar och erfarenheter</h1>
-    <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
+    <a href="#">klicka här mer info<i class="fa fa-plus-circle close"></i></a>
     <hr class="hr" />
     <ul class="myInfo">
-      <li class="li-education">12 veckor Praktik hos konsultföretaget Walter IT Systems AB- AGILE MANAGEMENT AND DEVELOPMENT</li>
-      <li class="li-education">2016</li>
-      <li class="li-education">
-        <br />ledarerfarenhet inom dansverksamhet både i Sverige och utomlands</li>
-      <li class="li-education">1999 - 2016</li>
-      <li class="li-education">
-        <br />SVT Melodifestivalen, Deltävling 4, Örebro, Koreograf och Dansare för öppningsnummer</li>
-      <li class="li-education"> 2015</li>
-      <li class="li-education">
-        <br />Produktionen ”SIRI”, Stockholm, Complete Dance Crew på Dansens Hus och Riks Turné Koreograf och Dansare</li>
-      <li class="li-education"> 2013 – 2015</li>
-      <li class="li-education">
-        <br />After Dark Jubileumsshow, Sthlm, Malmö, Gbg, Danskapten, Koreograf och Dansare</li>
-      <li class="li-education"> 2012 – 2013</li>
-      <li class="li-education">
-        <br />Väskan AB, VästeråsButiksbiträde, Sommaranställning</li>
-      <li class="li-education"> 2012</li>
-      <li class="li-education">
-        <br />”The Last Bounce”, Globen StockholmDansare</li>
-      <li class="li-education"> 2010</li>
-      <li class="li-education">
-        <br />Musikalen ”West Side Story”, Norrlandsoperan, Umeå, Sångare och Dansare</li>
-      <li class="li-education"> 2010</li>
-      <li class="li-education">
-        <br />Complete Dance Crew Grundare, Koreograf och Dansare</li>
-      <li class="li-education"> 2008 – 2015</li>
+      <?php
+while ($row = mysqli_fetch_assoc($employment_result)) {
+    $employment = $row["employment"];
+    $year = $row["year"];
+    
+    echo "<li class='li-education'>
+    <br />$employment</li>
+    <li class='li-education'> $year</li>";
+}
+?>
     </ul>
   </div>
-  <div class="flex-col-card grey-pants expand">
-    <h1 class="h1-index-yellow">Meritförteckning inom de tekniska färdigheterna</h1>
-    <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
-    <ul class="myInfo">
-      <li>OOP C#<span>VG</span></li>
-      <li>C# Grund<span>VG</span></li>
-      <li>Databaser SQL<span>G</span></li>
-      <li>Arbeta i Agila Projekt<span>G</span></li>
-      <li>Asp.Net<span>VG</span></li>
-      <li>Webbaplikationer<span>VG</span></li>
-    </ul>
-  </div>
+
   <div class="flex-col expand">
     <h1 class="h1-col">Utbildningar</h1>
     <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
     <hr class="hr" />
     <ul class="myInfo">
-      <li class="li-education">
-        Teknikhögskolan, Stockholm Applikationsutveckling inom .NET
-      </li>
-      <li class="li-education">2015 – 2017</li>
-      <li class="li-education">
-        <br />Hermods, Västerås Komvux C#, Ma2bc, Sv2
-      </li>
-      <li class="li-education">2015 – 2015</li>
-      <li class="li-education">
-        <br />Balettakademien, Stockholm Yrkesutbildning
-      </li>
-      <li class="li-education">2004 – 2006</li>
-      <li class="li-education">
-        <br />Carlforsska Gymnasiet, Västerås Gymnasial utbildning 3-årig
-      </li>
-      <li class="li-education">2001 – 2004</li>
+      <?php
+while ($row = mysqli_fetch_assoc($educatio_result)) {
+    $school = $row["schools"];
+    $years = $row["years"];
+    
+    echo "<li class='li-education'>
+    <br />$school
+    </li>
+    <li class='li-education'>$years</li>";
+}
+?>
     </ul>
   </div>

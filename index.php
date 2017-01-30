@@ -24,6 +24,10 @@ switch ($page) {
         include_once("contact.php");
         break;
     
+    case 'portfolio':
+        include_once("portfolio.php");
+        break;
+    
     default:
         include ('home.php');
         break;

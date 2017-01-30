@@ -21,11 +21,6 @@ $second_li = mysqli_query($connection, "SELECT list_item FROM items WHERE header
 
 $third_li = mysqli_query($connection, "SELECT list_item FROM items WHERE headersID=3");
 
-$project_result = mysqli_query($connection, "SELECT * FROM projects_text");
-$row = mysqli_fetch_assoc($project_result);
-$project_header = $row['header'];
-$project_text = $row['project_text'];
-
 $employment_result = mysqli_query($connection, "SELECT * FROM employments");
 
 $educatio_result = mysqli_query($connection, "SELECT * FROM education");
@@ -104,30 +99,7 @@ while( $row = mysqli_fetch_assoc($third_li)) {
       </ul>
     </div>
   </div>
-  <h1 class="h1-col">- P r o j e k t -</h1>
-  <div class="flex-col-card project expand">
-    <h2>
-<?php
-echo $project_header;
-?>
-</h2>
-    <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
-    <hr class="hr">
-    <div class="myInfo">
-      <p>
-        <?php
-echo $project_text;
-?>
-      </p>
-      <div class="flex-footer grey-pants">
-        <h1>Klicka på ett projekt för att se mitt arbete</h1>
 
-        <!--<a href="http://projects/ToDoList/index.html">klicka här</a>-->
-
-
-      </div>
-    </div>
-  </div>
   <div class="flex-col expand">
     <h1 class="h1-col">Anställningar och erfarenheter</h1>
     <a href="#">klicka här mer info<i class="fa fa-plus-circle close"></i></a>

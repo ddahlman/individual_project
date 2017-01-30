@@ -19,5 +19,6 @@
     <a class="page-links" href="?page=resume">CV <hr class="hr"></a>
     <a class="page-links" href="?page=about">OM MIG <hr class="hr"></a>
     <a class="page-links" href="?page=contact">KONTAKT <hr class="hr"></a>
+    <a class="page-links" href="?page=portfolio">MITT ARBETE <hr class="hr"></a>
   </div>
   <div class="layer"></div>

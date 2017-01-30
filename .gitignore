@@ -257,4 +257,4 @@ paket-files/
 !.vscode/tasks.json
 !.vscode/launch.json
 
-hemlig_admin/config.php
+/hemlig_admin/config.php

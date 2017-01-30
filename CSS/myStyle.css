@@ -29,9 +29,13 @@ body {
     flex-direction: column;
 }
 
-#easterEgg {
-    display: none;
-    position: relative;
+
+/***************** validate ********************/
+
+#nameError,
+#phoneError,
+#emailError {
+    color: #ff0000;
 }
 
 
@@ -96,7 +100,7 @@ body {
     height: 100px;
     width: 80px;
     transform: rotate(47deg);
-    margin: -50px 0 0 -40px;
+    margin: -47px 0 0 -33px;
 }
 
 #rope {
@@ -110,13 +114,13 @@ body {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    margin-left: 133px;
+    margin-left: 128px;
 }
 
 #h-body {
     height: 60px;
     width: 100px;
-    margin: -1px 0 0 158px;
+    margin: -1px 0 0 150px;
 }
 
 #arms {
@@ -124,7 +128,7 @@ body {
     height: 56px;
     width: 60px;
     transform: rotate(-40deg);
-    margin: -48px 0 0 124px;
+    margin: -48px 0 0 120px;
 }
 
 #legs {
@@ -132,7 +136,7 @@ body {
     height: 70px;
     width: 74px;
     transform: rotate(-40deg);
-    margin: -5px 0 0 116px;
+    margin: -5px 0 0 113px;
 }
 
 #face {

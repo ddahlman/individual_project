@@ -128,7 +128,7 @@ $(document).ready(function () {
     function check_input() {
         if (input === secret) {
             //the code used to reveal mario and the world is then put here 
-            $('#easterEgg').css('display', 'block');
+            window.location = 'easter_egg.php';
         }
     }
 

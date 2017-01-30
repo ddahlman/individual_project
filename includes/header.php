@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Daniel Dahlman</title>
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
   <link rel="stylesheet" href="font/css/font-awesome.min.css">
-  <!--<link rel="stylesheet" href="CSS/modal.css">
-<link rel="stylesheet" href="CSS/hangman.css">-->
   <link rel="stylesheet" href="CSS/myStyle.css">
 </head>
 
@@ -19,5 +18,6 @@
     <a class="page-links" href="?page=home">HEM <hr class="hr"></a>
     <a class="page-links" href="?page=resume">CV <hr class="hr"></a>
     <a class="page-links" href="?page=about">OM MIG <hr class="hr"></a>
+    <a class="page-links" href="?page=contact">KONTAKT <hr class="hr"></a>
   </div>
   <div class="layer"></div>

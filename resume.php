@@ -112,7 +112,7 @@ echo $project_header;
 ?>
 </h2>
     <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
-    <hr class="hr" />
+    <hr class="hr">
     <div class="myInfo">
       <p>
         <?php
@@ -122,7 +122,7 @@ echo $project_text;
       <div class="flex-footer grey-pants">
         <h1>Klicka på ett projekt för att se mitt arbete</h1>
 
-        <a href="http://projects/ToDoList/index.html">klicka här</a>
+        <!--<a href="http://projects/ToDoList/index.html">klicka här</a>-->
 
 
       </div>
@@ -131,7 +131,7 @@ echo $project_text;
   <div class="flex-col expand">
     <h1 class="h1-col">Anställningar och erfarenheter</h1>
     <a href="#">klicka här mer info<i class="fa fa-plus-circle close"></i></a>
-    <hr class="hr" />
+    <hr class="hr">
     <ul class="myInfo">
       <?php
 while ($row = mysqli_fetch_assoc($employment_result)) {
@@ -149,7 +149,7 @@ while ($row = mysqli_fetch_assoc($employment_result)) {
   <div class="flex-col expand">
     <h1 class="h1-col">Utbildningar</h1>
     <a href="#">mer info<i class="fa fa-plus-circle close"></i></a>
-    <hr class="hr" />
+    <hr class="hr">
     <ul class="myInfo">
       <?php
 while ($row = mysqli_fetch_assoc($educatio_result)) {

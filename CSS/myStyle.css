@@ -508,7 +508,10 @@ a:hover {
     text-shadow: 1px 1px 1px rgba(23, 23, 23, 0.83);
 }
 
-a:hover {
+a:hover,
+a:visited,
+a:active,
+a:focus {
     color: #b8860b;
 }
 
@@ -531,6 +534,7 @@ a:hover {
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
     transition: transform .6s;
+    float: none;
 }
 
 

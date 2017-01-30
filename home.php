@@ -54,6 +54,7 @@
     </div>
     <div class="flex-col-img-center">
       <img class="index-profile" src="img/Daniel svart bakgrund (2).jpg" alt="daniel profilbild" />
+
       <p class="p-contact">Telefon: 073-918 22 16
         <br> Email: danieldahlman@outlook.com
         <br> Webbsida: www.danieldahlman.se

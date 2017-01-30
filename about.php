@@ -29,6 +29,7 @@
           <p> har alltid varit intresserad av att skapa och att bygga lösningar till svåra problem. Att bli programmerare är någonting jag riktigt fastnade för, just för att det innehåller så många moment där man får utveckla sin skicklighet inom design och
             utveckling av applikationer.
           </p>
+          <iframe width="280" height="157" src="https://www.youtube.com/embed/7G350UUO90k" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>

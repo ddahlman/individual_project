@@ -9,11 +9,6 @@ html {
     margin: 0;
 }
 
-textarea {
-    font: 100% BebasNeue;
-    border-radius: 5px;
-}
-
 input[type="text"] {
     border-radius: 5px;
     padding: 10px;
@@ -117,13 +112,18 @@ h1,
 
 .dark-bg {
     background-color: #555;
-    flex: 1;
     padding: 8px;
-    border-radius: 5px;
 }
 
 .grey-bg {
     background-color: #999;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 15px;
+    border: 6px solid #555;
+}
+
+.white-bg {
     border-radius: 5px;
     padding: 8px;
     margin-top: 15px;

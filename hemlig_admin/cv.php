@@ -161,32 +161,6 @@ if(isset($_POST['list3-id'])) {
 }
 
 /*===================================================================================================*/
-/* Project header and text*/
-/*===================================================================================================*/
-
-/*when clicking on spara below redigera projektrubriken================*/
-if(isset($_POST['save-pro-header'])) {
-    $proj_header = mysqli_real_escape_string($connection, $_POST["project-header"]);
-    
-    mysqli_query($connection, "UPDATE projects_text
-    SET header='$proj_header'
-    WHERE id=1");
-    
-    $success_8 = 'Projektrubriken är uppdaterad!';
-}
-
-/*when clicking on spara below redigera projekttexten================*/
-if(isset($_POST['save-pro-text'])) {
-    $proj_text = mysqli_real_escape_string($connection, $_POST["project-text"]);
-    
-    mysqli_query($connection, "UPDATE projects_text
-    SET project_text='$proj_text'
-    WHERE id=1");
-    
-    $success_9 = 'Projekttexten är uppdaterad!';
-}
-
-/*===================================================================================================*/
 /* Employments*/
 /*===================================================================================================*/
 
@@ -507,62 +481,6 @@ if(isset($success_7)) {
 }
 ?>
             </div>
-
-
-
-            <!--================= PROJEKT UPPDATERING =====================================-->
-            <!--                 PROJEKT TEXT                               -->
-            <!--============================================================================-->
-
-            <?php
-/*update third header================*/
-/*poject query*/
-$project_query = mysqli_query($connection,
-"SELECT *
-FROM projects_text
-WHERE id=1");
-
-$project = mysqli_fetch_assoc($project_query);
-$project_header  = $project['header'];
-$project_text    = $project['project_text'];
-?>
-              <div class="grey-bg">
-                <form method="post" action="">
-                  <h1 class="h1-white">Redigera projektrubriken</h1>
-                  <input type="text" name="project-header" value="<?php echo $project_header; ?>">
-                  <input type="submit" name="save-pro-header" value="spara rubrik">
-                </form>
-                <?php
-if(isset($success_8)) {
-    echo $success_8;
-} else {
-    echo "";
-}
-?>
-                  <!--Uppdatera projekt text================-->
-                  <div class="grey-bg">
-                    <form method="post" action="">
-                      <h1 class="h1-white">redigera projekttexten</h1>
-                      <textarea name="project-text" cols="50" rows="10">
-                        <?php echo $project_text; ?>
-                      </textarea>
-
-                      <div>
-                        <input type="submit" name="save-pro-text" value="spara">
-                      </div>
-                    </form>
-                  </div>
-
-                  <?php
-if(isset($success_9)) {
-    echo $success_9;
-} else {
-    echo "";
-}
-?>
-              </div>
-      </div>
-
       <!--================================================================================================-->
       <!-- Employments-->
       <!--================================================================================================-->
@@ -574,7 +492,7 @@ $employment_query = mysqli_query($connection,
 FROM employments");
 ?>
 
-        <div class="flex-container">
+        
           <div class="grey-bg">
             <h1 class="h1-white">Redigera listan för anställningar</h1>
             <ul>
@@ -614,7 +532,7 @@ if(isset($success_10)) {
     echo "";
 }
 ?>
-          </div>
+         
         </div>
 
         <!--================================================================================================-->

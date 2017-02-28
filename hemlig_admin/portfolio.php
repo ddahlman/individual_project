@@ -1,7 +1,5 @@
 <?php
 
-$success_1 = "";
-$success_2 = "";
 
 /*when clicking on ändra below redigera url-adress================*/
 if(isset($_POST['txt-url-id'])) {
@@ -13,9 +11,9 @@ if(isset($_POST['txt-url-id'])) {
     SET url='$url', project_text='$proj_text'
     WHERE id = '$txt_url_id'");
     if($update) {
-        $success_1 = 'url-listan är uppdaterad!';
+        $success = 'url-listan är uppdaterad!';
     } else {
-        $success_1 = 'Error';
+        $success = 'Error';
     }
     
 }
@@ -30,9 +28,9 @@ if(isset($_POST['add-items'])) {
     $result = mysqli_query($connection, "INSERT INTO project_url (url, project_text)
     VALUES ('$add_to_list', '$add_proj')");
     if($result) {
-        $success_2 = 'Listan är uppdaterad!';
+        $success = 'Du har lagt till i listan!';
     } else {
-        $success_2 = 'Error';
+        $success = 'Error';
     }
 }
 
@@ -44,7 +42,47 @@ $my_work = mysqli_query($connection,
 "SELECT *
 FROM project_url");
 ?>
-    <div class="flex-container">
+ <div class="dark-bg">
+      <h1 class="h1-white">Redigera portfolio</h1>
+    </div>
+
+    <!--******************* confirmation message ********************-->
+<?php
+if(isset($success)) {
+    echo "<div class='bg-success'>
+            <div class='text-center'><strong>$success</strong></div>
+          </div>";
+} else {
+    echo "";
+}
+?>
+
+<div class='container'>
+ <!--**************** lägg till url ***************-->
+    <div class="row">
+      <div class="white-bg">
+        <form method="post" action="">
+          <div class=' form-group row'>
+             <div class='col-md-6'>
+              <label for='add-to-list' class="control-label">Lägg till projekt url</label>
+              <input type="text" class='form-control' name="add-to-list" placeholder="Lägg till en url">   
+            </div>
+          </div>
+         <!--************* lägg till projekttext *************-->
+         <div class='form-group row'>
+           <div class='col-md-8'>
+              <label for="add-proj-text" class="control-label">Lägg till text</label>
+              <textarea name="add-proj-text" class='form-control' rows='10' placeholder="Lägg till text"></textarea>
+           </div>
+         </div>
+          <div>
+            <input type="submit" class='btn btn-success' name="add-items" value="spara tillägg">
+          </div>
+        </form>
+      </div>
+    </div>
+<hr>
+    
       <?php
 while($row = mysqli_fetch_assoc($my_work)) {
     $project_url = $row['url'];
@@ -52,57 +90,36 @@ while($row = mysqli_fetch_assoc($my_work)) {
     $id = $row['id'];
     ?>
         <!--Uppdatera url ===================================-->
-        <div class="grey-bg">
+
+      <div class="row">
+        <div class="white-bg">
           <form method="post" action="">
-            <h1 class="h1-white">Redigera URL-adress</h1>
-            <ul>
-              <li>
-                <input type="text" name="url" value="<?php echo $project_url; ?>">
-              </li>
-            </ul>
+            <div class='form-group row'>
+              <div class='col-md-6'>
+                 <label class="control-label">Redigera URL-adress</label>
+                  <input type="text" class='form-control' name="url" value="<?php echo $project_url; ?>">
+              </div>
+            </div>
             <!--Uppdatera projekt text================-->
-            <h1 class="h1-white">redigera projekttexten</h1>
-            <input type="hidden" name="txt-url-id" value="<?php echo $id; ?>">
-            <textarea name="project-text" cols="50" rows="10">
-              <?php echo $project_text; ?>
-            </textarea>
+            <div class='form-group row'>
+              <div class='col-md-8'>
+                 <label class="control-label">Redigera Projekttexten</label>
+                  <input type="hidden" name="txt-url-id" value="<?php echo $id; ?>">
+                  <textarea name="project-text" class='form-control' rows="10">
+                    <?php echo $project_text; ?>
+                  </textarea>
+              </div>
+            </div>
             <div>
-              <input type="submit" name="save-pro-text" value="ändra">
+              <input type="submit" class='btn btn-info' name="save-pro-text" value="ändra">
             </div>
           </form>
         </div>
+         </div>
         <?php
 }
 ?>
-          <?php
-if(isset($success_1)) {
-    echo $success_1;
-} else {
-    echo "";
-}
-?>
-    </div>
+</div>   
 
 
-    <!--**************** lägg till url ***************-->
-    <div class="flex-container">
-      <div class="grey-bg">
-        <form method="post" action="">
-          <h1 class="h1-white">Lägg till projekt url</h1>
-          <input type="text" name="add-to-list" placeholder="Lägg till en url">
-          <!--************* lägg till projekttext *************-->
-          <h1 class="h1-white">Lägg till text</h1>
-          <textarea name="add-proj-text" cols="50" rows="10"> </textarea>
-          <div>
-            <input type="submit" name="add-items" value="spara tillägg">
-          </div>
-        </form>
-        <?php
-if(isset($success_2)) {
-    echo $success_2;
-} else {
-    echo "";
-}
-?>
-      </div>
-    </div>
+   

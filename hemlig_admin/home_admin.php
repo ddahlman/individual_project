@@ -26,7 +26,9 @@ $welcome_txt = $welcome['welcome_text'];
     </div>
  <?php
 if(isset($success)) {
-    echo $success;
+    echo "<div class='bg-success'>
+            <div class='text-center'><strong>$success</strong></div>
+          </div>";
 } else {
     echo "";
 }
@@ -37,7 +39,7 @@ if(isset($success)) {
           <form method="post" action="">
             <div class='form-group row'>
               <div class='col-md-8'>
-                 <label class="control-label">redigera första sidans text</label>
+                 <label class="control-label">Redigera första sidans text</label>
                   <textarea class='form-control' name="welcome-text" rows="10">
                     <?php echo $welcome_txt; ?>
                   </textarea>

@@ -1,18 +1,5 @@
 <?php
 
-$success_1 = "";
-$success_2 = "";
-$success_3 = "";
-$success_4 = "";
-$success_5 = "";
-$success_6 = "";
-$success_7 = "";
-$success_8 = "";
-$success_9 = "";
-$success_10 = "";
-$success_11 = "";
-
-
 /*=================================================================================================*/
 /* 1st query   */
 /*=================================================================================================*/
@@ -25,7 +12,7 @@ if(isset($_POST['save-text'])) {
     SET first_text='$first_text'
     WHERE id=1");
     
-    $success_1 = 'Första texten är uppdaterad!';
+    $success = 'Första texten är uppdaterad!';
 }
 
 /*when clicking on first spara rubrik================*/
@@ -36,7 +23,7 @@ if(isset($_POST['save-1st-header'])) {
     SET header='$first_header'
     WHERE headersID = 1");
     
-    $success_2 = 'Första rubriken är uppdaterad!';
+    $success = 'Första rubriken är uppdaterad!';
 }
 
 /*when clicking on first spara tillägg================*/
@@ -47,9 +34,9 @@ if(isset($_POST['add-1st-list'])) {
     $result1 = mysqli_query($connection, "INSERT INTO items (headersID, list_item)
     VALUES ('1', '$add_to_list')");
     if($result1) {
-        $success_3 = 'Första listan är uppdaterad!';
+        $success = 'Första listan är uppdaterad!';
     } else {
-        $success_3 = 'Error';
+        $success = 'Error';
     }
 }
 
@@ -62,9 +49,9 @@ if(isset($_POST['list1-id'])) {
     SET list_item='$list_item1'
     WHERE id = '$list1_id'");
     if($update) {
-        $success_3 = 'Första listan är uppdaterad!';
+        $success = 'Första listan är uppdaterad!';
     } else {
-        $success_3 = 'Error';
+        $success = 'Error';
     }
     
 }
@@ -81,7 +68,7 @@ if(isset($_POST['save-2nd-header'])) {
     SET header='$second_header'
     WHERE headersID = 2");
     
-    $success_4 = 'Andra rubriken är uppdaterad!';
+    $success = 'Andra rubriken är uppdaterad!';
 }
 
 /*when clicking on second spara tillägg================*/
@@ -92,9 +79,9 @@ if(isset($_POST['add-2nd-list'])) {
     $result2 = mysqli_query($connection, "INSERT INTO items (headersID, list_item)
     VALUES ('2', '$add_to_list2')");
     if($result2) {
-        $success_5 = 'Andra listan är uppdaterad!';
+        $success = 'Andra listan är uppdaterad!';
     } else {
-        $success_5 = 'Error';
+        $success = 'Error';
     }
 }
 
@@ -107,9 +94,9 @@ if(isset($_POST['list2-id'])) {
     SET list_item='$list_item2'
     WHERE id = '$list2_id'");
     if($update) {
-        $success_5 = 'Andra listan är uppdaterad!';
+        $success = 'Andra listan är uppdaterad!';
     } else {
-        $success_5 = 'Error';
+        $success = 'Error';
     }
     
 }
@@ -127,7 +114,7 @@ if(isset($_POST['save-3rd-header'])) {
     SET header='$third_header'
     WHERE headersID = 3");
     
-    $success_6 = 'Tredje rubriken är uppdaterad!';
+    $success = 'Tredje rubriken är uppdaterad!';
 }
 
 /*when clicking on third spara tillägg================*/
@@ -138,9 +125,9 @@ if(isset($_POST['add-3rd-list'])) {
     $result3 = mysqli_query($connection, "INSERT INTO items (headersID, list_item)
     VALUES ('3', '$add_to_list3')");
     if($result3) {
-        $success_7 = 'Tredje listan är uppdaterad!';
+        $success = 'Tredje listan är uppdaterad!';
     } else {
-        $success_7 = 'Error';
+        $success = 'Error';
     }
 }
 
@@ -153,9 +140,9 @@ if(isset($_POST['list3-id'])) {
     SET list_item='$list_item3'
     WHERE id = '$list3_id'");
     if($update) {
-        $success_7 = 'Tredje listan är uppdaterad!';
+        $success = 'Tredje listan är uppdaterad!';
     } else {
-        $success_7 = 'Error';
+        $success = 'Error';
     }
     
 }
@@ -174,9 +161,9 @@ if(isset($_POST['add-employment'])) {
     $result4 = mysqli_query($connection, "INSERT INTO employments (employment, year)
     VALUES ('$add_emp', '$add_empyears')");
     if($result4) {
-        $success_10 = 'Listan för anställningar är uppdaterad!';
+        $success = 'Listan för anställningar är uppdaterad!';
     } else {
-        $success_10 = 'Error';
+        $success = 'Error';
     }
 }
 
@@ -190,9 +177,9 @@ if(isset($_POST['emp-id'])) {
     SET employment='$employments', year='$emp_year'
     WHERE id = '$emp_id'");
     if($update_emp) {
-        $success_10 = 'Listan för anställningar är uppdaterad!';
+        $success = 'Listan för anställningar är uppdaterad!';
     } else {
-        $success_10 = 'Error';
+        $success = 'Error';
     }
     
 }
@@ -212,9 +199,9 @@ if(isset($_POST['add-education'])) {
     $result5 = mysqli_query($connection, "INSERT INTO education (schools, years)
     VALUES ('$add_edu', '$add_eduyears')");
     if($result5) {
-        $success_11 = 'Listan för utbildningar är uppdaterad!';
+        $success = 'Listan för utbildningar är uppdaterad!';
     } else {
-        $success_11 = 'Error';
+        $success = 'Error';
     }
 }
 
@@ -228,17 +215,34 @@ if(isset($_POST['edu-id'])) {
     SET schools='$educations', years='$edu_year'
     WHERE id = '$edu_id'");
     if($update_edu) {
-        $success_11 = 'Listan för utbildningar är uppdaterad!';
+        $success = 'Listan för utbildningar är uppdaterad!';
     } else {
-        $success_11 = 'Error';
+        $success = 'Error';
     }
     
 }
 ?>
 
 
+<!--******************************************************************
+                    CV header                          
+**********************************************************************-->
 
-  <?php
+    <div class="dark-bg">
+      <h1 class="h1-white">Redigera CV</h1>
+    </div>
+
+<!--******************* confirmation message ********************-->
+    <?php
+if(isset($success)) {
+    echo "<div class='bg-success'>
+            <div class='text-center'><strong>$success</strong></div>
+          </div>";
+} else {
+    echo "";
+}
+?>
+ <?php
 /*--update first text===================================*/
 $cv_ft_query = mysqli_query($connection,
 "SELECT *
@@ -248,33 +252,25 @@ WHERE id=1");
 $cv_first_text = mysqli_fetch_assoc($cv_ft_query);
 $first_text    = $cv_first_text['first_text'];
 ?>
-    <div class="dark-bg">
-      <h1 class="h1-white">Redigera CV</h1>
-    </div>
-
-    <div class="flex-container">
-      <div class="flex-center-center">
-        <div class="grey-bg">
+<div class='container'>
+    <div class="row">
+        <div class="white-bg">
           <form method="post" action="">
-            <h1 class="h1-white">redigera första CV-texten</h1>
-            <textarea name="first-text" id="first-text" cols="50" rows="10">
-              <?php echo $first_text; ?>
-            </textarea>
-
+            <div class='form-group row'>
+                <div class='col-md-8'>
+                    <label class="control-label">redigera första CV-texten</label>
+                    <textarea class='form-control' name="first-text" id="first-text" rows="10">
+                        <?php echo $first_text; ?>
+                    </textarea>
+                </div>
+            </div>
             <div>
-              <input type="submit" name="save-text" value="spara">
+              <input type="submit" class='btn btn-info' name="save-text" value="spara">
             </div>
           </form>
         </div>
-        <?php
-if(isset($success_1)) {
-    echo $success_1;
-} else {
-    echo "";
-}
-?>
-      </div>
     </div>
+    <hr>
 
     <!--===================================== 1 ===========================================-->
     <?php
@@ -288,66 +284,73 @@ $cv_first_header = mysqli_fetch_assoc($cv_1gh_query);
 $first_header  = $cv_first_header['header'];
 ?>
 
-      <div class="flex-container">
-        <div class="grey-bg">
-          <form method="post" action="">
-            <h1 class="h1-white">Redigera första rubriken</h1>
-            <input type="text" name="first-header" value="<?php echo $first_header; ?>">
-            <input type="submit" name="save-1st-header" value="spara rubrik">
-          </form>
-          <?php
-if(isset($success_2)) {
-    echo $success_2;
-} else {
-    echo "";
-}
-
-
-/*insert to and update first list========================*/
+    <div class="row">
+        <div class="white-bg">
+            <form method="post" action="">
+                <div class='form-group row'>
+                    <div class='col-md-6'>
+                        <label class="control-label">Redigera första rubriken</label>
+                        <input type="text" class='form-control' name="first-header" value="<?php echo $first_header; ?>">
+                    </div>
+                </div>
+                 <div class='form-group'>
+                    <input type="submit" class='btn btn-info' name="save-1st-header" value="spara rubrik">
+                </div>
+            </form>
+        <hr>
+<!--insert to and update first list========================-->
+<?php
 $cv_1list_query = mysqli_query($connection,
 "SELECT id, list_item
 FROM items
 WHERE headersID=1");
 ?>
 
+       
+                <label class="control-label">Redigera listan</label>
+                <ul>
+                    <?php
+                        while( $row = mysqli_fetch_assoc($cv_1list_query)) {
+                            $list_item = $row['list_item'];
+                            $id = $row['id'];
+                    ?>
+                    <li>
+                        <form method="post" action="">
+                            <div class='form-group row'>
+                                <div class='col-md-6'>
+                                    <input type="hidden" name="list1-id" value="<?php echo $id; ?>">
+                                    <input type="text" class='form-control' name="list-item1" value="<?php echo $list_item; ?>">
+                                </div>
+                                <div class='col-md-2'>
+                                    <input type="submit" class='btn btn-info' value="ändra">
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <?php
+                    }
+                    ?>
+                </ul>
+            <hr>
 
-            <h1 class="h1-white">Redigera listan</h1>
-            <ul id="first-list">
-              <?php
-while( $row = mysqli_fetch_assoc($cv_1list_query)) {
-    $list_item = $row['list_item'];
-    $id = $row['id'];
-    ?>
-                <li>
-                  <form method="post" action="">
-                    <input type="hidden" name="list1-id" value="<?php echo $id; ?>">
-                    <input type="text" name="list-item1" value="<?php echo $list_item; ?>">
-                    <input type="submit" name="" value="ändra">
-                  </form>
-                </li>
-                <?php
-}
-?>
-            </ul>
-            <form method="post" action="">
-              <h1 class="h1-white">Lägg till i listan</h1>
-              <input type="text" name="add-to-list" placeholder="Lägg till i listan">
-              <input type="submit" name="add-1st-list" value="spara tillägg">
-            </form>
+        <form method="post" action="">
+            <div class='form-group row'>
+                <div class='col-md-6'>
+                    <label class="control-label">Lägg till i listan</label>
+                    <input type="text" class='form-control' name="add-to-list" placeholder="Lägg till i listan">
+                </div>
+            </div>
+            <div class='form-group'>
+                <input type="submit" class='btn btn-success' name="add-1st-list" value="spara tillägg">
+            </div>
+        </form>
+        
+    </div>
+</div>
 
-            <?php
-if(isset($success_3)) {
-    echo $success_3;
-} else {
-    echo "";
-}
-?>
+<!--================================== 2 =================================================-->
 
-        </div>
-
-        <!--================================== 2 =================================================-->
-
-        <?php
+<?php
 /*update second header================*/
 $cv_2gh_query = mysqli_query($connection,
 "SELECT header
@@ -357,64 +360,72 @@ WHERE headersID=2");
 $cv_second_header = mysqli_fetch_assoc($cv_2gh_query);
 $second_header  = $cv_second_header['header'];
 ?>
-          <div class="grey-bg">
+        <div class='row'>
+          <div class="white-bg">
             <form method="post" action="">
-              <h1 class="h1-white">Redigera andra rubriken</h1>
-              <input type="text" name="second-header" value="<?php echo $second_header; ?>">
-              <input type="submit" name="save-2nd-header" value="spara rubrik">
+                <div class='form-group row'>
+                    <div class='col-md-6'>
+                        <label class="control-label">Redigera andra rubriken</label>
+                        <input type="text" class='form-control' name="second-header" value="<?php echo $second_header; ?>">
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <input type="submit" class='btn btn-info' name="save-2nd-header" value="spara rubrik">
+                </div>
             </form>
-            <?php
-if(isset($success_4)) {
-    echo $success_4;
-} else {
-    echo "";
-}
+           <hr>
 
-
-/*insert to and update second list========================*/
+<!--insert to and update second list========================-->
+ <?php
 $cv_2list_query = mysqli_query($connection,
 "SELECT id, list_item
 FROM items
 WHERE headersID=2");
 ?>
 
-
-              <h1 class="h1-white">Redigera listan</h1>
+            
+              <label class="control-label">Redigera listan</label>
               <ul>
                 <?php
-while( $row = mysqli_fetch_assoc($cv_2list_query)) {
-    $list_item2 = $row['list_item'];
-    $id = $row['id'];
-    ?>
+                    while( $row = mysqli_fetch_assoc($cv_2list_query)) {
+                         $list_item2 = $row['list_item'];
+                         $id = $row['id'];
+                ?>
                   <li>
                     <form method="post" action="">
-                      <input type="hidden" name="list2-id" value="<?php echo $id; ?>">
-                      <input type="text" name="list-item2" value="<?php echo $list_item2; ?>">
-                      <input type="submit" name="" value="ändra">
+                        <div class='form-group row'>
+                            <div class='col-md-6'>
+                                <input type="hidden" name="list2-id" value="<?php echo $id; ?>">
+                                <input type="text" class='form-control' name="list-item2" value="<?php echo $list_item2; ?>">
+                            </div>
+                            <div class='col-md-2'>
+                                <input type="submit" class='btn btn-info' name="" value="ändra">
+                            </div>
+                        </div>
                     </form>
                   </li>
-                  <?php
-}
-?>
+                <?php
+                }
+                ?>
               </ul>
+            <hr>
+
               <form method="post" action="">
-                <h1 class="h1-white">Lägg till i listan</h1>
-                <input type="text" name="add-to-list2" placeholder="Lägg till i listan">
-                <input type="submit" name="add-2nd-list" value="spara tillägg">
+                <div class='form-group row'>
+                    <div class='col-md-6'>
+                        <label class="control-label">Lägg till i listan</label>
+                        <input type="text" class='form-control' name="add-to-list2" placeholder="Lägg till i listan">
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <input type="submit" class='btn btn-success' name="add-2nd-list" value="spara tillägg">
+                </div>
               </form>
-
-              <?php
-if(isset($success_5)) {
-    echo $success_5;
-} else {
-    echo "";
-}
-?>
-
           </div>
-          <!--================================== 3 ==============================================-->
+        </div>
+<!--================================== 3 ==============================================-->
 
-          <?php
+<?php
 /*update third header================*/
 $cv_3gh_query = mysqli_query($connection,
 "SELECT header
@@ -424,63 +435,68 @@ WHERE headersID=3");
 $cv_third_header = mysqli_fetch_assoc($cv_3gh_query);
 $third_header  = $cv_third_header['header'];
 ?>
-
-
-
-            <div class="grey-bg">
+        <div class='row'>
+            <div class="white-bg">
               <form method="post" action="">
-                <h1 class="h1-white">Redigera tredje rubriken</h1>
-                <input type="text" name="third-header" value="<?php echo $third_header; ?>">
-                <input type="submit" name="save-3rd-header" value="spara rubrik">
+                <div class='form-group row'>
+                    <div class='col-md-6'>
+                        <label class="control-label">Redigera tredje rubriken</label>
+                        <input type="text" class='form-control' name="third-header" value="<?php echo $third_header; ?>">
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <input type="submit" class='btn btn-info' name="save-3rd-header" value="spara rubrik">
+                </div>
               </form>
-              <?php
-if(isset($success_6)) {
-    echo $success_6;
-} else {
-    echo "";
-}
-
-
-/*insert to and update third list========================*/
+              <hr>
+<!--insert to and update third list========================-->
+<?php
 $cv_3list_query = mysqli_query($connection,
 "SELECT id, list_item
 FROM items
 WHERE headersID=3");
 ?>
 
+           
+                <label class="control-label">Redigera listan</label>
+                    <ul>
+                        <?php
+                            while( $row = mysqli_fetch_assoc($cv_3list_query)) {
+                                $list_item3 = $row['list_item'];
+                                $id = $row['id'];
+                        ?>
+                        <li>
+                            <form method="post" action="">
+                                <div class='form-group row'>
+                                    <div class='col-md-6'>
+                                        <input type="hidden" name="list3-id" value="<?php echo $id; ?>">
+                                        <input type="text" class='form-control' name="list-item3" value="<?php echo $list_item3; ?>">
+                                    </div>
+                                    <div class='col-md-2'>
+                                        <input type="submit" class='btn btn-info' value="ändra">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <?php
+                        }
+                        ?>
+                    </ul>
+                    <hr>
 
-                <h1 class="h1-white">Redigera listan</h1>
-                <ul>
-                  <?php
-while( $row = mysqli_fetch_assoc($cv_3list_query)) {
-    $list_item3 = $row['list_item'];
-    $id = $row['id'];
-    ?>
-                    <li>
-                      <form method="post" action="">
-                        <input type="hidden" name="list3-id" value="<?php echo $id; ?>">
-                        <input type="text" name="list-item3" value="<?php echo $list_item3; ?>">
-                        <input type="submit" name="" value="ändra">
-                      </form>
-                    </li>
-                    <?php
-}
-?>
-                </ul>
                 <form method="post" action="">
-                  <h1 class="h1-white">Lägg till i listan</h1>
-                  <input type="text" name="add-to-list3" placeholder="Lägg till i listan">
-                  <input type="submit" name="add-3rd-list" value="spara tillägg">
+                    <div class='form-group row'>
+                        <div class='col-md-6'>
+                            <label class="control-label">Lägg till i listan</label>
+                            <input type="text" class='form-control' name="add-to-list3" placeholder="Lägg till i listan">
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <input type="submit" class='btn btn-success' name="add-3rd-list" value="spara tillägg">
+                    </div>
                 </form>
-
-                <?php
-if(isset($success_7)) {
-    echo $success_7;
-} else {
-    echo "";
-}
-?>
             </div>
+        </div>
       <!--================================================================================================-->
       <!-- Employments-->
       <!--================================================================================================-->
@@ -492,100 +508,125 @@ $employment_query = mysqli_query($connection,
 FROM employments");
 ?>
 
-        
-          <div class="grey-bg">
-            <h1 class="h1-white">Redigera listan för anställningar</h1>
-            <ul>
-              <?php
-while( $row = mysqli_fetch_assoc($employment_query)) {
-    $employment = $row['employment'];
-    $emp_years = $row['year'];
-    $id = $row['id'];
-    ?>
-                <li>
-                  <form method="post" action="">
-                    <input type="hidden" name="emp-id" value="<?php echo $id; ?>">
-                    <label for="employment">anställning</label>
-                    <input type="text" name="employment" value="<?php echo $employment; ?>">
-                    <label for="emp-years">årtal</label>
-                    <input type="text" name="emp-years" value="<?php echo $emp_years; ?>">
-                    <input type="submit" name="" value="ändra">
-                  </form>
-                </li>
-                <?php
-}
-?>
-            </ul>
-            <form method="post" action="">
-              <h1 class="h1-white">Lägg till i listan</h1>
-              <input type="text" name="add-to-emp" placeholder="Lägg till anställning">
-              <input type="text" name="add-to-empyears" placeholder="Lägg till årtal">
-              <input type="submit" name="add-employment" value="spara tillägg">
-            </form>
-
-
-
+    <div class='row'>
+        <div class="white-bg">
+        <label class="control-label">Redigera listan för anställningar</label>
+        <ul>
             <?php
-if(isset($success_10)) {
-    echo $success_10;
-} else {
-    echo "";
-}
-?>
-         
-        </div>
+            while( $row = mysqli_fetch_assoc($employment_query)) {
+                $employment = $row['employment'];
+                $emp_years = $row['year'];
+                $id = $row['id'];
+            ?>
+            <li>
+                <form method="post" action="">
+                    <div class='form-group row'>
+                        <input type="hidden" name="emp-id" value="<?php echo $id; ?>">
+                        <div class='col-md-5'>
+                            <label class='control-label' for="employment">anställning</label>
+                            <input class='form-control' type="text" name="employment" value="<?php echo $employment; ?>">
+                        </div>
+                        <div class='col-md-5'>
+                            <label class='control-label' for="emp-years">årtal</label>
+                            <input class='form-control' type="text" name="emp-years" value="<?php echo $emp_years; ?>">
+                        </div>
+                        <div class='col-md-1'>
+                            <label class='control-label' for='submit'></label>
+                            <input type="submit" class='btn btn-info form-control' name='submit' value="ändra">
+                        </div>
+                    </div>
+                </form>
+            </li>
+            <?php
+            }
+            ?>
+            </ul>
+            <hr>
 
+            <form class='form-horizontal' method="post" action="">
+                <div class='form-group'>
+                    <div class='col-md-6'>
+                        <label class="control-label">Lägg till i listan</label>
+                        <input class='form-control' type="text" name="add-to-emp" placeholder="Lägg till anställning">
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <div class='col-md-6'>
+                        <input class='form-control' type="text" name="add-to-empyears" placeholder="Lägg till årtal">
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <div class='col-md-2'>
+                        <input class='btn btn-success' type="submit" name="add-employment" value="spara tillägg">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
         <!--================================================================================================-->
         <!-- Education-->
         <!--================================================================================================-->
 
 
-        <?php
+<?php
 /*insert to and update education list========================*/
 $education_query = mysqli_query($connection,
 "SELECT *
 FROM education");
 ?>
 
-          <div class="flex-container">
-            <div class="grey-bg">
-              <h1 class="h1-white">Redigera listan för utbildningar</h1>
+          <div class="row">
+            <div class="white-bg">
+              <label class="control-label">Redigera listan för utbildningar</label>
               <ul>
                 <?php
-while( $row = mysqli_fetch_assoc($education_query)) {
-    $schools = $row['schools'];
-    $edu_years = $row['years'];
-    $id = $row['id'];
-    ?>
-                  <li>
-                    <form method="post" action="">
-                      <input type="hidden" name="edu-id" value="<?php echo $id; ?>">
-                      <label for="education">utbildning</label>
-                      <input type="text" name="education" value="<?php echo $schools; ?>">
-                      <label for="edu-years">årtal</label>
-                      <input type="text" name="edu-years" value="<?php echo $edu_years; ?>">
-                      <input type="submit" name="" value="ändra">
-                    </form>
+                    while( $row = mysqli_fetch_assoc($education_query)) {
+                        $schools = $row['schools'];
+                        $edu_years = $row['years'];
+                        $id = $row['id'];
+                    ?>
+                    <li>
+                        <form method="post" action="">
+                            <div class='form-group row'>
+                                <input type="hidden" name="edu-id" value="<?php echo $id; ?>">
+                                <div class='col-md-5'>
+                                    <label class='control-label' for="education">utbildning</label>
+                                    <input class='form-control' type="text" name="education" value="<?php echo $schools; ?>">
+                                </div>
+                                <div class='col-md-5'>
+                                    <label class='control-label' for="edu-years">årtal</label>
+                                    <input class='form-control' type="text" name="edu-years" value="<?php echo $edu_years; ?>">
+                                </div>
+                                <div class='col-md-1'>
+                                    <label class='control-label' for="submit"></label>
+                                    <input class='btn btn-info' type="submit" name="submit" value="ändra">
+                                </div>
+                            </div>
+                        </form>
                   </li>
                   <?php
-}
-?>
+                    }
+                ?>
               </ul>
-              <form method="post" action="">
-                <h1 class="h1-white">Lägg till i listan</h1>
-                <input type="text" name="add-to-edu" placeholder="Lägg till utbildning">
-                <input type="text" name="add-to-eduyears" placeholder="Lägg till årtal">
-                <input type="submit" name="add-education" value="spara tillägg">
+              <hr>
+
+              <form class='form-horizontal' method="post" action="">
+                <div class='form-group'>
+                    <div class='col-md-5'>
+                        <label class="control-label">Lägg till i listan</label>
+                        <input class='form-control' type="text" name="add-to-edu" placeholder="Lägg till utbildning">
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <div class='col-md-5'>
+                        <input class='form-control' type="text" name="add-to-eduyears" placeholder="Lägg till årtal">
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <div class='col-md-2'>
+                        <input class='btn btn-success' type="submit" name="add-education" value="spara tillägg">
+                    </div>
+                </div>
               </form>
-
-
-
-              <?php
-if(isset($success_11)) {
-    echo $success_11;
-} else {
-    echo "";
-}
-?>
             </div>
-          </div>
+        </div>

@@ -42,7 +42,7 @@ while($row = mysqli_fetch_assoc($result)) {
     </div>
     <form method='post'>
     <input type='hidden' name='id' value='{$row['id']}'>
-    <button type='submit' class='btn btn-danger'><span class='glyphicon glyphicon-remove'></span> ta bort</button>
+    <button type='submit' class='btn btn-danger'><span class='fa fa-remove'></span> ta bort</button>
     </form>
     </div>";
 }

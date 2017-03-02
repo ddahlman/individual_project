@@ -21,16 +21,18 @@ $result = mysqli_query($connection, $query);
 
 
 
-
+<div class="dark-bg">
+      <h1 class="h1-white">Meddelanden</h1>
+    </div>
 
   <div class="container">
-    <h1>Meddelanden</h1>
-    <h2>Nya meddelanden</h2>
+    
+    <h2>Nya meddelanden (<span id='counter'></span>)</h2>
     <?php
 while($row = mysqli_fetch_assoc($result)) {
-    echo "<div class='well bookings'>
+    echo "<div class='well messages'>
     <div class='center-block'>
-    <strong>{$row['name_contact']}</strong> </p><br>
+    <h2><strong>{$row['name_contact']}</strong></h2><br>
     </div>
     <div class='row'>
     <div class='well col-md-6'>

@@ -14,4 +14,17 @@ $(document).ready(function () {
         $('.layer').css('background-color', '');
     });
 
+    /********************** inc_message counter ***************/
+    (function () {
+
+        var counter = 0;
+
+        var messages = Array.from(document.querySelectorAll('.messages'));
+        var showCounter = document.getElementById('counter');
+
+        messages.map(mess => counter += 1);
+
+        showCounter.innerHTML = counter;
+    })();
+
 });

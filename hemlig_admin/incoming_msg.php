@@ -14,11 +14,7 @@ FROM inc_message AS i
 ORDER BY i.id DESC";
 $result = mysqli_query($connection, $query);
 
-
-
 ?>
-
-
 
 
 <div class="dark-bg">

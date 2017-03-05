@@ -9,11 +9,6 @@ html {
     margin: 0;
 }
 
-input[type="text"] {
-    border-radius: 5px;
-    padding: 10px;
-}
-
 li {
     list-style: none;
 }
@@ -115,28 +110,9 @@ h1,
     padding: 8px;
 }
 
-.grey-bg {
-    background-color: #999;
-    border-radius: 5px;
-    padding: 8px;
-    margin-top: 15px;
-    border: 6px solid #555;
-}
-
 .white-bg {
     border-radius: 5px;
     padding: 8px;
     margin-top: 15px;
     border: 6px solid #555;
-}
-
-
-/*flex----------------------------*/
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-top: 15px;
-    justify-content: space-around;
 }

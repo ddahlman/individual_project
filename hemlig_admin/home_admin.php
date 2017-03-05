@@ -1,8 +1,7 @@
 <?php
-$success = "";
 
-if(isset($_POST['save-text'])) {
-    $welcome_text = mysqli_real_escape_string($connection, $_POST["welcome-text"]);
+if(isset($_POST['welcome_text'])) {
+    $welcome_text = mysqli_real_escape_string($connection, $_POST["welcome_text"]);
     
     mysqli_query($connection, "UPDATE home_page
     SET welcome_text='$welcome_text'");
@@ -40,13 +39,13 @@ if(isset($success)) {
             <div class='form-group row'>
               <div class='col-md-8'>
                  <label class="control-label">Redigera första sidans text</label>
-                  <textarea class='form-control' name="welcome-text" rows="10">
+                  <textarea class='form-control' id='home-text' name="welcome_text" rows="10">
                     <?php echo $welcome_txt; ?>
                   </textarea>
               </div>
             </div>
             <div class='form-group'>
-              <input type="submit" class='btn btn-info' name="save-text" value="spara">
+              <input type="submit" id='home-submit' class='btn btn-info' name="save-text" value="spara">
             </div>
           </form>
         </div>

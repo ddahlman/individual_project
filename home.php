@@ -53,7 +53,7 @@ $welcome_text = $row['welcome_text'];
     <div class="flex-row">
       <div class="flex-col">
         <h1 class="h1-index-grey">daniel dahlman</h1>
-        <h1 class="h1-index-yellow">Webb designer & webb utvecklare</h1>
+        <h1 class="h1-index-yellow">Webb designer & webb utvecklare yo</h1>
         <p>
           <?php echo $welcome_text ?>
         </p>

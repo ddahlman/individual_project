@@ -116,3 +116,14 @@ h1,
     margin-top: 15px;
     border: 6px solid #555;
 }
+
+
+/*===== alert success*/
+
+.alert.alert-success,
+.alert.alert-success.cv-text,
+.alert.alert-success.cv-header-1,
+.alert.alert-success.cv-header-2,
+.alert.alert-success.cv-header-3 {
+    display: none;
+}

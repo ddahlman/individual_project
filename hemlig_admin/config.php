@@ -7,5 +7,8 @@ $dbdatabase = "219307-danieldahlman";*/
 $dbusername = "root";
 $dbhost = "localhost";
 $dbpassword = "";
-$dbdatabase = "test";
+$db = "test";
+
+$connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $db);
+mysqli_query($connection, "SET NAMES utf8");
 ?>

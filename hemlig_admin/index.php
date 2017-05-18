@@ -16,7 +16,7 @@ if(isset($_POST['submit'])) {
         $password = $_POST['password'];
         
         
-        $connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbdatabase);
+        
         
         if(!$connection) {
             echo "Error: Unable to connect to MySQL." . PHP_EOL;

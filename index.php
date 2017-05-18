@@ -1,7 +1,7 @@
 <?php include_once('./includes/header.php');
 include('./hemlig_admin/config.php');
 
-$connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbdatabase);
+
 ?>
 
   <?php

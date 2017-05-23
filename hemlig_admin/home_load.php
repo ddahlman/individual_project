@@ -2,6 +2,7 @@
 include('session.php');
 include('config.php');
 include('admin_meny.php');
+include('modal.php');
 $connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbdatabase);
 ?>
 

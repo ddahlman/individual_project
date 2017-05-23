@@ -124,6 +124,33 @@ h1,
 .alert.alert-success.cv-text,
 .alert.alert-success.cv-header-1,
 .alert.alert-success.cv-header-2,
-.alert.alert-success.cv-header-3 {
+.alert.alert-success.cv-header-3,
+.list-success {
     display: none;
+}
+
+.li-form {
+    border: 1px solid #eeeeee;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0 2px 5px #999;
+}
+
+.fa.fa-check {
+    color: #31b0d5;
+}
+
+.form-horizontal .has-feedback .form-control-feedback {
+    right: 45px;
+}
+
+
+/*============= badge label*/
+
+.label.label-default {
+    background-color: #555;
+}
+
+.well.note {
+    background-color: #fff;
 }

@@ -23,7 +23,7 @@ class _cv_headers extends Resource{ // Klassen ärver egenskaper från den gener
         switch($collection){
             case 'items':
                 if($this->id){ // Om vår URL innehåller ett ID på resursen hämtas bara den usern
-                    $query = "SELECT i.list_item
+                    $query = "SELECT i.list_item, i.id
                     FROM cv_grey_headers AS c INNER JOIN
                     items AS i ON
                     c.headersID = i.headersID

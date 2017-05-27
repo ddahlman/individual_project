@@ -20,7 +20,9 @@
     <a class="page-links" href="?page=home">Admin <hr class="hr"></a>
     <a class="page-links" href="?page=home_admin">Första sidan <hr class="hr"></a>
     <a class="page-links" href="?page=cv">CV <hr class="hr"></a>
+    <a class="page-links" href="?page=about">Om mig <hr class="hr"></a>
     <a class="page-links" href="?page=portfolio">Mitt arbete <hr class="hr"></a>
     <a class="page-links" href="?page=incoming_msg">Meddelande <span class='badge counter'></span><hr class="hr"></a>
   </div>
   <div class="layer"></div>
+  <button type="button" class='logOut'>logga ut</button>

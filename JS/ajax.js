@@ -112,4 +112,81 @@ $(document).ready(function () {
             });
         }
     });
+    /*============================= get Welcome_text to home.php ===============*/
+    $.get('http://localhost/individual_project/api/?/welcome_text').then((response) => {
+        $('#welcome-text').html(response.texts[0].welcome_text);
+    });
+    /*=============================== get CV first text ===========================*/
+    $.get('http://localhost/individual_project/api/?/cv_text').then((response) => {
+        $('#cv-firsttext').html(response.texts[0].first_text);
+    });
+    /*=========================== get CV headers and lists ==============================*/
+    $.get("http://localhost/individual_project/api/?/cv_headers").then((result) => {
+        let resultheaders = result.allheaders;
+        [...document.querySelectorAll('.list-header')].map((head, i) => head.innerHTML = resultheaders[i].header);
+        resultheaders.map((obj) => {
+            $.get(`http://localhost/individual_project/api/?/cv_headers/${obj.headersID}/items`)
+                .then((response) => {
+                    let li = response.header_items.map(item => `<li>${item.list_item}</li>`);
+
+                    let id = response.id;
+
+                    switch (id) {
+                        case "1":
+                            $('#first-list').html(li);
+                            break;
+                        case "2":
+                            $('#second-list').html(li);
+                            break;
+                        case "3":
+                            $('#third-list').html(li);
+                            break;
+                        default:
+                            break;
+                    }
+                });
+            return obj;
+        });
+    });
+
+    /*=================== get Employments ==================================*/
+    $.get('http://localhost/individual_project/api/?/cv_employment')
+        .then((response) => {
+            let employment = response.employments.map((obj) => {
+                let emp = `<li class='li-education'>
+                           <br/>${obj.employment}
+                           </li>
+                           <li class='li-education'>${obj.year}</li>`;
+                return emp;
+            });
+            $('#employments').html(employment);
+        });
+    /*======================== get Education =============================*/
+    $.get('http://localhost/individual_project/api/?/cv_education')
+        .then((response) => {
+            let education = response.educations.map((obj) => {
+                let emp = `<li class='li-education'>
+                           <br/>${obj.school}
+                           </li>
+                           <li class='li-education'>${obj.year}</li>`;
+                return emp;
+            });
+            $('#educations').html(education);
+        });
+
+    /*=============== get About me =========================*/
+    $.get('http://localhost/individual_project/api/?/about').then((response) => {
+        let str = response.texts[0].text;
+        [...document.querySelectorAll('.about-text')].map((tag, i) => tag.innerHTML = str.split('...')[i]);
+    });
+    /*============ get Projects ===============================*/
+    $.get('http://localhost/individual_project/api/?/portfolio').then((response) => {
+        let projects = response.projects.map((obj) => {
+            let project = `<div class='well'>
+                           <a href='${obj.url}'>${obj.url}</a>
+                           <p>${obj.project_text}</p></div>`;
+            return project;
+        });
+        $('#myWork').html(projects);
+    });
 });

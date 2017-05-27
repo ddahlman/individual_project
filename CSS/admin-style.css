@@ -154,3 +154,22 @@ h1,
 .well.note {
     background-color: #fff;
 }
+
+
+/*************************** logOut *****************************************/
+
+.logOut {
+    position: absolute;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #ec9b13;
+    right: 0;
+}
+
+.logOut:hover {
+    background-color: #333;
+    transition: 0.3s;
+}

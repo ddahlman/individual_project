@@ -16,7 +16,6 @@ class _login extends Resource{ // Klassen ärver egenskaper från den generella 
     }
     
     function GET($input, $db){
-        
         $this->id = $_SESSION['login_user'];
         
     }
@@ -24,27 +23,25 @@ class _login extends Resource{ // Klassen ärver egenskaper från den generella 
     # Denna funktion körs om vi anropat resursen genom HTTP-metoden POST
     function POST($input, $db){
         
-        
         # I denna funktion skapar vi en ny user med den input vi fått
         /* if(isset($input['user_name'], $input['user_password'])){*/
         $user_name = escape($input['username']);
-        
         $user_password = escape($input['password']);
         
+        $salt = 'MinFörstaRiktigaHemsidaMedSäkerhet!84';
+        $user_password = crypt($user_password, $salt);
         
-        
-        
-        $query = "SELECT * FROM users
-        WHERE name = '$user_name'
+        $query = "SELECT * FROM login
+        WHERE username = '$user_name'
         AND password = '$user_password'";
         
         $result = mysqli_query($db, $query);
         
         if (mysqli_num_rows($result) == 1) {
             $user = mysqli_fetch_assoc($result);
-            $_SESSION['login_user'] = $user['id']; //sets the key to login_user and the value to $id
-            $this->user_name = $user['name'];
-            $this->id = $user['id'];
+            $_SESSION['login_user'] = $user['id'];//sets the key to login_user and the value to $id
+            /*$this->user_name = $user['username'];
+            $this->id = $user['id'];*/
             $this->session = session_id();
         } else {
             

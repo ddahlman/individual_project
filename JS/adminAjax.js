@@ -34,7 +34,7 @@ $(document).ready(function () {
             url: "http://localhost/individual_project/api/?/welcome_text/1",
             data: { welcome_text: homeText },
             success: (data) => {
-                $('.alert-success').show().fadeOut(3000);
+                $('#home-success').show().fadeOut(3000);
             }
 
         });
@@ -444,7 +444,6 @@ $(document).ready(function () {
             let counter = 0;
             let messages = response.messages.map((obj) => {
                 counter += 1;
-                console.log(counter);
                 let message = `<div class='well messages'>
                                  <div class='center-block'>
                                  <h2><strong>${obj.name_contact}</strong></h2><br>
@@ -474,6 +473,29 @@ $(document).ready(function () {
         let msgFrom = this.parentNode.querySelector('strong').innerHTML;
         let url = "http://localhost/individual_project/api/?/incoming_msg/";
         showModal(id, msgFrom, url, getMessages);
+    });
+    /*========================== about text ==========================*/
+
+    function getAboutText() {
+        $.get("http://localhost/individual_project/api/?/about").then((response) => {
+            $('#about-text').val(response.texts[0].text);
+        });
+    }
+    getAboutText();
+
+    $('#about-submit').on('click', function (e) {
+        e.preventDefault();
+        var aboutText = $('#about-text').val();
+
+        $.ajax({
+            type: "PUT",
+            url: "http://localhost/individual_project/api/?/about/1",
+            data: { text: aboutText },
+            success: () => {
+                $('#about-success').show().fadeOut(3000);
+            }
+
+        });
     });
 
 });

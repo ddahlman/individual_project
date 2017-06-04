@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="CSS/bootstrap.min.css">
   <link rel="stylesheet" href="CSS/modal.css">
   <link rel="stylesheet" href="CSS/todo.css">
+  <link rel="stylesheet" href="CSS/snake.css">
   <link rel="stylesheet" href="CSS/hangman.css">
   <link rel="stylesheet" href="CSS/myStyle.css">
 </head>

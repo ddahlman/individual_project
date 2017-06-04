@@ -4,7 +4,7 @@ yoffset = 0;
 var gamePaused = false;
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext("2d");
-ctx.fillStyle = 'blue';
+ctx.fillStyle = 'white';
 const _w = canvas.width;
 const _h = canvas.height;
 ctx.fillRect(0, 0, _w, _h);
@@ -59,7 +59,7 @@ function draw() {
         ctx.fillRect(a.l, a.t, w, h);
     }
     collision(); //kolla om
-    ctx.fillStyle = 'blue';
+    ctx.fillStyle = 'white';
     ctx.fillRect(tail.l, tail.t, w, h);
 
 }
@@ -130,6 +130,5 @@ function collision() {
 
         array.push(obj);
         food();
-
     }
 }

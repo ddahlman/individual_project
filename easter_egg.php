@@ -37,7 +37,7 @@ include_once('./includes/header.php');
         </div>
         <div id="head">
           <div id="face">
-            <p> x x </p>
+            <span>x x </span>
           </div>
         </div>
         <div id="h-body">

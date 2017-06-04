@@ -1,0 +1,69 @@
+.overflow {
+    overflow: hidden;
+}
+
+
+/*.panel-heading.clearfix {
+    width: 100%;
+}*/
+
+li {
+    list-style: none;
+}
+
+li.list-group-item.clearfix,
+li.todo {
+    font: bold 15px Arial;
+    color: #333;
+    text-shadow: none;
+}
+
+input.this-item.form-control {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#addedItems li .well {
+    background-color: #fff;
+}
+
+#head-error,
+#todo-error {
+    color: #ff0000;
+}
+
+.expired {
+    border: 2px solid #a94442;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.warning {
+    border: 2px solid #8a6d3b;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.item-today {
+    font-size: 10px;
+}
+
+.btn.btn-info.addTask {
+    background-color: #2f2f2f;
+    border: none;
+}
+
+.btn.btn-info.addTask:hover {
+    color: #909090;
+}
+
+.btn.btn-info.addTask:focus {
+    outline-color: #555;
+}
+
+.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 5px 0 0 5px;
+}
+
+.btn.btn-danger.remove {
+    border: none;
+}

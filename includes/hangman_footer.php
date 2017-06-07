@@ -11,7 +11,7 @@
 <script src="JS/jquery-3.1.1.min.js"></script>
 <script src="JS/bootstrap.min.js"></script>
 <script src="JS/hangman.js" charset="utf-8"></script>
-<script src="JS/sidebar.js"></script>
+
 </body>
 
 </html>

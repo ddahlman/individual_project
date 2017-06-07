@@ -2,13 +2,36 @@ const cw = 10; //segmentets storlek i höjd och bredd
 xoffset = cw;
 yoffset = 0;
 var gamePaused = false;
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext("2d");
+let canvas;
+let ctx;
+
+function init() {
+    canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+        ctx = canvas.getContext("2d");
+
+        window.addEventListener('resize', resizeCanvas, false);
+        window.addEventListener('orientationchange', resizeCanvas, false);
+        resizeCanvas();
+    }
+}
+init();
+
+function resizeCanvas() {
+    var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    ctx.putImageData(imgData, 0, 0);
+}
+
+
 ctx.fillStyle = 'white';
-const _w = canvas.width;
-const _h = canvas.height;
-ctx.fillRect(0, 0, _w, _h);
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
 food();
+
 var array = [{
     l: 50,
     t: 0,
@@ -42,15 +65,22 @@ function paint() {
 }
 
 function draw() {
-    //sista segmentet som skall målas blått efter förflyttning
+    //sista segmentet som skall målas vitt efter förflyttning
     var tail = array[array.length - 1];
     //segmentbredd
     w = 10;
     //segmenthöjd
     h = 10;
-    if (array[0].l > 490 || array[0].t > 490 || array[0].l < 0 || array[0].t < 0) {
+
+    //l = left
+    //t = top
+    if (array[0].l > canvas.width || array[0].t > canvas.height || array[0].l < 0 || array[0].t < 0) {
         clearInterval(mytimer);
-        alert('game over!');
+        modal();
+        document.querySelector('.winOrLoose1').innerHTML = 'Du förlorade...';
+        document.querySelector('.winOrLoose2').innerHTML = 'Välj något av alternativen nedan';
+        [...document.querySelectorAll('.modal-header, .modal-footer')].map(part => part.style.backgroundColor = 'red');
+        document.querySelector('.modal-h2').innerHTML = "You're a looooooooser!";
     }
     for (var i = 0; i < array.length; i++) {
         var a = array[i];
@@ -75,6 +105,46 @@ function update() {
     array.unshift(tail); //lägg till först
     array.pop(); //ta bort sista
 }
+
+function clicker(selector, y, x) {
+    document.querySelector(selector).addEventListener('click', () => {
+        yoffset = y;
+        xoffset = x;
+    });
+}
+
+function checkBtn() {
+    const down = '#down';
+    const downY = 10;
+    const downX = 0;
+    const up = '#up';
+    const upY = -10;
+    const upX = 0;
+    const left = '#left';
+    const leftY = 0;
+    const leftX = -10;
+    const right = '#right';
+    const rightY = 0;
+    const rightX = 10;
+
+    if (down) clicker(down, downY, downX);
+    if (up) clicker(up, upY, upX);
+    if (left) clicker(left, leftY, leftX);
+    if (right) clicker(right, rightY, rightX);
+}
+
+checkBtn();
+
+//pause toggle
+document.querySelector('#pause').addEventListener('click', () => {
+    if (!gamePaused) {
+        mytimer = clearInterval(mytimer);
+        gamePaused = true;
+    } else if (gamePaused) {
+        mytimer = setInterval(paint, 150);
+        gamePaused = false;
+    }
+});
 
 //Läs av pilarna och navigera ormen
 document.onkeydown = checkKey;
@@ -112,8 +182,8 @@ function checkKey(e) {
 function food() {
 
     wormfood = {
-        x: Math.floor(Math.random() * (490 - 0) / 10) * 10,
-        y: Math.floor(Math.random() * (490 - 0) / 10) * 10
+        x: Math.floor(Math.random() * (canvas.width - 0) / 10) * 10,
+        y: Math.floor(Math.random() * (canvas.height - 0) / 10) * 10
     };
 
     ctx.fillStyle = "red";
@@ -132,3 +202,13 @@ function collision() {
         food();
     }
 }
+
+function modal() {
+    let modal = document.querySelector('.modal');
+    modal.style.display = 'block';
+    document.querySelector('.closeModal').addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+}
+
+

@@ -1,7 +1,6 @@
 <?php
-include('session.php');
-include('config.php');
 include('admin_meny.php');
+include('modal.php');
 
 ?>
 
@@ -19,6 +18,10 @@ switch ($page) {
     
     case 'cv':
         include_once("cv.php");
+        break;
+    
+    case 'about':
+        include_once("about.php");
         break;
     
     case 'portfolio':

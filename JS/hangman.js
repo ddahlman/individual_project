@@ -59,7 +59,6 @@ $(document).ready(function () {
             keysPressedArray = $.unique(keysPressedArray);
             /*loop through all correct letters and add that letter to correct id*/
             var hangedArray = correctLetters.map((hangedChar, i) => hangedChar === letter ? hangedChar = $('#letter' + i).html(letter) : hangedChar = "");
-            console.log(hangedArray);
             if ($('#letter0').text().length > 0 &&
                 $('#letter1').text().length > 0 &&
                 $('#letter2').text().length > 0 &&
@@ -143,7 +142,7 @@ $(document).ready(function () {
     /*=================== modal ===============================*/
 
     function Modal() {
-        var theModal = $('#theModal');
+        var theModal = $('.modal');
         theModal.css('display', 'block');
         $('.closeModal').on('click', function () {
             theModal.css('display', 'none');

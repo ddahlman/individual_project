@@ -8,11 +8,7 @@
     <li>0739-18 22 16</li>
   </ul>
 </footer>
-<script src="JS/jquery-3.1.1.min.js"></script>
-<script src="JS/SocialShare.js"></script>
-<script src="JS/bootstrap.min.js"></script>
-<script src="JS/ajax.js"></script>
-<script src="JS/myScript.js" charset="utf-8"></script>
+<script src="JS/snake.js"></script>
 </body>
 
 </html>

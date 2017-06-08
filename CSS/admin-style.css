@@ -116,3 +116,60 @@ h1,
     margin-top: 15px;
     border: 6px solid #555;
 }
+
+
+/*===== alert success*/
+
+.alert.alert-success,
+.alert.alert-success.cv-text,
+.alert.alert-success.cv-header-1,
+.alert.alert-success.cv-header-2,
+.alert.alert-success.cv-header-3,
+.list-success {
+    display: none;
+}
+
+.li-form {
+    border: 1px solid #eeeeee;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0 2px 5px #999;
+}
+
+.fa.fa-check {
+    color: #31b0d5;
+}
+
+.form-horizontal .has-feedback .form-control-feedback {
+    right: 45px;
+}
+
+
+/*============= badge label*/
+
+.label.label-default {
+    background-color: #555;
+}
+
+.well.note {
+    background-color: #fff;
+}
+
+
+/*************************** logOut *****************************************/
+
+.logOut {
+    position: absolute;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #ec9b13;
+    right: 0;
+}
+
+.logOut:hover {
+    background-color: #333;
+    transition: 0.3s;
+}

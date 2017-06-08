@@ -1,9 +1,9 @@
 <?php
-include_once('./includes/header.php');
+include_once('./includes/todo-header.php');
 ?>
 
   <!-- modal-->
-  <div id="theModal" class="modal">
+  <div class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <span class="closeModal">&times;</span>
@@ -37,7 +37,7 @@ include_once('./includes/header.php');
         </div>
         <div id="head">
           <div id="face">
-            <p> x x </p>
+            <span>x x </span>
           </div>
         </div>
         <div id="h-body">
@@ -56,5 +56,5 @@ include_once('./includes/header.php');
   </div>
 
   <?php
-include_once('./includes/footer.php');
+include_once('./includes/hangman_footer.php');
 ?>

@@ -9,6 +9,7 @@
   <title>Daniel Dahlman</title>
   <link rel="stylesheet" href="../font/css/font-awesome.min.css">
   <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="../CSS/modal.css">
   <link rel="stylesheet" href="../CSS/admin-style.css">
 </head>
 
@@ -19,7 +20,9 @@
     <a class="page-links" href="?page=home">Admin <hr class="hr"></a>
     <a class="page-links" href="?page=home_admin">Första sidan <hr class="hr"></a>
     <a class="page-links" href="?page=cv">CV <hr class="hr"></a>
+    <a class="page-links" href="?page=about">Om mig <hr class="hr"></a>
     <a class="page-links" href="?page=portfolio">Mitt arbete <hr class="hr"></a>
-    <a class="page-links" href="?page=incoming_msg">Meddelande <hr class="hr"></a>
+    <a class="page-links" href="?page=incoming_msg">Meddelande <span class='badge counter'></span><hr class="hr"></a>
   </div>
   <div class="layer"></div>
+  <button type="button" class='logOut'>logga ut</button>

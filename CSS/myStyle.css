@@ -26,6 +26,7 @@ body {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
 }
 
@@ -52,8 +53,14 @@ body {
     top: 0;
 }
 
+.contact-form {
+    margin-bottom: 200px;
+    background-color: #fff;
+    box-shadow: 2px 4px 15px;
+}
 
-/*beginning of sidebar=================================*/
+
+/*sidebar=================================*/
 
 .hamburger {
     position: fixed;
@@ -253,7 +260,7 @@ a:focus {
     transition: transform .3s;
 }
 
-.close {
+.close-expand {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -273,13 +280,16 @@ a:focus {
 .h1-header-class,
 .h1-header-about {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     top: 25%;
 }
 
 .h1-flex-class,
 .h1-flex-about {
-    font: bold 156px BebasNeue;
+    font-size: 156px;
     color: rgba(236, 155, 19, 0.6);
     text-shadow: 2px 8px 10px #808080;
     -webkit-box-flex: 1;
@@ -332,11 +342,13 @@ footer li {
 }
 
 .flex-container {
+    -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
 }
 
 .flex-row,
 .flex-row-2 {
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -350,11 +362,13 @@ footer li {
 .flex-col-img2,
 .flex-col-card,
 .flex-footer {
+    -webkit-flex-direction: column;
     flex-direction: column;
 }
 
 .flex-row-2,
 .like-block {
+    -webkit-justify-content: center;
     justify-content: center;
 }
 
@@ -381,17 +395,21 @@ footer li {
 
 .flex-col-center-cl,
 .flex-col-img-center {
+    -webkit-align-self: center;
     align-self: center;
 }
 
 .flex-col-img,
 .flex-col-img2 {
     position: relative;
+    -webkit-justify-content: flex-end;
     justify-content: flex-end;
+    -webkit-align-items: center;
     align-items: center;
 }
 
 .flex-col-img-center {
+    -webkit-justify-content: space-around;
     justify-content: space-around;
     margin: 0 0 10px 0;
 }
@@ -477,6 +495,7 @@ tbody {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: flex-end;
     justify-content: flex-end;
     right: 5%;
 }
@@ -513,9 +532,11 @@ tbody {
 
 @media (max-width: 800px) {
     .flex-col-img-center {
+        -webkit-flex-direction: column;
         flex-direction: column;
     }
     .h1-header-about {
+        -webkit-flex-direction: row;
         flex-direction: row;
         align-self: center;
         top: 0;
@@ -578,12 +599,14 @@ tbody {
 
 @media (max-width: 400px) {
     .flex-container {
+        -webkit-flex-flow: column wrap;
         flex-flow: column wrap;
     }
     .h1-col {
         font-size: 40px;
     }
     .flex-row {
+        -webkit-flex-direction: column;
         flex-direction: column;
         margin: 0 0 10px 0;
     }
@@ -595,7 +618,6 @@ tbody {
     }
     .like-block {
         background-color: transparent;
-        justify-content: space-around;
     }
     .like-button span,
     .like-button span.nr2 {

@@ -15,10 +15,10 @@
 </div>
 <!-- modal end -->
 <div class="container-fluid">
-
+  <h1 class='text-center'>Kontakt</h1>
   <div class="row">
     <div class="col-md-12">
-      <div class="well">
+      <div class="well contact-form">
 
         <!--contact form, Daniel-->
         <form class="form-horizontal" id="contact-form">

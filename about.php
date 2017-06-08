@@ -16,7 +16,7 @@
       <h1>Lite om vem jag är</h1>
       <p class='about-text'></p>
       <div class="flex-col expand">
-        <a href="#">mer info...<i class="fa fa-plus-circle close"></i></a>
+        <a href="#">mer info...<i class="fa fa-plus-circle close-expand"></i></a>
         <div class="myInfo">
           <p class='about-text'></p>
           <iframe width="280" height="157" src="https://www.youtube.com/embed/7G350UUO90k" frameborder="0" allowfullscreen></iframe>

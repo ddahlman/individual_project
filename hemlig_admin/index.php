@@ -20,9 +20,7 @@
   </div>
   <h1 class='text-center'>Klicka på logga in eller registrering</h1>
   <div class='container'>
-    <div class='row' id='forms'>
-
-    </div>
+    <div class='row' id='forms'></div>
   </div>
   <script src='../JS/jquery-3.1.1.min.js'></script>
   <script src='../JS/login.js'></script>

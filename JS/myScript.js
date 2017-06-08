@@ -38,7 +38,7 @@ $(document).ready(function () {
         // <a>.hitta alla '.myInfo' efter this.med start från detta '.myInfo', ta bort en. toggla detta. 
         $(this).nextAll('.myInfo').slice(0, 1).slideToggle();
 
-        $(this).find('i').toggleClass('close open');
+        $(this).find('i').toggleClass('close-expand open');
     });
 
 

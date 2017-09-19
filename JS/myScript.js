@@ -48,7 +48,7 @@ $(document).ready(function () {
 
         var now = new Date();
         var currentTime = now.getTime();
-        var lia = new Date(2018, 0, 15);
+        var lia = new Date(2017, 10, 13);
         var liaTime = lia.getTime();
         var remainTime = liaTime - currentTime;
 
@@ -65,9 +65,9 @@ $(document).ready(function () {
         min = (min < 10) ? "0" + min : min;
         sec = (sec < 10) ? "0" + sec : sec;
 
-        $("#days1").html(day + " " + ":");
-        $("#hours1").html(hour + " " + ":");
-        $("#minutes1").html(min + " " + ":");
+        $("#days1").html(day);
+        $("#hours1").html(hour);
+        $("#minutes1").html(min);
         $("#seconds1").html(sec);
 
         setTimeout(countDownLia, 1000);
@@ -95,9 +95,9 @@ $(document).ready(function () {
         min = (min < 10) ? "0" + min : min;
         sec = (sec < 10) ? "0" + sec : sec;
 
-        $("#days2").html(day + " " + ":");
-        $("#hours2").html(hour + " " + ":");
-        $("#minutes2").html(min + " " + ":");
+        $("#days2").html(day);
+        $("#hours2").html(hour);
+        $("#minutes2").html(min);
         $("#seconds2").html(sec);
 
 

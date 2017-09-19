@@ -3,9 +3,14 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Daniel Dahlman, Front-end utvecklare och webbdesigner. Skapar responsiva hemsidor i HTML5, JavaScript och CSS3">
+  <meta property='og:title' content='Daniel Dahlman' />
+  <meta property='og:image' content='http://danieldahlman.se/img/daniel gbg copy smaller copy.jpg' />
+  <meta property='og:description' content='website of Daniel Dahlman frontend developer and webdesigner' />
+  <meta property='og:url' content='http://danieldahlman.se' />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daniel Dahlman</title>
+  <title>Daniel Dahlman - Front-end utvecklare webbdesigner</title>
   <link rel="stylesheet" href="font/css/font-awesome.min.css">
   <link rel="stylesheet" href="CSS/bootstrap.min.css">
   <link rel="stylesheet" href="CSS/modal.css">

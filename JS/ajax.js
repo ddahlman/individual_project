@@ -71,7 +71,6 @@ $(document).ready(function () {
 
     $('#submitbtn-contact').on('click', function (e) {
         e.preventDefault();
-        console.log(nameError, phoneError, emailError);
         if (!nameError || !phoneError || !emailError) {
             if ($('#name-contact').val() === "") {
                 $('#nameError').html('Du behöver fylla i namn!');
@@ -97,13 +96,15 @@ $(document).ready(function () {
                 email: document.querySelector('#email-contact').value,
                 note: document.querySelector('#text-contact').value
             };
-            $.post('http://danieldahlman.se/api/?/incoming_msg', contactinfo).then((response) => {
-                console.log(response);
-                [...document.querySelectorAll('input[type=text], #text-contact')].map(inp => inp.value = '');
+            $.post('http://localhost/individual_project/api/?/incoming_msg', contactinfo).then(function (response) {
+                Array.from(document.querySelectorAll('input[type=text], #text-contact')).map(function (inp) {
+                    inp.value = '';
+                    return inp.value;
+                });
 
                 $('.modal').css('display', 'block');
                 $('.modal-header, .modal-footer').css('background-color', '#ec9b13');
-                $('.closeModal, .btn-again').on('click', () => {
+                $('.closeModal, .btn-again').on('click', function () {
                     $('.modal').css('display', 'none');
                 });
 
@@ -113,21 +114,26 @@ $(document).ready(function () {
         }
     });
     /*============================= get Welcome_text to home.php ===============*/
-    $.get('http://danieldahlman.se/api/?/welcome_text').then((response) => {
+    $.get('http://localhost/individual_project/api/?/welcome_text').then(function (response) {
         $('#welcome-text').html(response.texts[0].welcome_text);
     });
     /*=============================== get CV first text ===========================*/
-    $.get('http://danieldahlman.se/api/?/cv_text').then((response) => {
+    $.get('http://localhost/individual_project/api/?/cv_text').then(function (response) {
         $('#cv-firsttext').html(response.texts[0].first_text);
     });
     /*=========================== get CV headers and lists ==============================*/
-    $.get("http://danieldahlman.se/api/?/cv_headers").then((result) => {
+    $.get("http://localhost/individual_project/api/?/cv_headers").then(function (result) {
         let resultheaders = result.allheaders;
-        [...document.querySelectorAll('.list-header')].map((head, i) => head.innerHTML = resultheaders[i].header);
-        resultheaders.map((obj) => {
-            $.get(`http://danieldahlman.se/api/?/cv_headers/${obj.headersID}/items`)
-                .then((response) => {
-                    let li = response.header_items.map(item => `<li>${item.list_item}</li>`);
+        Array.from(document.querySelectorAll('.list-header')).map(function (head, i) {
+            head.innerHTML = resultheaders[i].header;
+            return head.innerHTML;
+        });
+        resultheaders.map(function (obj) {
+            $.get('http://localhost/individual_project/api/?/cv_headers/' + obj.headersID + '/items')
+                .then(function (response) {
+                    let li = response.header_items.map(function (item) {
+                        return '<li>' + item.list_item + '</li>';
+                    });
 
                     let id = response.id;
 
@@ -150,41 +156,39 @@ $(document).ready(function () {
     });
 
     /*=================== get Employments ==================================*/
-    $.get('http://danieldahlman.se/api/?/cv_employment')
-        .then((response) => {
-            let employment = response.employments.map((obj) => {
-                let emp = `<li class='li-education'>
-                           <br/>${obj.employment}
-                           </li>
-                           <li class='li-education'>${obj.year}</li>`;
+    $.get('http://localhost/individual_project/api/?/cv_employment')
+        .then(function (response) {
+            let employment = response.employments.map(function (obj) {
+                let emp = '<li class="li-education"><br/>' + obj.employment +
+                    '</li><li class="li-education">' + obj.year + '</li>';
                 return emp;
             });
             $('#employments').html(employment);
         });
     /*======================== get Education =============================*/
-    $.get('http://danieldahlman.se/api/?/cv_education')
-        .then((response) => {
-            let education = response.educations.map((obj) => {
-                let emp = `<li class='li-education'>
-                           <br/>${obj.school}
-                           </li>
-                           <li class='li-education'>${obj.year}</li>`;
+    $.get('http://localhost/individual_project/api/?/cv_education')
+        .then(function (response) {
+            let education = response.educations.map(function (obj) {
+                let emp = '<li class="li-education"><br/>' + obj.school +
+                    '</li><li class="li-education">' + obj.year + '</li>';
                 return emp;
             });
             $('#educations').html(education);
         });
 
     /*=============== get About me =========================*/
-    $.get('http://danieldahlman.se/api/?/about').then((response) => {
+    $.get('http://localhost/individual_project/api/?/about').then(function (response) {
         let str = response.texts[0].text;
-        [...document.querySelectorAll('.about-text')].map((tag, i) => tag.innerHTML = str.split('...')[i]);
+        Array.from(document.querySelectorAll('.about-text')).map(function (tag, i) {
+            tag.innerHTML = str.split('...')[i];
+            return tag.innerHTML;
+        });
     });
     /*============ get Projects ===============================*/
-    $.get('http://danieldahlman.se/api/?/portfolio').then((response) => {
-        let projects = response.projects.map((obj) => {
-            let project = `<div class='well'>
-                           <a href='${obj.url}'>${obj.url}</a>
-                           <p>${obj.project_text}</p></div>`;
+    $.get('http://localhost/individual_project/api/?/portfolio').then(function (response) {
+        let projects = response.projects.map(function (obj) {
+            let project = '<div class="well"><a href="' + obj.url + '">' + obj.url +
+                '</a><p>' + obj.project_text + '</p></div>';
             return project;
         });
         $('#myWork').html(projects);

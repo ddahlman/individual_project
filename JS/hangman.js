@@ -38,7 +38,10 @@ $(document).ready(function () {
     };
     $('#lives').html('Liv kvar: 9');
     /*append a div to every letter in the word hanged*/
-    var tiles = correctLetters.map((letter, i) => $('.letters-to-fill').append('<div id="letter' + i + '" class="correct"></div>'));
+    var tiles = correctLetters.map(function (letter, i) {
+        $('.letters-to-fill').append('<div id="letter' + i + '" class="correct"></div>');
+        return i;
+    });
     var letter;
     $(document).keydown(function (e) {
         /*writes in the console which letters I've pressed
@@ -58,7 +61,10 @@ $(document).ready(function () {
             /*removes duplicates*/
             keysPressedArray = $.unique(keysPressedArray);
             /*loop through all correct letters and add that letter to correct id*/
-            var hangedArray = correctLetters.map((hangedChar, i) => hangedChar === letter ? hangedChar = $('#letter' + i).html(letter) : hangedChar = "");
+            var hangedArray = correctLetters.map(function (hangedChar, i) {
+                let rightLetter = hangedChar === letter ? hangedChar = $('#letter' + i).html(letter) : hangedChar = "";
+                return rightLetter;
+            });
             if ($('#letter0').text().length > 0 &&
                 $('#letter1').text().length > 0 &&
                 $('#letter2').text().length > 0 &&
@@ -72,13 +78,14 @@ $(document).ready(function () {
 
             }
             /*filter keysPressedArray so the new soWrong array is without hanged letters*/
-            soWrong = keysPressedArray.filter((value) =>
-                value !== "h" &&
-                value !== "a" &&
-                value !== "n" &&
-                value !== "g" &&
-                value !== "e" &&
-                value !== "d");
+            soWrong = keysPressedArray.filter(function (value) {
+                return value !== "h" &&
+                    value !== "a" &&
+                    value !== "n" &&
+                    value !== "g" &&
+                    value !== "e" &&
+                    value !== "d";
+            });
 
 
             var showHangman = soWrong.map(function (value, i, arr) {

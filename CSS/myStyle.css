@@ -4,12 +4,33 @@
 }
 
 @font-face {
-    font-family: 'digital-7';
-    src: url('../font/digital-7.ttf') format('opentype');
+    font-family: 'BebasNeue Bold';
+    src: url('../font/BebasNeue Bold.otf') format('opentype');
 }
 
-* {
-    box-sizing: border-box;
+@font-face {
+    font-family: 'BebasNeue Book';
+    src: url('../font/BebasNeue Book.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BebasNeue Light';
+    src: url('../font/BebasNeue Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BebasNeue Thin';
+    src: url('../font/BebasNeue Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BebasNeue Regular';
+    src: url('../font/BebasNeue Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src: url('../font/digital-7.ttf') format('opentype');
 }
 
 html {
@@ -22,12 +43,6 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
 }
 
 
@@ -155,6 +170,10 @@ a.page-links:hover {
     text-shadow: 2px 2px 5px #555;
 }
 
+.home-img {
+    position: relative;
+}
+
 
 /*end of index-=====================================*/
 
@@ -185,10 +204,6 @@ p,
 .h1-col {
     font-size: 70px;
     text-align: center;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
 }
 
 h2 {
@@ -247,6 +262,40 @@ a:focus {
 }
 
 
+/* download============== */
+
+.download {
+    font: bold 12px arial;
+    border-radius: 8px;
+    padding: 10px 20px 10px 20px;
+    margin: 5px;
+    border: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    background-color: #ec9b13;
+    color: #333;
+    text-shadow: none;
+}
+
+.download:focus {
+    outline: 0;
+}
+
+.download:hover {
+    box-shadow: 2px 2px 4px #000;
+    text-shadow: none;
+    color: #fff;
+}
+
+.download:active {
+    box-shadow: inset 0 2px 10px #000;
+}
+
+.download-div {
+    margin-bottom: 2%;
+}
+
+
 /*EXPAND FUNCTION=========*/
 
 .fa.fa-plus-circle {
@@ -280,10 +329,6 @@ a:focus {
 .h1-header-class,
 .h1-header-about {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
     top: 25%;
 }
 
@@ -292,11 +337,6 @@ a:focus {
     font-size: 156px;
     color: rgba(236, 155, 19, 0.6);
     text-shadow: 2px 8px 10px #808080;
-    -webkit-box-flex: 1;
-    width: 20%;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
 }
 
 
@@ -306,9 +346,6 @@ footer {
     background-image: url('../img/whitewoodBackground.png');
     border-top: 5px solid #555;
     box-shadow: 2px 17px 50px #333 inset;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
 }
 
 footer,
@@ -324,52 +361,9 @@ footer li {
 
 /*flex-grid==============================*/
 
-.flex-container,
-.flex-row,
-.flex-row-2,
-.flex-col-img,
-.flex-col-img2,
-.flex-col-img-center,
-.flex-col-card,
-.flex-footer,
-.like-block,
-.like-button {
-    display: table-cell;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-
-.flex-container {
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-}
-
-.flex-row,
-.flex-row-2 {
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
 .flex-row,
 .flex-col-card {
     margin: 0 10px 10px 10px;
-}
-
-.flex-row-2,
-.flex-col-img,
-.flex-col-img2,
-.flex-col-card,
-.flex-footer {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-}
-
-.flex-row-2,
-.like-block {
-    -webkit-justify-content: center;
-    justify-content: center;
 }
 
 .flex-row-2 {
@@ -381,58 +375,6 @@ footer li {
 .flex-col-card,
 .flex-footer {
     padding: 15px;
-}
-
-.flex-col,
-.flex-col-center-cl,
-.flex-col-img2,
-.flex-col-img-center {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-
-.flex-col-center-cl,
-.flex-col-img-center {
-    -webkit-align-self: center;
-    align-self: center;
-}
-
-.flex-col-img,
-.flex-col-img2 {
-    position: relative;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.flex-col-img-center {
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    margin: 0 0 10px 0;
-}
-
-.flex-col-card {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 30%;
-    -ms-flex: 1 0 30%;
-    flex: 1 0 30%;
-}
-
-.flex-col-card p {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-}
-
-.flex-footer {
-    -webkit-box-flex: 1;
-    -webkit-flex: 0 1 290px;
-    -ms-flex: 0 1 290px;
-    flex: 0 1 290px;
 }
 
 
@@ -474,29 +416,26 @@ img {
 
 table {
     border-spacing: 15px 0;
+    width: 100%;
+    margin: 2%;
 }
 
 tbody {
-    border: 2px solid;
     border-radius: 10px;
-    padding: 10px;
+    padding: 2%;
     box-shadow: 2px 2px 10px #000;
     background-color: rgba(255, 255, 255, 0.3);
-    width: 665px;
+    display: block;
 }
 
-.count-down-lia,
-.count-down-exam {
+.table-div {
+    width: 11vw;
+    text-align: center;
+}
+
+.count-down-lia {
     position: absolute;
-    font: 100px BebasNeue;
     color: rgba(255, 255, 255, 0.8);
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
     right: 5%;
 }
 
@@ -504,14 +443,10 @@ tbody {
     top: 20%;
 }
 
-.count-down-exam {
-    top: 48%;
-}
-
 .time-text,
 .time-text1 {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 15px;
+    font: 2vw BebasNeue Light, arial;
 }
 
 .time-text {
@@ -519,7 +454,7 @@ tbody {
 }
 
 .digits {
-    font: 100px digital-7;
+    font: 7vw digital-7;
     color: rgba(236, 155, 19, 0.8);
     text-shadow: 2px 2px #555;
 }
@@ -530,7 +465,8 @@ tbody {
 
 /*media queries==============================*/
 
-@media (max-width: 800px) {
+
+/* @media (max-width: 800px) {
     .flex-col-img-center {
         -webkit-flex-direction: column;
         flex-direction: column;
@@ -673,4 +609,4 @@ tbody {
     .h1-header-class {
         top: 15%;
     }
-}
+} */

@@ -79,7 +79,10 @@ function draw() {
         modal();
         document.querySelector('.winOrLoose1').innerHTML = 'Du förlorade...';
         document.querySelector('.winOrLoose2').innerHTML = 'Välj något av alternativen nedan';
-        [...document.querySelectorAll('.modal-header, .modal-footer')].map(part => part.style.backgroundColor = 'red');
+        Array.from(document.querySelectorAll('.modal-header, .modal-footer')).map(function (part) {
+            part.style.backgroundColor = 'red';
+            return part;
+        });
         document.querySelector('.modal-h2').innerHTML = "You're a looooooooser!";
     }
     for (var i = 0; i < array.length; i++) {
@@ -107,7 +110,7 @@ function update() {
 }
 
 function clicker(selector, y, x) {
-    document.querySelector(selector).addEventListener('click', () => {
+    document.querySelector(selector).addEventListener('click', function () {
         yoffset = y;
         xoffset = x;
     });
@@ -136,7 +139,7 @@ function checkBtn() {
 checkBtn();
 
 //pause toggle
-document.querySelector('#pause').addEventListener('click', () => {
+document.querySelector('#pause').addEventListener('click', function () {
     if (!gamePaused) {
         mytimer = clearInterval(mytimer);
         gamePaused = true;
@@ -206,7 +209,7 @@ function collision() {
 function modal() {
     let modal = document.querySelector('.modal');
     modal.style.display = 'block';
-    document.querySelector('.closeModal').addEventListener('click', () => {
+    document.querySelector('.closeModal').addEventListener('click', function () {
         modal.style.display = 'none';
     });
 }

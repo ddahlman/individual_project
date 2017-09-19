@@ -8,6 +8,7 @@
     <li>0739-18 22 16</li>
   </ul>
 </footer>
+<script src="JS/arrfromWorkAround.js"></script>
 <script src="JS/snake.js"></script>
 </body>
 

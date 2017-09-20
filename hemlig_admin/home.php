@@ -1,4 +1,4 @@
-<div class="flex-container">
+<div class="container">
   <div>
     <div class="dark-bg">
       <h1 class="h1-white" id='greeting'></h1>

@@ -1,0 +1,42 @@
+<svg width="2695" height="1926" viewBox="0 0 2695 1926" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>index vector</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(2471 2708)">
+<g id="index vector">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-2054.84 -2708)" fill="#EC9B13"/>
+</g>
+<g id="Ellipse">
+<use xlink:href="#path1_fill" transform="translate(-2058.5 -1061.05)" fill="#EC9B13"/>
+</g>
+<g id="Ellipse 2">
+<use xlink:href="#path2_fill" transform="translate(-2298.5 -924.926)" fill="#EC9B13"/>
+</g>
+<g id="Ellipse 3">
+<use xlink:href="#path3_fill" transform="translate(-2471 -856.866)" fill="#EC9B13"/>
+</g>
+<g id="Ellipse 6">
+<use xlink:href="#path4_fill" transform="translate(-1633.88 -1627)" fill="#EC9B13"/>
+</g>
+<g id="Ellipse 4">
+<use xlink:href="#path5_fill" transform="translate(-1807.44 -1745)" fill="#EC9B13"/>
+</g>
+<g id="Ellipse 5">
+<use xlink:href="#path6_fill" transform="translate(-1904.29 -1588)" fill="#EC9B13"/>
+</g>
+<g id="Ellipse 7">
+<use xlink:href="#path7_fill" transform="translate(-1202.37 -1774)" fill="#EC9B13"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 62.7362 1926L 592.073 1548.27C 570.032 1451.34 412.888 1464.09 0 1548.27L 635.753 1363.5C 759.314 1305.58 656.855 1040.71 403.865 622.652C 701.422 945.837 812.954 1097.66 780.282 1245.4C 747.61 1393.15 1433.37 566.777 1058.67 704.324C 1534.09 462.29 1563.81 534.349 952.807 1245.4L 1687.67 554L 1688.7 554L 2278.36 0L 2278.36 554L 2278.36 1926L 1540.96 1926L 62.7362 1926Z"/>
+<path id="path1_fill" d="M 307.5 139.523C 307.5 216.579 238.664 279.046 153.75 279.046C 68.8362 279.046 0 216.579 0 139.523C 0 62.4665 68.8362 0 153.75 0C 238.664 0 307.5 62.4665 307.5 139.523Z"/>
+<path id="path2_fill" d="M 157.5 71.4629C 157.5 110.931 122.242 142.926 78.75 142.926C 35.2576 142.926 0 110.931 0 71.4629C 0 31.995 35.2576 0 78.75 0C 122.242 0 157.5 31.995 157.5 71.4629Z"/>
+<path id="path3_fill" d="M 82.5 37.433C 82.5 58.1066 64.0317 74.866 41.25 74.866C 18.4683 74.866 0 58.1066 0 37.433C 0 16.7593 18.4683 0 41.25 0C 64.0317 0 82.5 16.7593 82.5 37.433Z"/>
+<path id="path4_fill" d="M 68.0822 35.5C 68.0822 55.1061 52.8415 71 34.0411 71C 15.2407 71 0 55.1061 0 35.5C 0 15.8939 15.2407 0 34.0411 0C 52.8415 0 68.0822 15.8939 68.0822 35.5Z"/>
+<path id="path5_fill" d="M 113.151 59C 113.151 91.5848 87.821 118 56.5753 118C 25.3296 118 0 91.5848 0 59C 0 26.4152 25.3296 0 56.5753 0C 87.821 0 113.151 26.4152 113.151 59Z"/>
+<path id="path6_fill" d="M 30.6849 16C 30.6849 24.8366 23.8159 32 15.3425 32C 6.86906 32 0 24.8366 0 16C 0 7.16344 6.86906 0 15.3425 0C 23.8159 0 30.6849 7.16344 30.6849 16Z"/>
+<path id="path7_fill" d="M 56.5753 29.5C 56.5753 45.7924 43.9105 59 28.2877 59C 12.6648 59 0 45.7924 0 29.5C 0 13.2076 12.6648 0 28.2877 0C 43.9105 0 56.5753 13.2076 56.5753 29.5Z"/>
+</defs>
+</svg>

@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'BebasNeue Light';
-    src: url('../font/BebasNeue Light.otf') format('opentype');
+    src: url('../font/convert/converted-files/BebasNeueLight.eot?#iefix') format('embedded-opentype'), url('../font/convert/converted-files/BebasNeueLight.woff') format('woff'), url("../font/TTF's/BebasNeue Light.ttf") format('truetype'), url('../font/convert/converted-files/BebasNeueLight.svg#svgFontName') format('svg');
 }
 
 @font-face {
@@ -60,6 +60,8 @@ body {
     right: 0;
     bottom: 0;
     -webkit-transition: all ease-in .3s;
+    -moz-transition: all ease-in .3s;
+    -o-transition: all ease-in .3s;
     transition: all ease-in .3s;
     z-index: 100;
 }
@@ -68,8 +70,11 @@ body {
     top: 0;
 }
 
+.container.contact {
+    padding-bottom: 10%;
+}
+
 .contact-form {
-    margin-bottom: 200px;
     background-color: #fff;
     box-shadow: 2px 4px 15px;
 }
@@ -96,10 +101,8 @@ body {
 }
 
 .hamburger,
-.like-button span,
 .fa.fa-plus-circle,
-.sidenav .closebtn,
-.like-button span.nr2 {
+.sidenav .closebtn {
     font-size: 40px;
 }
 
@@ -121,12 +124,14 @@ body {
     left: 0;
     background-color: rgba(255, 255, 255, 0.8);
     overflow-x: hidden;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
     transition: 0.3s;
     padding-top: 60px;
 }
 
-.sidenav a,
-img {
+.sidenav a {
     display: block;
 }
 
@@ -135,7 +140,10 @@ img {
     text-decoration: none;
     font-size: 25px;
     padding: 10px 15px 15px 50px;
-    transition: 0.5s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: .4s;
+    transition: 0.4s;
 }
 
 a.page-links:hover {
@@ -151,27 +159,33 @@ a.page-links:hover {
 
 .h1-index-grey {
     color: #555;
-    font-size: 54px;
+    font-size: 6em;
 }
 
-.index-profile {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-}
-
-.p-contact {
-    align-self: center;
-}
-
-.h1-index-yellow,
-.h1-about {
+.h2-index-yellow {
     color: #ec9b13;
-    text-shadow: 2px 2px 5px #555;
 }
 
 .home-img {
     position: relative;
+}
+
+.index-vector {
+    background: url('../img/index vector.svg') no-repeat bottom right;
+    background-size: 60%;
+}
+
+article.col-md-4 {
+    padding-top: 4%;
+}
+
+article.col-md-2 {
+    padding-top: 6%;
+}
+
+.index-address,
+.index-contact-header {
+    color: #fff;
 }
 
 
@@ -179,6 +193,10 @@ a.page-links:hover {
 
 
 /*resume page--=====================================-*/
+
+.resume-img {
+    position: relative;
+}
 
 .hr {
     margin-left: 0;
@@ -190,19 +208,18 @@ a.page-links:hover {
 h1,
 h2,
 p,
-li {
+li,
+.index-address {
     font-family: BebasNeue;
 }
 
-.h1-col,
 .li-education,
-p,
-.like-button span.nr2 {
+p {
     color: #808080;
 }
 
-.h1-col {
-    font-size: 70px;
+.h1-resume {
+    font: 8vw BebasNeue;
     text-align: center;
 }
 
@@ -210,12 +227,15 @@ h2 {
     color: #606060;
 }
 
-p {
+p,
+.index-address {
     font-size: 120%;
 }
 
 .grey-pants {
     background-image: url('../img/greyPantsBackground.png');
+    padding: 1%;
+    margin: 2px;
 }
 
 .grey-pants,
@@ -271,6 +291,8 @@ a:focus {
     margin: 5px;
     border: none;
     -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: .2s;
     transition: 0.2s;
     background-color: #ec9b13;
     color: #333;
@@ -306,6 +328,9 @@ a:focus {
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -o-transition: transform .3s;
     transition: transform .3s;
 }
 
@@ -313,6 +338,9 @@ a:focus {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
+    -webkit-transition: transform .6s;
+    -moz-transition: transform .6s;
+    -o-transition: transform .6s;
     transition: transform .6s;
     float: none;
 }
@@ -326,16 +354,19 @@ a:focus {
 
 /*Start of about page--------*/
 
-.h1-header-class,
-.h1-header-about {
-    position: absolute;
-    top: 25%;
+.about-img {
+    position: relative;
 }
 
-.h1-flex-class,
-.h1-flex-about {
-    font-size: 156px;
-    color: rgba(236, 155, 19, 0.6);
+.h1-about-parent {
+    position: absolute;
+    top: 38%;
+    left: 20%;
+}
+
+.h1-about {
+    font: 12vw BebasNeue;
+    color: rgba(236, 155, 19, 0.7);
     text-shadow: 2px 8px 10px #808080;
 }
 
@@ -346,11 +377,15 @@ footer {
     background-image: url('../img/whitewoodBackground.png');
     border-top: 5px solid #555;
     box-shadow: 2px 17px 50px #333 inset;
+    padding-top: 2%;
+}
+
+footer ul {
+    margin-bottom: 0;
 }
 
 footer,
-footer li a,
-.like-button span:hover {
+footer li a {
     color: #fff;
 }
 
@@ -359,9 +394,45 @@ footer li {
 }
 
 
+/*jquery plugin social media---------*/
+
+.like-block {
+    width: 100%;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.like-button {
+    background-color: transparent;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
+    color: #333;
+}
+
+.like-button .nr2 {
+    font-size: 2em;
+}
+
+.like-button:hover {
+    color: #666;
+}
+
+.like-button:focus {
+    outline: 0;
+}
+
+
+/* end of footer========================= */
+
+
 /*flex-grid==============================*/
 
-.flex-row,
+
+/* .flex-row,
 .flex-col-card {
     margin: 0 10px 10px 10px;
 }
@@ -375,41 +446,7 @@ footer li {
 .flex-col-card,
 .flex-footer {
     padding: 15px;
-}
-
-
-/*jquery plugin social media---------*/
-
-.like-block,
-img {
-    width: 100%;
-}
-
-.like-block {
-    position: absolute;
-}
-
-.like-button,
-.hamburger {
-    cursor: pointer;
-}
-
-.like-button {
-    background-color: transparent;
-}
-
-.like-button span {
-    color: #333;
-}
-
-.like-button span,
-.like-button span.nr2 {
-    padding: 20px;
-}
-
-.like-button span:hover {
-    transition: ease-in-out 0.4s;
-}
+} */
 
 
 /*CountDown====================*/
@@ -437,9 +474,6 @@ tbody {
     position: absolute;
     color: rgba(255, 255, 255, 0.8);
     right: 5%;
-}
-
-.count-down-lia {
     top: 20%;
 }
 
@@ -464,6 +498,19 @@ tbody {
 
 
 /*media queries==============================*/
+
+@media (max-width: 800px) {
+    .index-address,
+    .index-contact-header {
+        color: #808080;
+    }
+}
+
+@media (min-width: 992px) {
+    .grey-pants.col-md-4 {
+        width: 32%;
+    }
+}
 
 
 /* @media (max-width: 800px) {

@@ -67,25 +67,31 @@
   </div>
   <img class='img-responsive' src="img/daniel gbg copy smaller copy.jpg" alt="Daniel i Göteborg" />
 </section>
-<div class="like-block">
-  <button class="like-button share s_twitter"><span class="nr2 fa fa-twitter-square"></span></button>
-  <button class="like-button share s_facebook"><span class="nr2 fa fa-facebook-square"></span></button>
-  <button class="like-button share s_plus"><span class="nr2 fa fa-google-plus-official"></span></button>
-  <button class="like-button share s_linkedin"><span class="nr2 fa fa-linkedin-square"></span></button>
-</div>
-<div class="flex-row">
-  <div class="flex-col">
-    <h1 class="h1-index-grey">daniel dahlman</h1>
-    <h1 class="h1-index-yellow">Webb designer & webb utvecklare</h1>
-    <p id='welcome-text'></p>
-  </div>
-  <div class="flex-col-img-center">
-    <img class="index-profile" src="img/Daniel svart bakgrund (2).jpg" alt="daniel profilbild" />
 
-    <p class="p-contact">Telefon: 073-918 22 16
-      <br> Email: danieldahlman@outlook.com
-      <br> Webbsida: www.danieldahlman.se
-      <br> Adress: Portalgatan 4H
-      <br> 754 23 Uppsala</p>
-  </div>
-</div>
+<section class='index-vector'>
+  <section class="container">
+    <div class='row'>
+      <article class="col-md-6">
+        <header>
+          <h1 class="h1-index-grey">daniel dahlman</h1>
+          <h2 class="h2-index-yellow">Webb designer & webb utvecklare</h2>
+        </header>
+        <p id='welcome-text'></p>
+      </article>
+      <article class="col-md-4">
+        <img class="center-block" src="img/daniel profil.png" alt="daniel profilbild" />
+      </article>
+      <article class='col-md-2'>
+        <header>
+          <h2 class='index-contact-header'>Contact info</h2>
+        </header>
+        <address class='index-address'>073-918 22 16
+<br>danieldahlman@outlook.com
+<br>www.danieldahlman.se
+<br>Portalgatan 4H
+<br> 754 23 Uppsala
+</address>
+      </article>
+    </div>
+  </section>
+</section>

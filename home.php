@@ -23,46 +23,64 @@
           </td>
         </tr>
         <tr>
-          <td class="time-text">Dagar</td>
+          <td class="time-text">
+            <div class='table-div'>Dagar</div>
+          </td>
           <td class="time-text"></td>
-          <td class="time-text">Timmar</td>
+          <td class="time-text">
+            <div class='table-div'>Timmar</div>
+          </td>
           <td class="time-text"></td>
-          <td class="time-text">Minuter</td>
+          <td class="time-text">
+            <div class='table-div'>Minuter</div>
+          </td>
           <td class="time-text"></td>
-          <td class="time-text">Sekunder</td>
+          <td class="time-text">
+            <div class='table-div'>Sekunder</div>
+          </td>
         </tr>
       </tbody>
     </table>
     <table>
-      <tr>
-        <td colspan="7" class="time-text1">Jag tar examen om</td>
-      </tr>
-      <tr>
-        <td class="digits">
-          <div class='table-div' id="days2"></div>
-        </td>
-        <td class="digits">:</td>
-        <td class="digits">
-          <div class='table-div' id="hours2"></div>
-        </td>
-        <td class="digits">:</td>
-        <td class="digits">
-          <div class='table-div' id="minutes2"></div>
-        </td>
-        <td class="digits">:</td>
-        <td class="digits">
-          <div class='table-div' id="seconds2"></div>
-        </td>
-      </tr>
-      <tr>
-        <td class="time-text">Dagar</td>
-        <td class="time-text"></td>
-        <td class="time-text">Timmar</td>
-        <td class="time-text"></td>
-        <td class="time-text">Minuter</td>
-        <td class="time-text"></td>
-        <td class="time-text">Sekunder</td>
-      </tr>
+      <tbody>
+        <tr>
+          <td colspan="7" class="time-text1">Jag tar examen om</td>
+        </tr>
+        <tr>
+          <td class="digits">
+            <div class='table-div' id="days2"></div>
+          </td>
+          <td class="digits">:</td>
+          <td class="digits">
+            <div class='table-div' id="hours2"></div>
+          </td>
+          <td class="digits">:</td>
+          <td class="digits">
+            <div class='table-div' id="minutes2"></div>
+          </td>
+          <td class="digits">:</td>
+          <td class="digits">
+            <div class='table-div' id="seconds2"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="time-text">
+            <div class='table-div'>Dagar</div>
+          </td>
+          <td class="time-text"></td>
+          <td class="time-text">
+            <div class='table-div'>Timmar</div>
+          </td>
+          <td class="time-text"></td>
+          <td class="time-text">
+            <div class='table-div'>Minuter</div>
+          </td>
+          <td class="time-text"></td>
+          <td class="time-text">
+            <div class='table-div'>Sekunder</div>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
   <img class='img-responsive' src="img/daniel gbg copy smaller copy.jpg" alt="Daniel i Göteborg" />

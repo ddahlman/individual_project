@@ -18,7 +18,7 @@ $(document).ready(function () {
     }
     /*============ Välkomsttext första sidan===============================*/
     $.ajax({
-        url: "http://danieldahlman.se/api/?/welcome_text",
+        url: "http://localhost/individual_project/api/?/welcome_text",
         success: function (result) {
             const txt = result.texts[0].welcome_text;
             $('#home-text').val(txt);
@@ -31,7 +31,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "PUT",
-            url: "http://danieldahlman.se/api/?/welcome_text/1",
+            url: "http://localhost/individual_project/api/?/welcome_text/1",
             data: { welcome_text: homeText },
             success: function (data) {
                 $('#home-success').show().fadeOut(3000);
@@ -44,7 +44,7 @@ $(document).ready(function () {
     /*======================= CV first_text ============================*/
 
     $.ajax({
-        url: "http://danieldahlman.se/api/?/cv_text",
+        url: "http://localhost/individual_project/api/?/cv_text",
         success: function (result) {
             const txt = result.texts[0].first_text;
             $('#first-text').val(txt);
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "PUT",
-            url: "http://danieldahlman.se/api/?/cv_text/1",
+            url: "http://localhost/individual_project/api/?/cv_text/1",
             data: { first_text: firstText },
             success: function (data) {
                 $('#cv-text').show().fadeOut(3000);
@@ -71,7 +71,7 @@ $(document).ready(function () {
 
     function getHeadersAndLists() {
         $.ajax({
-            url: "http://danieldahlman.se/api/?/cv_headers",
+            url: "http://localhost/individual_project/api/?/cv_headers",
             success: function (result) {
                 resultheaders = result.allheaders;
                 Array.from(document.querySelectorAll('.header')).map(function (head, i) {
@@ -79,12 +79,12 @@ $(document).ready(function () {
                     return head.value;
                 });
                 resultheaders.map(function (obj, i) {
-                    $.get('http://danieldahlman.se/api/?/cv_headers/' + obj.headersID + '/items')
+                    $.get('http://localhost/individual_project/api/?/cv_headers/' + obj.headersID + '/items')
                         .then(function (response) {
 
                             var li = response.header_items.map(function (item) {
                                 let listItem = '<li class="list-item">' +
-                                    '< form class="form-horizontal li-form">' +
+                                    '<form class="form-horizontal li-form">' +
 
                                     '<div class="form-group has-feedback has-feedback-left">' +
                                     '<input type="hidden" value="' + item.id + '">' +
@@ -137,7 +137,7 @@ $(document).ready(function () {
         var header = this.parentNode.parentNode.childNodes[1].childNodes[1].childNodes[3].value;
         $.ajax({
             type: "PUT",
-            url: "http://danieldahlman.se/api/?/cv_headers/" + id,
+            url: "http://localhost/individual_project/api/?/cv_headers/" + id,
             data: { header: header },
             success: function (data) {
                 var showID = data.id;
@@ -169,7 +169,7 @@ $(document).ready(function () {
         var item = this.parentNode.parentNode.parentNode.querySelector('input[type=text]').value;
         $.ajax({
             type: "PUT",
-            url: "http://danieldahlman.se/api/?/cv_item/" + id,
+            url: "http://localhost/individual_project/api/?/cv_item/" + id,
             data: { item: item },
             success: function (response) {
                 var showID = response.id;
@@ -182,7 +182,7 @@ $(document).ready(function () {
     $('.container').on('click', '.delete-list', function () {
         let id = this.parentNode.parentNode.parentNode.querySelector('input[type=hidden]').value;
         let content = this.parentNode.parentNode.parentNode.querySelector('input[type=text]').value;
-        let url = "http://danieldahlman.se/api/?/cv_item/";
+        let url = "http://localhost/individual_project/api/?/cv_item/";
         showModal(id, content, url, getHeadersAndLists);
     });
 
@@ -192,7 +192,7 @@ $(document).ready(function () {
             item: this.parentNode.parentNode.querySelector('input[type=text]').value,
             headersID: this.parentNode.parentNode.parentNode.querySelector('.headerVal').value
         };
-        $.post('http://danieldahlman.se/api/?/cv_item', items)
+        $.post('http://localhost/individual_project/api/?/cv_item', items)
             .then(function () {
                 this.parentNode.parentNode.querySelector('input[type=text]').value = '';
                 getHeadersAndLists();
@@ -201,7 +201,7 @@ $(document).ready(function () {
 
     /*================ employments ========================================================*/
     function getEmployments() {
-        $.get('http://danieldahlman.se/api/?/cv_employment')
+        $.get('http://localhost/individual_project/api/?/cv_employment')
             .then(function (response) {
                 let employment = response.employments.map(function (obj) {
                     let emp = '<li class="li-form">' +
@@ -243,7 +243,7 @@ $(document).ready(function () {
             year: this.parentNode.parentNode.parentNode.querySelector('#emp-years').value
         };
         $.ajax({
-            url: 'http://danieldahlman.se/api/?/cv_employment/' + id,
+            url: 'http://localhost/individual_project/api/?/cv_employment/' + id,
             method: 'PUT',
             data: emp
         }).then(function (response) {
@@ -258,7 +258,7 @@ $(document).ready(function () {
             employment: this.parentNode.parentNode.parentNode.querySelector('#employment').value,
             year: this.parentNode.parentNode.parentNode.querySelector('#emp-years').value
         };
-        let url = "http://danieldahlman.se/api/?/cv_employment/";
+        let url = "http://localhost/individual_project/api/?/cv_employment/";
         showModal(id, emp.employment, url, getEmployments);
     });
 
@@ -269,7 +269,7 @@ $(document).ready(function () {
             year: document.querySelector('#add-emp-year').value
         };
 
-        $.post('http://danieldahlman.se/api/?/cv_employment', emp)
+        $.post('http://localhost/individual_project/api/?/cv_employment', emp)
             .then(function () {
                 document.querySelector('#add-employ').value = '';
                 document.querySelector('#add-emp-year').value = '';
@@ -279,7 +279,7 @@ $(document).ready(function () {
 
     /*=================== cv-education =======================================*/
     function getEducation() {
-        $.get('http://danieldahlman.se/api/?/cv_education')
+        $.get('http://localhost/individual_project/api/?/cv_education')
             .then(function (response) {
                 let education = response.educations.map(function (obj) {
                     let edu = '<li class="li-form">' +
@@ -321,7 +321,7 @@ $(document).ready(function () {
             year: this.parentNode.parentNode.parentNode.querySelector('.edu-years').value
         };
         $.ajax({
-            url: 'http://danieldahlman.se/api/?/cv_education/' + id,
+            url: 'http://localhost/individual_project/api/?/cv_education/' + id,
             method: 'PUT',
             data: edu
         }).then(function (response) {
@@ -337,7 +337,7 @@ $(document).ready(function () {
             education: this.parentNode.parentNode.parentNode.querySelector('.education').value,
             year: this.parentNode.parentNode.parentNode.querySelector('.edu-years').value
         };
-        let url = "http://danieldahlman.se/api/?/cv_education/";
+        let url = "http://localhost/individual_project/api/?/cv_education/";
         showModal(id, edu.education, url, getEducation);
     });
 
@@ -348,7 +348,7 @@ $(document).ready(function () {
             year: document.querySelector('#add-edu-year').value
         };
 
-        $.post('http://danieldahlman.se/api/?/cv_education', edu)
+        $.post('http://localhost/individual_project/api/?/cv_education', edu)
             .then(function () {
                 document.querySelector('#add-ed').value = '';
                 document.querySelector('#add-edu-year').value = '';
@@ -360,7 +360,7 @@ $(document).ready(function () {
     /*===========================================================================*/
 
     function getUrls() {
-        $.get('http://danieldahlman.se/api/?/portfolio').then(function (response) {
+        $.get('http://localhost/individual_project/api/?/portfolio').then(function (response) {
             const projects = response.projects.map(function (obj) {
                 let project = '<div class="white-bg">' +
                     '<form class="form-horizontal">' +
@@ -400,7 +400,7 @@ $(document).ready(function () {
             project_text: this.parentNode.parentNode.querySelector('.edit-projtext').value
         };
         $.ajax({
-            url: 'http://danieldahlman.se/api/?/portfolio/' + id,
+            url: 'http://localhost/individual_project/api/?/portfolio/' + id,
             method: 'PUT',
             data: proj
         }).then(function (response) {
@@ -416,7 +416,7 @@ $(document).ready(function () {
             url: this.parentNode.parentNode.querySelector('.edit-url').value,
             project_text: this.parentNode.parentNode.querySelector('.edit-projtext').value
         };
-        let url = "http://danieldahlman.se/api/?/portfolio/";
+        let url = "http://localhost/individual_project/api/?/portfolio/";
         showModal(id, proj.url, url, getUrls);
     });
 
@@ -426,7 +426,7 @@ $(document).ready(function () {
             url: document.querySelector('#add-url').value,
             project_text: document.querySelector('#add-proj-text').value
         };
-        $.post('http://danieldahlman.se/api/?/portfolio', proj)
+        $.post('http://localhost/individual_project/api/?/portfolio', proj)
             .then(function () {
                 document.querySelector('#add-url').value = '';
                 document.querySelector('#add-proj-text').value = '';
@@ -437,7 +437,7 @@ $(document).ready(function () {
 
     /*================== Incoming messages =======================================*/
     function getMessages() {
-        $.get('http://danieldahlman.se/api/?/incoming_msg').then(function (response) {
+        $.get('http://localhost/individual_project/api/?/incoming_msg').then(function (response) {
             let counter = 0;
             let messages = response.messages.map(function (obj) {
                 counter += 1;
@@ -468,13 +468,13 @@ $(document).ready(function () {
     $('.container').on('click', '.delete-msg', function () {
         let id = this.parentNode.querySelector('input[type=hidden]').value;
         let msgFrom = this.parentNode.querySelector('strong').innerHTML;
-        let url = "http://danieldahlman.se/api/?/incoming_msg/";
+        let url = "http://localhost/individual_project/api/?/incoming_msg/";
         showModal(id, msgFrom, url, getMessages);
     });
     /*========================== about text ==========================*/
 
     function getAboutText() {
-        $.get("http://danieldahlman.se/api/?/about").then(function (response) {
+        $.get("http://localhost/individual_project/api/?/about").then(function (response) {
             $('#about-text').val(response.texts[0].text);
         });
     }
@@ -486,7 +486,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "PUT",
-            url: "http://danieldahlman.se/api/?/about/1",
+            url: "http://localhost/individual_project/api/?/about/1",
             data: { text: aboutText },
             success: function () {
                 $('#about-success').show().fadeOut(3000);

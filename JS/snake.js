@@ -13,6 +13,8 @@ function init() {
         window.addEventListener('resize', resizeCanvas, false);
         window.addEventListener('orientationchange', resizeCanvas, false);
         resizeCanvas();
+    } else {
+        document.getElementById('notworking').innerHTML = 'Tyvärr så fungerar inte det här spelet i den här webbläsaren...';
     }
 }
 init();
@@ -21,13 +23,13 @@ function resizeCanvas() {
     var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight - 300;
 
     ctx.putImageData(imgData, 0, 0);
 }
 
 
-ctx.fillStyle = 'white';
+ctx.fillStyle = 'lightgrey';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 food();
@@ -92,7 +94,7 @@ function draw() {
         ctx.fillRect(a.l, a.t, w, h);
     }
     collision(); //kolla om
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'lightgrey';
     ctx.fillRect(tail.l, tail.t, w, h);
 
 }

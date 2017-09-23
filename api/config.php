@@ -1,13 +1,13 @@
 <?php
-$dbusername = "219307_ot65650";
+/* $dbusername = "219307_ot65650";
 $dbhost = "danieldahlman-219307.mysql.binero.se";
 $dbpassword = "Leinad0243";
-$db = "219307-danieldahlman";
+$db = "219307-danieldahlman"; */
 
-/* $dbusername = "root";
+$dbusername = "root";
 $dbhost = "localhost";
 $dbpassword = "";
-$db = "test"; */
+$db = "test";
 
 
 header('Content-Type: application/json');

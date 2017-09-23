@@ -4,33 +4,13 @@
 }
 
 @font-face {
-    font-family: 'BebasNeue Bold';
-    src: url('../font/BebasNeue Bold.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'BebasNeue Book';
-    src: url('../font/BebasNeue Book.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'BebasNeue Light';
     src: url('../font/convert/converted-files/BebasNeueLight.eot?#iefix') format('embedded-opentype'), url('../font/convert/converted-files/BebasNeueLight.woff') format('woff'), url("../font/TTF's/BebasNeue Light.ttf") format('truetype'), url('../font/convert/converted-files/BebasNeueLight.svg#svgFontName') format('svg');
 }
 
 @font-face {
-    font-family: 'BebasNeue Thin';
-    src: url('../font/BebasNeue Thin.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'BebasNeue Regular';
-    src: url('../font/BebasNeue Regular.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'LED';
-    src: url('../font/LED/LED.ttf') format('truetype');
+    src: url('../font/LED/LED.ttf') format('opentype');
 }
 
 html {

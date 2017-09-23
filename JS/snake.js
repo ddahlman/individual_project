@@ -22,7 +22,7 @@ init();
 function resizeCanvas() {
     var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-    canvas.width = window.innerWidth;
+    canvas.width = window.innerWidth - 17;
     canvas.height = window.innerHeight - 300;
 
     ctx.putImageData(imgData, 0, 0);

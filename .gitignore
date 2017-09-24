@@ -258,3 +258,8 @@ paket-files/
 !.vscode/launch.json
 
 ./77api/config.php
+
+./JS/adminAjax.js
+./JS/ajax.js
+./JS/login.js
+./JS/loggedin.js

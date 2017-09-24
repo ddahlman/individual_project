@@ -26,7 +26,7 @@ include_once ('./includes/todo-header.php');
   <h1 class='text-center'>Snake game</h1>
 
   <canvas width="100" height="100" id="canvas"></canvas>
-<p id='notworking'></p>
+  <p id='notworking'></p>
   <div class='container'>
     <div class='row'>
       <div class='col-xs-12 text-center'>

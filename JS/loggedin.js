@@ -1,10 +1,10 @@
 $(document).ready(function () {
     const storage = sessionStorage.getItem('token');
 
-    $.get('http://localhost/individual_project/api/?/login&token=' + storage)
+    $.get('http://danieldahlman.se/api/?/login&token=' + storage)
         .then(function (response) {
 
-            $.get('http://localhost/individual_project/api/?/user/' + response.id).then(function (result) {
+            $.get('http://danieldahlman.se/api/?/user/' + response.id).then(function (result) {
 
                 $('#greeting').html('Välkommen ' + result.name + '!');
             });
@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     $('.logOut').on('click', function () {
         $.ajax({
-            url: "http://localhost/individual_project/api/?/login",
+            url: "http://danieldahlman.se/api/?/login",
             type: "DELETE",
             data: { logout: true },
             success: function (response) {

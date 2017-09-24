@@ -52,7 +52,7 @@ $(document).ready(function () {
             password: document.getElementById('password').value
         };
 
-        $.post('http://localhost/individual_project/api/?/login', login).then(function (response) {
+        $.post('http://danieldahlman.se/api/?/login', login).then(function (response) {
             session = "&token=" + response.session;
 
             if (response.session === null || response.session === undefined) {
@@ -75,7 +75,7 @@ $(document).ready(function () {
             password: document.getElementById('reg-password').value
         };
 
-        $.post('http://localhost/individual_project/api/?/user', reg).then(function (response) {
+        $.post('http://danieldahlman.se/api/?/user', reg).then(function (response) {
 
             let inputs = document.querySelectorAll('.inp');
             Array.from(inputs).map(function (inp) { inp.value = ""; });
@@ -86,7 +86,7 @@ $(document).ready(function () {
 
     $('.checkLogin').on('click', function () {
 
-        $.get('http://localhost/individual_project/api/?/login' + session)
+        $.get('http://danieldahlman.se/api/?/login' + session)
             .then(function (response) {
 
             }).fail(function (jqxhr, status, error) {

@@ -89,11 +89,6 @@ $(document).ready(function () {
         $.get('http://danieldahlman.se/api/?/login' + session)
             .then(function (response) {
 
-            }).fail(function (jqxhr, status, error) {
-
             });
-
     });
-
-
 });

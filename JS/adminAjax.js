@@ -62,7 +62,6 @@ $(document).ready(function () {
             success: function (data) {
                 $('#cv-text').show().fadeOut(3000);
             }
-        }).fail(function (jqxhr, status, error) {
         });
     });
     /*====================================================================*/
@@ -156,7 +155,6 @@ $(document).ready(function () {
                 }
 
             }
-        }).fail(function (jqxhr, status, error) {
         });
     });
 
@@ -175,7 +173,6 @@ $(document).ready(function () {
                 var showID = response.id;
                 $('#success' + showID).show().fadeOut(3000);
             }
-        }).fail(function (jqxhr, status, error) {
         });
     });
 
@@ -327,7 +324,6 @@ $(document).ready(function () {
         }).then(function (response) {
             var showID = response.id;
             $('.edu-success' + showID).show().fadeOut(3000);
-        }).fail(function (jqxhr, status, error) {
         });
     });
 
@@ -406,7 +402,6 @@ $(document).ready(function () {
         }).then(function (response) {
             var showID = response.id;
             $('#proj-success' + showID).show().fadeOut(3000);
-        }).fail(function (jqxhr, status, error) {
         });
     });
 
@@ -431,7 +426,6 @@ $(document).ready(function () {
                 document.querySelector('#add-url').value = '';
                 document.querySelector('#add-proj-text').value = '';
                 getUrls();
-            }).fail(function (jqxhr, status, error) {
             });
     });
 

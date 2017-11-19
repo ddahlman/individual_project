@@ -3,7 +3,7 @@
     <table>
       <tbody>
         <tr>
-          <td colspan="7" class="time-text1">Min LIA startar om</td>
+          <td colspan="7" class="time-text1">Min LIA hos Trippus har pågått i</td>
         </tr>
         <tr>
           <td class="digits">

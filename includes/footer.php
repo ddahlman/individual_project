@@ -23,7 +23,7 @@
 <script src="JS/bootstrap.min.js"></script>
 <script src="JS/arrfromWorkAround.min.js"></script>
 <script src="JS/ajax.js"></script>
-<script src="JS/myScript.min.js" charset="utf-8"></script>
+<script src="JS/myScript.min.js"></script>
 </body>
 
 </html>

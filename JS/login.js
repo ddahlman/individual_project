@@ -52,7 +52,7 @@ $(document).ready(function () {
             password: document.getElementById('password').value
         };
 
-        $.post('http://danieldahlman.se/api/?/login', login).then(function (response) {
+        $.post('https://danieldahlman.se/api/?/login', login).then(function (response) {
             session = "&token=" + response.session;
 
             if (response.session === null || response.session === undefined) {

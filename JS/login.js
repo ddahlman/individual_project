@@ -75,7 +75,7 @@ $(document).ready(function () {
             password: document.getElementById('reg-password').value
         };
 
-        $.post('http://danieldahlman.se/api/?/user', reg).then(function (response) {
+        $.post('https://danieldahlman.se/api/?/user', reg).then(function (response) {
 
             let inputs = document.querySelectorAll('.inp');
             Array.from(inputs).map(function (inp) { inp.value = ""; });
@@ -86,7 +86,7 @@ $(document).ready(function () {
 
     $('.checkLogin').on('click', function () {
 
-        $.get('http://danieldahlman.se/api/?/login' + session)
+        $.get('https://danieldahlman.se/api/?/login' + session)
             .then(function (response) {
 
             });

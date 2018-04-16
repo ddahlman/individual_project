@@ -96,7 +96,7 @@ $(document).ready(function () {
                 email: document.querySelector('#email-contact').value,
                 note: document.querySelector('#text-contact').value
             };
-            $.post('http://danieldahlman.se/api/?/incoming_msg', contactinfo).then(function (response) {
+            $.post('https://danieldahlman.se/api/?/incoming_msg', contactinfo).then(function (response) {
                 Array.from(document.querySelectorAll('input[type=text], #text-contact')).map(function (inp) {
                     inp.value = '';
                     return inp.value;
@@ -114,22 +114,22 @@ $(document).ready(function () {
         }
     });
     /*============================= get Welcome_text to home.php ===============*/
-    $.get('http://danieldahlman.se/api/?/welcome_text').then(function (response) {
+    $.get('https://danieldahlman.se/api/?/welcome_text').then(function (response) {
         $('#welcome-text').html(response.texts[0].welcome_text);
     });
     /*=============================== get CV first text ===========================*/
-    $.get('http://danieldahlman.se/api/?/cv_text').then(function (response) {
+    $.get('https://danieldahlman.se/api/?/cv_text').then(function (response) {
         $('#cv-firsttext').html(response.texts[0].first_text);
     });
     /*=========================== get CV headers and lists ==============================*/
-    $.get("http://danieldahlman.se/api/?/cv_headers").then(function (result) {
+    $.get("https://danieldahlman.se/api/?/cv_headers").then(function (result) {
         let resultheaders = result.allheaders;
         Array.from(document.querySelectorAll('.list-header')).map(function (head, i) {
             head.innerHTML = resultheaders[i].header;
             return head.innerHTML;
         });
         resultheaders.map(function (obj) {
-            $.get('http://danieldahlman.se/api/?/cv_headers/' + obj.headersID + '/items')
+            $.get('https://danieldahlman.se/api/?/cv_headers/' + obj.headersID + '/items')
                 .then(function (response) {
                     let li = response.header_items.map(function (item) {
                         return '<li>' + item.list_item + '</li>';
@@ -156,7 +156,7 @@ $(document).ready(function () {
     });
 
     /*=================== get Employments ==================================*/
-    $.get('http://danieldahlman.se/api/?/cv_employment')
+    $.get('https://danieldahlman.se/api/?/cv_employment')
         .then(function (response) {
             let employment = response.employments.map(function (obj) {
                 let emp = '<li class="li-education"><br/>' + obj.employment +
@@ -166,7 +166,7 @@ $(document).ready(function () {
             $('#employments').html(employment);
         });
     /*======================== get Education =============================*/
-    $.get('http://danieldahlman.se/api/?/cv_education')
+    $.get('https://danieldahlman.se/api/?/cv_education')
         .then(function (response) {
             let education = response.educations.map(function (obj) {
                 let emp = '<li class="li-education"><br/>' + obj.school +
@@ -177,7 +177,7 @@ $(document).ready(function () {
         });
 
     /*=============== get About me =========================*/
-    $.get('http://danieldahlman.se/api/?/about').then(function (response) {
+    $.get('https://danieldahlman.se/api/?/about').then(function (response) {
         let str = response.texts[0].text;
         Array.from(document.querySelectorAll('.about-text')).map(function (tag, i) {
             tag.innerHTML = str.split('...')[i];
@@ -185,7 +185,7 @@ $(document).ready(function () {
         });
     });
     /*============ get Projects ===============================*/
-    $.get('http://danieldahlman.se/api/?/portfolio').then(function (response) {
+    $.get('https://danieldahlman.se/api/?/portfolio').then(function (response) {
         let projects = response.projects.map(function (obj) {
             let project = '<div class="well"><a href="' + obj.url + '">' + obj.url +
                 '</a><p>' + obj.project_text + '</p></div>';

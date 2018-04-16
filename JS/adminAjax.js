@@ -31,7 +31,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "PUT",
-            url: "http://danieldahlman.se/api/?/welcome_text/1",
+            url: "https://danieldahlman.se/api/?/welcome_text/1",
             data: { welcome_text: homeText },
             success: function (data) {
                 $('#home-success').show().fadeOut(3000);

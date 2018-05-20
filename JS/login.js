@@ -54,7 +54,7 @@ $(document).ready(function () {
 
         $.post('https://danieldahlman.se/api/?/login', login).then(function (response) {
             session = "&token=" + response.session;
-
+            var a = 'hej';
             if (response.session === null || response.session === undefined) {
                 let inputs = document.querySelectorAll('.inp');
                 Array.from(inputs).map(function (inp) { inp.value = ""; });

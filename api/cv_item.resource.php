@@ -63,6 +63,7 @@ class _cv_item extends Resource{ // Klassen ärver egenskaper från den generell
         $item = escape($input['item']);
         $headersID = escape($input['headersID']);
         
+        var_dump($input);
         $query = "INSERT INTO items (headersID, list_item)
         VALUES ('$headersID', '$item')";
         

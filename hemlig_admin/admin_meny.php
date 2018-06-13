@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../font/css/font-awesome.min.css">
   <link rel="stylesheet" href="../CSS/bootstrap.min.css">
   <link rel="stylesheet" href="../CSS/modal.css">
-  <link rel="stylesheet" href="../CSS/admin-style.css">
+  <link rel="stylesheet" href="../CSS/admin-style.min.css">
 </head>
 
 <body>

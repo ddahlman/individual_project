@@ -189,9 +189,10 @@ $(document).ready(function () {
             item: this.parentNode.parentNode.querySelector('input[type=text]').value,
             headersID: this.parentNode.parentNode.parentNode.querySelector('.headerVal').value
         };
-        $.post('https://danieldahlman.se/api/?/cv_item', items)
+        $.post('http://localhost/individual_project/api/?/cv_item', items)
             .then(function () {
                 this.parentNode.parentNode.querySelector('input[type=text]').value = '';
+                console.log('hej');
                 getHeadersAndLists();
             });
     });

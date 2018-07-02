@@ -47,6 +47,7 @@ $(document).ready(function () {
         }
     });
 
+
     $('#email-contact').on('keyup', function () {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(this).val()) && $(this).val().trim() !== "") {
             $(this).closest(".emailInp")

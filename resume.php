@@ -12,7 +12,7 @@
     </article>
   </div>
   <div class='download-div text-center'>
-    <a class='download' href="./CV 2018-11-26.pdf" download><span class='fa fa-download'></span> Ladda ner Daniel Dahlmans CV 2018</a>
+    <a class='download' href="./CV 2019 Daniel Dahlman.pdf" download><span class='fa fa-download'></span> Ladda ner Daniel Dahlmans CV 2019</a>
   </div>
   <div class="row">
     <div class="col-md-4 grey-pants expand">

@@ -257,7 +257,7 @@ paket-files/
 !.vscode/tasks.json
 !.vscode/launch.json
 
-./77api/config.php
+./api/config.php
 
 ./JS/adminAjax.js
 ./JS/ajax.js
